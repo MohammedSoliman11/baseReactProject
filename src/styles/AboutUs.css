@@ -1,0 +1,46 @@
+/* src/styles/About.css */
+.container {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 20px 0;
+}
+
+.teamSection {
+  margin-top: 40px;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.teamMember {
+  width: 150px;
+  margin: 20px;
+  text-align: center;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
