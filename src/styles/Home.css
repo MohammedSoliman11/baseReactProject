@@ -103,3 +103,27 @@
   font-size: 1rem;
   margin: 0;
 }
+
+/* App.css */
+.first-half-section {
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  background-image: url('../assets/Rectangle14.png'); /* Your background image URL */
+  background-size: cover; /* Make sure the image covers the section */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  position: absolute; /* Required for overlaying the gradient */
+}
+
+.first-half-section::before {
+  content: ''; /* Necessary for a pseudo-element */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to right, white, #13094AF2); /* Gradient from blue to white */
+  opacity: 0.5; /* Adjust opacity for the gradient if necessary */
+  pointer-events: none; /* Prevent interference with clicks */
+}
+
