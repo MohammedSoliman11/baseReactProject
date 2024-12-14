@@ -56,3 +56,129 @@
   font-weight: bold;
   padding: 10px;
 }
+.firstP
+{
+  font-size: 24px;
+  color: #EBAE3B;
+  font-weight: 500;
+}
+.firstP2
+{
+  font-size: 30px;
+  font-weight: 700;
+}
+.firstP3
+{
+  font-size: 19px;
+}
+.service
+{
+  background-color: rgba(255, 255, 255, 0.164);
+  border: 1px solid white !important;
+  border-radius: 14px;
+  padding: 15px 30px;
+}
+
+
+.stats-box {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.border-end {
+  border-right: 1px solid #dee2e6; /* Divider between columns */
+}
+
+.text-warning {
+  color: #ffcc00; /* Gold color for numbers */
+}
+
+.text-success {
+  color: #28a745; /* Green text for percentages */
+}
+
+i {
+  font-size: 0.9rem;
+}
+
+/* Section 2 */
+/* Custom Styling for AboutUs Component */
+.orange-box {
+  position: absolute;
+  top: -15px;
+  
+  left:35px;
+  width: 120px;
+  height: 120px;
+  background-color: #ffcc00; /* Orange color */
+  z-index: -1;
+}
+
+.dotted-box {
+  position: absolute;
+ 
+  bottom: -10px;
+  right: -10px;
+  width: 80px;
+  height: 100px;
+  background-image: radial-gradient(black 1px, transparent 1px);
+  background-size: 8px 8px;
+  z-index: 5;
+  opacity: 0.5;
+}
+
+.text-warning {
+  color: #ffcc00; /* Gold color for highlighted text */
+}
+
+.text-primary {
+  color: #6a11cb; /* Custom primary color */
+}
+.section2{
+  margin-top: 150px;
+}
+.borderr{
+  border-bottom: 1px solid black !important;
+}
+.coloredP1
+{
+  color: #2E255F;
+  font-weight: bolder
+}
+.coloredP2
+{
+  color: rgba(22, 12, 77, 0.65);
+  font-size: 18px;
+}
+
+/* section3 */
+.section3
+{
+  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../images/37c72c4e8da526d887301b5f08672e0f.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: 60%;
+}
+
+.coloredP3
+{
+  font-weight: 700;
+  font-size: 22px;
+}
+.vector
+{
+  width: 2%;
+}
+.coloredP4
+{
+  text-align: center;
+}
+.centerP{
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
