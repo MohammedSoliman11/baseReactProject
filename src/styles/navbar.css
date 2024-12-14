@@ -1,83 +1,139 @@
-/* src/styles/Navbar.css */
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+}
+
+/* Navbar Styles */
 .navbar {
+  background-color: #f8f8f8;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.bg-div{
+  display: flex;
+  justify-content: space-between;
+
+}
+.divider {
+  width: 1px; /* Thickness of the divider */
+  height: 24px; /* Height of the divider, matching the icon size */
+  background-color: white; /* Divider color */
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000;
-  color: white;
-  padding: 10px 20px;
-  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Left Section */
 .navbar-left {
   display: flex;
   align-items: center;
 }
 
-.login-btn {
-  background-color: #d59c2c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.logo {
+  width: 50px;
+  margin-right: 10px;
 }
 
-.login-btn:hover {
-  background-color: #b27b1d;
+.navbar-time,
+.navbar-date {
+  margin-right: 15px;
+  color: #555;
+  font-size: 14px;
 }
 
-/* Center Section */
-.navbar-center .navbar-links {
-  display: flex;
+.navbar-time i,
+.navbar-date i {
+  margin-left: 5px;
+}
+
+/* Center Menu */
+.navbar-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
   gap: 20px;
 }
 
-.navbar-center .navbar-links a {
-  color: white;
+.navbar-menu li a {
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.3s;
 }
 
-.navbar-center .navbar-links a:hover {
-  color: #d59c2c;
+.navbar-menu li a:hover {
+  color: #f6b700;
 }
 
 /* Right Section */
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
-.time {
-  font-size: 1rem;
+.btn-primary {
+  background-color: #f6b700;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
 }
 
-.contact-icons {
+.btn-primary:hover {
+  background-color: #e5a800;
+}
+
+.navbar-right i {
+  font-size: 18px;
+  color: #555;
+  margin-left: 15px;
+}
+
+.icon-container {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 16px; /* Space between items */
 }
 
-.contact-icons .icon {
-  font-size: 1.5rem;
-  color: white;
-  transition: color 0.3s ease;
+.icon-container i {
+  font-size: 12px; /* Adjust the size of the icons */
+  color: white; /* Icon color */
 }
 
-.contact-icons .icon:hover {
-  color: #d59c2c;
+.gl-navbar{
+  margin-top: 20px;
 }
 
-.language-selector {
-  color: white;
-  font-size: 1rem;
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.navbar-logo {
-  width: 50px;
-  height: auto;
+  .navbar-center {
+    margin: 10px 0;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
