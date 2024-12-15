@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Layout from "./layout/Layout";
 
+
 const App = () => {
   const routes = createHashRouter([{
     path: "/",
