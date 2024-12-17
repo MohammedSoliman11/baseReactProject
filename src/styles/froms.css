@@ -1,0 +1,142 @@
+button.btn {
+  font-weight: bold;
+}
+
+button.btn-warning {
+  color: #fff;
+}
+
+button.btn-light {
+  color: #000;
+}
+
+
+.gradient-button {
+  background: linear-gradient(to right, #5a4a8e, #10084d); /* Gradient */
+  color: white;
+  border: none;
+  border-radius: 12px; /* Rounded corners */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.gradient-button:hover {
+  background: linear-gradient(to right, #6a5ca0, #2b1f6d); /* Lighter gradient on hover */
+}
+
+.arrow1 {
+  font-size: 30px;
+  margin-left: 10px; /* Space between arrow and text */
+}
+
+.button-text {
+  white-space: nowrap;
+  padding: 15px 15px 15Px 37px;
+}
+
+
+.input-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333; /* Dark text color */
+  margin-bottom: 5px;
+}
+
+.required {
+  color: red;
+  margin-left: 2px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0; /* Light gray border */
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding doesn't increase size */
+  outline: none;
+  color: #555;
+}
+
+.input-field::placeholder {
+  color: #c0c0c0; /* Light gray placeholder text */
+}
+
+.input-field:focus {
+  border-color: #4a90e2; /* Light blue border on focus */
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.phone-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.country-code {
+  padding: 8px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+  outline: none;
+}
+
+.phone-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  font-size: 14px;
+  color: #555;
+  outline: none;
+}
+
+.phone-input::placeholder {
+  color: #c0c0c0;
+}
+
+.flag {
+  background-color: #006c35; /* Green background for flag */
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flag img {
+  width: 20px;
+  height: auto;
+}
+
+
+
+.tabs {
+  display: flex;
+  justify-content: flex-end; /* Align right for RTL */
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.tab {
+  padding: 10px 20px;
+  color: #9e9e9e; /* Inactive text color */
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.tab.active {
+  color: #f4a61e; /* Active text color */
+  border-bottom: 2px solid #f4a61e; /* Active tab underline */
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  font-weight: bold;
+}

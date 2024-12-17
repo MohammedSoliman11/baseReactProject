@@ -12,7 +12,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* First half of the screen */
   background-image: url("./assets/Rectangle14.png");
   background-size: cover;
   background-position: center;

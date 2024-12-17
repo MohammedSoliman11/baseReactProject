@@ -1,0 +1,66 @@
+/* footer */
+/* Footer Container */
+.footer
+{
+  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../images/bb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+}
+
+.footer-container {
+   
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+/* Footer Title Styling */
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Links and Icons */
+.footer-container ul {
+  padding-left: 0;
+}
+
+.footer-container li {
+  margin-bottom: 0.5rem;
+}
+
+.faceIcon
+{
+  width: 35px;
+  height: 35px;
+  border: 1.5px solid red;
+  border-radius: 50%;
+  padding: 7px;
+  border-color: rgba(235, 174, 59, 1);
+}
+
+.getIT
+{
+  font-size: 13px;
+  color: #2E255F;
+}
+.googleStyle
+{
+  font-size: 17px;
+  font-weight: bold;
+  color: #2E255F;
+}
+.googleStyle
+{
+  border-radius: 5px;
+}
+.google
+{
+ 
+  margin-bottom: 10px;
+}
+
+
+
