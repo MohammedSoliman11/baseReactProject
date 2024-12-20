@@ -17,8 +17,8 @@ const Footer = () => {
   return (
     <>
       {/* footer */}
-      <div className='footer mt-5 mb-5'>
-        <footer className='footer-container py-5'>
+      <div className='footer d-flex flex-column justify-content-center align-items-center mt-5'>
+        <footer className='container'>
           <div className='container'>
             <div className='row text-white'>
               {/* Section 4: About & Social Media */}
@@ -101,7 +101,7 @@ const Footer = () => {
                 <h5 className='footer-title'>حمل التطبيق الخاص بنا</h5>
 
                 <a href='' className='text-decoration-none'>
-                  <div className='google d-flex googleStyle bg-white align-items-center ps-4 flex-row-reverse'>
+                  <div className='google d-flex googleStyle bg-white align-items-center px-4 py-2 flex-row-reverse '>
                     <div className='google-img'>
                       <img
                         src={googlePly} // Replace with Play Store logo
@@ -111,15 +111,14 @@ const Footer = () => {
                     </div>
 
                     <div className='anchor ms-2'>
-                      <span className='me-5  getIT'>GET IT ON</span>
-                      <br />
-                      <span className='me-3   googleStyle'>Google Play</span>
+                      <span className='getIT'>GET IT ON</span>
+                      <span className='googleStyle'>Google Play</span>
                     </div>
                   </div>
                 </a>
 
                 <a href='' className='text-decoration-none'>
-                  <div className='google d-flex googleStyle bg-white align-items-center ps-4 flex-row-reverse '>
+                  <div className='google d-flex googleStyle bg-white align-items-center px-4 py-2 flex-row-reverse '>
                     <div className='google-img'>
                       <img
                         src={apple} // Replace with Play Store logo
@@ -129,8 +128,7 @@ const Footer = () => {
                     </div>
 
                     <div className='anchor ms-2'>
-                      <span className='me-3  getIT'>GET IT ON</span>
-                      <br />
+                      <span className='getIT'>GET IT ON</span>
                       <span className=' googleStyle'>App Store</span>
                     </div>
                   </div>
