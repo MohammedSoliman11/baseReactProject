@@ -231,11 +231,10 @@ const ServiceForm = () => (
     <div className='mb-3'>
       <div className='input-container'>
         <label className='input-label'>لماذا تريد الانضمام الينا ؟</label>
-        <input
-          type='textarea'
-          id='gender'
+        <textarea
           placeholder='اكتب لماذا تريد الانضمام الينا ؟'
           className='input-field'
+          rows={5}
         />
       </div>
     </div>
