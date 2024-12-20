@@ -106,7 +106,7 @@ const JoinForm = () => (
         <span className='required'>*</span>
         <input
           type='text'
-          id='gender'
+          id='companyName'
           placeholder='ادخل اسم الشركة'
           className='input-field'
         />
@@ -118,7 +118,7 @@ const JoinForm = () => (
         <span className='required'>*</span>
         <input
           type='text'
-          id='gender'
+          id='tradeNumber'
           placeholder='ادخل رقم السجل التجاري'
           className='input-field'
         />
@@ -130,7 +130,7 @@ const JoinForm = () => (
         <span className='required'>*</span>
         <input
           type='text'
-          id='gender'
+          id='taxNumber'
           placeholder='ادخل رقم السجل الضريبي'
           className='input-field'
         />
@@ -210,7 +210,7 @@ const ServiceForm = () => (
         <span className='required'>*</span>
         <input
           type='text'
-          id='gender'
+          id='tradeNumber'
           placeholder='ادخل رقم السجل التجاري'
           className='input-field'
         />
@@ -222,7 +222,7 @@ const ServiceForm = () => (
         <span className='required'>*</span>
         <input
           type='text'
-          id='gender'
+          id='taxNumber'
           placeholder='ادخل رقم السجل الضريبي'
           className='input-field'
         />
@@ -239,7 +239,7 @@ const ServiceForm = () => (
       </div>
     </div>
     <button className='gradient-button'>
-      <span className='button-text'>ارسال طلب انضمام</span>
+      <span className='button-text'>ارسال طلب خدمة</span>
       <span className='carousel-control-prev-icon' aria-hidden='true'></span>
     </button>
   </form>
