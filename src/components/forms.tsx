@@ -11,7 +11,7 @@ const Form = () => {
   const showServiceForm = () => setActiveForm("service");
 
   return (
-    <div className='container d-flex justify-content-center mt-5'>
+    <div id='join' className='container d-flex justify-content-center mt-5'>
       {/* Toggle Buttons */}
       <div className='col-md-8'>
         <div className='d-flex justify-content-center mb-4 tabs'>

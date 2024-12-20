@@ -71,21 +71,33 @@ const Home = () => {
         </div>
         {/* navbar2 */}
         <div className='container'>
-          <div className='d-flex justify-content-between '>
+          <div className='d-flex justify-content-between align-items-center'>
             <div className='logo d-flex'>
               <img src={Logo} alt='' className='w-75' />
             </div>
 
-            <div className='info d-flex  mt-4 text-white'>
-              <h6 className='mx-2'>عن الشركة </h6>
-              <h6 className='mx-2'>لماذا نحن؟ </h6>
-              <h6 className='mx-2'>الخدامات </h6>
-              <h6 className='mx-2'>الآراء </h6>
-              <h6 className='mx-2'>طلب الانضمام </h6>
-              <h6 className='mx-2'>طلب خدمة </h6>
-            </div>
+            <ul className='col-md-6 info d-flex  mt-4 text-white text-decoration-none justify-content-between'>
+              <li className='mx-2'>
+                <a href='#about-us'>عن الشركة </a>
+              </li>
+              <li className='mx-2'>
+                <a href='#why-we-are-here'>لماذا نحن؟ </a>
+              </li>
+              <li className='mx-2'>
+                <a href='#services'>الخدامات </a>
+              </li>
+              <li className='mx-2'>
+                <a href='#reviews'>الآراء </a>
+              </li>
+              <li className='mx-2'>
+                <a href='#join'>طلب الانضمام </a>
+              </li>
+              <li className='mx-2'>
+                <a href='#join'>طلب خدمة </a>
+              </li>
+            </ul>
 
-            <div className='login mt-3'>
+            <div className='login'>
               <button type='button' className='btn btn-warning px-4 py-2 '>
                 <span className='login-btn'>تسجيل الدخول</span>
               </button>
@@ -146,7 +158,7 @@ const Home = () => {
       </div>
 
       {/* Section 2 */}
-      <div className='container section2 mb-5'>
+      <div id='about-us' className='container section2 mb-5'>
         <div className='row align-items-center'>
           {/* Right Section - Text */}
           <h5 className=' text-dark fw-bold mb-5 text-center'>
@@ -272,7 +284,7 @@ const Home = () => {
       </div>
 
       {/* section 5 */}
-      <div className='we container-fluid mb-5'>
+      <div id='why-we-are-here' className='we container-fluid mb-5'>
         <div className='why-us-section py-5 text-white'>
           <div className='container text-center'>
             {/* Section Title */}
@@ -328,7 +340,7 @@ const Home = () => {
       </div>
 
       {/* section 6 */}
-      <div className='services-section py-5'>
+      <div id='services' className='services-section py-5'>
         <div className='container text-center'>
           {/* Section Header */}
           <h2 className='mb-5 section-header text-warning  '>
@@ -386,7 +398,7 @@ const Home = () => {
 
       {/* section 7 */}
 
-      <div className='bidSlider'>
+      <div id='reviews' className='bidSlider'>
         <div className='review-background container-fluid '>
           <div className='h3 text-white text-decoration-underline d-flex  justify-content-center align-items-center'>
             <p className='mt-5'>الأراء</p>
