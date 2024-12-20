@@ -52,6 +52,10 @@ button.btn-light {
   margin-left: 2px;
 }
 
+.input-textarea {
+  
+}
+
 .input-field {
   width: 100%;
   padding: 10px;
@@ -139,4 +143,5 @@ button.btn-light {
   border-left: 0px;
   border-right: 0px;
   font-weight: bold;
+  border-radius: 0px;
 }

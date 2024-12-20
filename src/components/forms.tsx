@@ -11,28 +11,32 @@ const Form = () => {
   const showServiceForm = () => setActiveForm("service");
 
   return (
-    <div className='container mt-5'>
+    <div className='container d-flex justify-content-center mt-5'>
       {/* Toggle Buttons */}
-      <div className='d-flex justify-content-center mb-4 tabs'>
-        <button
-          className={`btn ${activeForm === "join" ? "active" : ""} mx-2 tab`}
-          onClick={showJoinForm}
-        >
-          طلب انضمام
-        </button>
-        <button
-          className={`btn ${
-            activeForm === "service" ? "active " : ""
-          } mx-2 tab`}
-          onClick={showServiceForm}
-        >
-          طلب خدمة
-        </button>
-      </div>
+      <div className='col-md-8'>
+        <div className='d-flex justify-content-center mb-4 tabs'>
+          <button
+            className={`col-md-6 btn ${
+              activeForm === "join" ? "active" : ""
+            } tab`}
+            onClick={showJoinForm}
+          >
+            طلب انضمام
+          </button>
+          <button
+            className={`col-md-6 btn ${
+              activeForm === "service" ? "active " : ""
+            } tab`}
+            onClick={showServiceForm}
+          >
+            طلب خدمة
+          </button>
+        </div>
 
-      {/* Form Content */}
-      {activeForm === "join" && <JoinForm />}
-      {activeForm === "service" && <ServiceForm />}
+        {/* Form Content */}
+        {activeForm === "join" && <JoinForm />}
+        {activeForm === "service" && <ServiceForm />}
+      </div>
     </div>
   );
 };
@@ -135,17 +139,16 @@ const JoinForm = () => (
     <div className='mb-3'>
       <div className='input-container'>
         <label className='input-label'>لماذا تريد الانضمام الينا ؟</label>
-        <input
-          type='textarea'
-          id='gender'
+        <textarea
           placeholder='اكتب لماذا تريد الانضمام الينا ؟'
           className='input-field'
+          rows={5}
         />
       </div>
     </div>
     <button className='gradient-button'>
       <span className='button-text'>ارسال طلب انضمام</span>
-      <span className='arrow1'> {">"} </span>
+      <span className='carousel-control-prev-icon' aria-hidden='true'></span>
     </button>
   </form>
 );
@@ -238,7 +241,7 @@ const ServiceForm = () => (
     </div>
     <button className='gradient-button'>
       <span className='button-text'>ارسال طلب انضمام</span>
-      <span className='arrow1'> {">"} </span>
+      <span className='carousel-control-prev-icon' aria-hidden='true'></span>
     </button>
   </form>
 );

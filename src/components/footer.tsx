@@ -1,17 +1,17 @@
 // import React from "react";
 import "../styles/footer.css"; // Import your CSS
-import Logo from "..//images/Rectangle 1 (1).png";
-import facebook from "../images/Vector (9).png";
-import X from "../images/Group.png";
-import insta from "../images/instagram (2) 1.png";
-import snap from "../images/snapchat (1) 1.png";
-import tiktok from "../images/Vector (10).png";
-import youtube from "../images/Vector (11).png";
-import call from "../images/call.png";
-import whatsapp from "../images/whatsapp.png";
-import sms from "../images/sms.png";
-import googlePly from "../images/Group (1).png";
-import apple from "../images/Vector (12).png";
+import Logo from "../assets/images/Rectangle 1 (1).png";
+import facebook from "../assets/images/Vector (9).png";
+import X from "../assets/images/Group.png";
+import insta from "../assets/images/instagram (2) 1.png";
+import snap from "../assets/images/snapchat (1) 1.png";
+import tiktok from "../assets/images/Vector (10).png";
+import youtube from "../assets/images/Vector (11).png";
+import call from "../assets/images/call.png";
+import whatsapp from "../assets/images/whatsapp.png";
+import sms from "../assets/images/sms.png";
+import googlePly from "../assets/images/Group (1).png";
+import apple from "../assets/images/Vector (12).png";
 
 const Footer = () => {
   return (

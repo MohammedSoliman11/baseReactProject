@@ -43,7 +43,7 @@
 /* Home */
 .home
 {
-  background-image: linear-gradient(to right, rgba(34, 32, 32, 0.541) 4%, rgba(65, 63, 105, 0.973) 100% ),url("../images/bg.png");
+  background-image: linear-gradient(to right, rgba(34, 32, 32, 0.541) 4%, rgba(65, 63, 105, 0.973) 100% ),url("../assets/images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -159,7 +159,7 @@ i {
 /* section3 */
 .section3
 {
-  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../images/37c72c4e8da526d887301b5f08672e0f.jpg");
+  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../assets/images/37c72c4e8da526d887301b5f08672e0f.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -208,6 +208,7 @@ i {
 
 /* Box Styling */
 .content-box {
+  height: 100%;
   background-color: #ffffff;
   padding: 20px;
   border: 1px solid #e6e6e6;
@@ -260,7 +261,7 @@ i {
 
 /* section 5 */
 .we{
-  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../images/6f7e431dfc49da91637306e45c3239eb.jpg");
+  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../assets/images/6f7e431dfc49da91637306e45c3239eb.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -380,9 +381,12 @@ h2 span.text-warning {
 
 
 /* section 7 */
+.bidSlider{
+  height: 573px;
+}
 .review-background
 {
-  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../images/image.png");
+  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../assets/images/image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -393,7 +397,7 @@ h2 span.text-warning {
 .layered-container {
   position: relative;
   width:1000px;
-  height: 500px;
+  height: 515px;
   margin: 1px auto;
  
   overflow: hidden;
@@ -428,15 +432,16 @@ h2 span.text-warning {
 .layer-3 {
   width: 580px;
   height: 350px;
-  background-color: white; /* Light Blue */
- 
+  /*background-color: white;  Light Blue */
+  /* left: 210px;
+  top: 25px; */
   z-index: 3;
 }
 
 .dotted-box2 {
   position: absolute;
-  bottom: 410px;
-  right: 120px;
+  bottom: 407px;
+  right: 147px;
   width: 130px;
   height: 170px;
   background-image: radial-gradient(white 1px, transparent 2px);
@@ -446,7 +451,7 @@ h2 span.text-warning {
 }
 .dotted-box3 {
   position: absolute;
-  bottom: 110px;
+  bottom: 100px;
  
   left: 120px;
   width: 130px;
@@ -469,11 +474,13 @@ h2 span.text-warning {
   background-color: #ffffff;
   color: #333333;
   padding: 2rem;
-  max-width: 700px;
+  max-width: 580px;
   text-align: center;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   position: relative;
+  width: 580px;
+  height: 350px;
+  padding: 7%;
 }
 
 /* Quote Icon */
@@ -500,14 +507,25 @@ h2 span.text-warning {
 }
 
 /* Custom Arrows */
-.custom-arrow .carousel-control-prev-icon,
+.custom-arrow ,
+.custom-arrow  {
+  background-color: #FFFFFF;
+
+}
+
+.custom-arrow .carousel-control-prev-icon ,
 .custom-arrow .carousel-control-next-icon {
-  background-color: wheat;
+  background-color: #160C4D;
+  border-radius: 50%;
+  width: 40%;
+  margin: 10%;
+}
+.icon-container3{
+  background-color: #160C4D;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   margin: 20px;
-  
 }
 
 /* Pagination Dots */

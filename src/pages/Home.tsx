@@ -4,19 +4,19 @@ import "./../styles/Home.css";
 import smsIcon from "../assets/sms.png";
 import callIcon from "../assets/call.png";
 import calender from "../assets/Vector.png";
-import clockImg from "..//assets/Vector (1).png";
-import globalImg from "..//assets/Vector (2).png";
-import Logo from "..//images/Rectangle 1 (1).png";
-import graph from "../images/ic-trending-up-24px (1).png";
-import about from "../images/Rectangle 15.png";
-import vector from "../images/Vector (3).png";
-import light from "../images/flat-color-icons_idea.png";
-import arrow from "../images/mage_goals-fill.png";
-import vector2 from "../images/Vector (5).png";
-import game from "../images/game-icons_road.png";
-import vector3 from "../images/Vector (6).png";
-import vector4 from "../images/Group 1171275311.png";
-import coloredVector from "../images/Vector (8).png";
+import clockImg from "../assets/Vector (1).png";
+import globalImg from "../assets/Vector (2).png";
+import Logo from "../assets/images/Rectangle 1 (1).png";
+import graph from "../assets/images/ic-trending-up-24px (1).png";
+import about from "../assets/images/Rectangle 15.png";
+import vector from "../assets/images/Vector (3).png";
+import light from "../assets/images/flat-color-icons_idea.png";
+import arrow from "../assets/images/mage_goals-fill.png";
+import vector2 from "../assets/images/Vector (5).png";
+import game from "../assets/images/game-icons_road.png";
+import vector3 from "../assets/images/Vector (6).png";
+import vector4 from "../assets/images/Group 1171275311.png";
+import coloredVector from "../assets/images/Vector (8).png";
 
 const Home = () => {
   return (
@@ -199,13 +199,13 @@ const Home = () => {
                 إنــــه لمــن دواعــي فخـــــــــرنا واعتزازنا أن نكـــــون بهذا
                 الصــــــرح العملاق، متميــــــــزون بجودة ما نقدمه لعملائنا
                 وحرصاً منا على أن نكون على قدر الثقة التي نحظــــى بها في
-                العديـــــــــد من الأعمال والمشاريع،نتطلع لخـــــدمتكـم على
-                أكمــل وجــــه من خـــــلال فـــــريق عمــــل متخصص همـــه الأول
+                العديــــــد من الأعمال والمشاريع،نتطلع لخـــــدمتكـم على أكمــل
+                وجــــه من خـــــلال فـــــريق عمــــل متخصص همـــه الأول
                 ارضـــاؤكـــــم، والعمـــــل على إنجـــــــاز الأعمال وتنفيذها
                 بأفضل المواصــفات وفقاً للأصول الفنية لأن تحقيــــق رضــــــا
                 العمــلاء وإتمــــام الأعمــــــــــــــال الموكلــــة إلينــــا
                 في الوقت المحــدد هي ركزتين أســاسيتين للتميز والتطـــــــوير
-                والاستمــــــــــرارية في ســـــوق العمل بـنجــــاح
+                والاستمــــــــــرارية في ســــوق العمل بنجـــــــاح
               </p>
             </div>
             <div className='secondQouteIcon d-flex top-0 '>
@@ -401,8 +401,9 @@ const Home = () => {
               {/* Layer 2 */}
               <div className='layer layer-2'></div>
               {/* Layer 3 */}
-              <div className='layer layer-3 '>
-                <div className='testimonial-section py-5'>
+
+              <div className='layer layer-3 container'>
+                <div className='testimonial-section'>
                   <div className='container'>
                     {/* Bootstrap Carousel */}
                     <div
@@ -429,15 +430,17 @@ const Home = () => {
                         </div>
                         {/* Custom Navigation Arrows */}
                         <button
-                          className='carousel-control-prev custom-arrow '
+                          className='carousel-control-prev custom-arrow'
                           type='button'
                           data-bs-target='#testimonialCarousel'
                           data-bs-slide='prev'
                         >
-                          <span
-                            className='carousel-control-prev-icon'
-                            aria-hidden='true'
-                          ></span>
+                          <span className='icon-container3'>
+                            <span
+                              className='carousel-control-prev-icon'
+                              aria-hidden='true'
+                            ></span>
+                          </span>
                         </button>
                         <button
                           className='carousel-control-next custom-arrow'
@@ -445,10 +448,12 @@ const Home = () => {
                           data-bs-target='#testimonialCarousel'
                           data-bs-slide='next'
                         >
-                          <span
-                            className='carousel-control-next-icon'
-                            aria-hidden='true'
-                          ></span>
+                          <span className='icon-container3'>
+                            <span
+                              className='carousel-control-next-icon'
+                              aria-hidden='true'
+                            ></span>
+                          </span>
                         </button>
                       </div>
                     </div>
