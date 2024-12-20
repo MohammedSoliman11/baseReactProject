@@ -84,7 +84,7 @@ const Home = () => {
                 <a href='#why-we-are-here'>لماذا نحن؟ </a>
               </li>
               <li className='mx-2'>
-                <a href='#services'>الخدامات </a>
+                <a href='#services'>الخدمات </a>
               </li>
               <li className='mx-2'>
                 <a href='#reviews'>الآراء </a>
@@ -128,7 +128,7 @@ const Home = () => {
 
         <div className='container  projectsNum '>
           <div className='row justify-content-center'>
-            <div className='col-10'>
+            <div className='col-8'>
               <div className='stats-box d-flex justify-content-between align-items-center text-center p-4 rounded'>
                 {/* First Column */}
                 <div className='col'>

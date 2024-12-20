@@ -2,7 +2,7 @@
 /* Footer Container */
 .footer
 {
-  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../images/bb.jpg");
+  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../assets/images/bb.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -43,6 +43,8 @@
 
 .getIT
 {
+  text-align: left;
+  display: block;
   font-size: 13px;
   color: #2E255F;
 }

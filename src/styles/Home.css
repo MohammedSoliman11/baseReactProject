@@ -43,6 +43,7 @@
 /* Home */
 .home
 {
+  position: relative;
   background-image: linear-gradient(to right, rgba(34, 32, 32, 0.541) 4%, rgba(65, 63, 105, 0.973) 100% ),url("../assets/images/bg.png");
   background-size: cover;
   background-position: center;
@@ -52,7 +53,6 @@
 } 
 .login-btn
 {
-  color: #2E255F;
   font-weight: bold;
   padding: 10px;
 }
@@ -111,7 +111,10 @@ i {
 }
 .projectsNum
 {
-  margin-top: 150px;
+  position: absolute;
+  left: 50%;
+  bottom: -15%;
+  transform: translate(-50%, -10%);
 }
 
 /* Section 2 */
