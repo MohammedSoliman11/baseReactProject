@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "dinBold";
+  src: url("./assets/Fonts/din-next-lt-w23/din-next-lt-w23-bold.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "dinRegular";
+  src: url("./assets/Fonts/din-next-lt-w23/din-next-lt-w23-regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "dinMedium";
+  src: url("./assets/Fonts/din-next-lt-w23/DinNextLTW23Medium.ttf")
+    format("truetype");
+}
+
+:root {
+  /* Gray Colors */
+  --garyBG: #1d1f1f;
+  --gary600: #333333;
+  --gary500: #444444;
+  --gary400: #666666;
+  --gary300: #a5a5a5;
+  --gary200: #d6d6d6;
+  --gary100: #eeeeee;
+  --gary50: #f8f8f8;
+  --white: white;
+
+  /* Brand Colors */
+  --brandMain: #160c4d;
+  --brandMain25: #1601f540;
+  --brandMain10: #1601f51a;
+  --brandMain5: #1601f50d;
+
+  --secondary: #EBAE3B;
+  /* Error Colors */
+  --error: #f50b0b;
+  --error10: #fee7e7;
+  --error5: #fef2f2;
+
+  /* Success Colors */
+  --success: #00af6c;
+  --success25: #00af6c40;
+
+  /* Warning Colors */
+  --warnig: #ffaf44;
+  --warning25: #ffaf4440;
+}
+
+.regularFont {
+  font-family: "dinRegular";
+}
+.mediumFont {
+  font-family: "dinMedium";
+}
+.boldFont {
+  font-family: "dinBold";
+  /* font-size: 20px; */
+}

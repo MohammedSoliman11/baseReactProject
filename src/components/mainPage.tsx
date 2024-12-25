@@ -18,6 +18,9 @@ const MainPage = () => {
     })
   );
 
+  const [HomeClass, setHomeClass] = useState("home");
+  const [Navbar, setNavbar] = useState("");
+
   //    Make current date
   const [currentDate, setCurrentDate] = useState(
     new Date().toLocaleDateString("en-US", {
@@ -47,118 +50,134 @@ const MainPage = () => {
     );
   }, []);
 
+  // const homeToggle = 0;
+
+  const setHomeClassFun = () => {
+    console.log(HomeClass);
+    if (HomeClass === "home1") setHomeClass("home");
+    else setHomeClass("home1");
+
+    console.log(Navbar);
+    if (Navbar == "") setNavbar("navbar1");
+    else setNavbar("");
+  };
+
   return (
     <>
       {/* Home */}
 
       <div className='home pt-3 container-fluid'>
-        {/* Navbar1 */}
-        <div className='container d-flex justify-content-between regularFont align-items-center'>
-          {/* Right Side */}
-          <div className='iconContainer d-flex fs-6'>
-            <div className='bar-container pt-1'>
-              <img src={smsIcon} alt='' className='w-75' />
+        {/* Main NavBar */}
+        <div className={Navbar}>
+          {/* Navbar1 */}
+          <div className='container d-flex justify-content-between regularFont align-items-center'>
+            {/* Right Side */}
+            <div className='iconContainer d-flex fs-6'>
+              <div className='bar-container pt-1'>
+                <img src={smsIcon} alt='' className='w-75' />
+              </div>
+              <div className='callIcon me-4 pt-1'>
+                <img src={callIcon} className='w-75' alt='' />
+              </div>
             </div>
-            <div className='callIcon me-4 pt-1'>
-              <img src={callIcon} className='w-75' alt='' />
+            {/* Leftt Side */}
+            <div className='leftContent d-flex justify-content-end'>
+              <div className='d-flex align-items-center bar-container2'>
+                <div className='calenderImg w-75 '>
+                  <img src={calender} alt='' className='w-75' />
+                </div>
+
+                <span className='text-white fw-light mx-2 date pt-1 '>
+                  {currentDate.split("/").join(".")}
+                </span>
+              </div>
+
+              <div className='d-flex align-items-center fw-light me-4  bar-container2'>
+                <div className='clockImg w-75 '>
+                  <img src={clockImg} alt='' className='w-75' />
+                </div>
+                <span className='text-white mx-2  pt-1'>{Time}</span>
+              </div>
+
+              <div className='d-flex align-items-center me-4'>
+                <div className='clockImg w-75 '>
+                  <img src={globalImg} alt='' className='w-75' />
+                </div>
+                <span className='text-white pt-1'>العربية</span>
+              </div>
             </div>
           </div>
-          {/* Leftt Side */}
-          <div className='leftContent d-flex justify-content-end'>
-            <div className='d-flex align-items-center bar-container2'>
-              <div className='calenderImg w-75 '>
-                <img src={calender} alt='' className='w-75' />
-              </div>
 
-              <span className='text-white fw-light mx-2 date pt-1 '>
-                {currentDate.split("/").join(".")}
-              </span>
-            </div>
-
-            <div className='d-flex align-items-center fw-light me-4  bar-container2'>
-              <div className='clockImg w-75 '>
-                <img src={clockImg} alt='' className='w-75' />
-              </div>
-              <span className='text-white mx-2  pt-1'>{Time}</span>
-            </div>
-
-            <div className='d-flex align-items-center me-4'>
-              <div className='clockImg w-75 '>
-                <img src={globalImg} alt='' className='w-75' />
-              </div>
-              <span className='text-white pt-1'>العربية</span>
-            </div>
+          {/* Line */}
+          <div className='container text-white'>
+            <hr />
           </div>
-        </div>
 
-        {/* Line */}
-        <div className='container text-white'>
-          <hr />
-        </div>
+          {/* navbar2 */}
+          <div className='container'>
+            <nav className='navbar navbar-expand-lg'>
+              <a className='navbar-brand' href='#'>
+                <div className='logo d-flex'>
+                  <img src={Logo} alt='' className='w-75' />
+                </div>
+              </a>
+              <button
+                className='navbar-toggler  '
+                type='button'
+                data-bs-toggle='collapse'
+                data-bs-target='#navbarSupportedContent'
+                aria-controls='navbarSupportedContent'
+                aria-expanded='false'
+                aria-label='Toggle navigation'
+                onClick={setHomeClassFun}
+              >
+                <span className='navbar-toggler-icon'></span>
+              </button>
+              <div
+                className='collapse navbar-collapse'
+                id='navbarSupportedContent'
+              >
+                <ul className='navbar-nav m-auto mb-2 mb-lg-0 linkStyles'>
+                  <li className='nav-item'>
+                    <a href='#about-us' className='nav-link '>
+                      عن الشركة{" "}
+                    </a>
+                  </li>
+                  <li className='nav-item'>
+                    <a href='#why-we-are-here ' className='nav-link'>
+                      لماذا نحن؟{" "}
+                    </a>
+                  </li>
+                  <li className='nav-item'>
+                    <a href='#services' className='nav-link'>
+                      الخدمات{" "}
+                    </a>
+                  </li>
 
-        {/* navbar2 */}
-        <div className='container'>
-          <nav className='navbar navbar-expand-lg  '>
-            <a className='navbar-brand' href='#'>
-              <div className='logo d-flex'>
-                <img src={Logo} alt='' className='w-75' />
+                  <li className='nav-item'>
+                    <a href='#reviews' className='nav-link'>
+                      الآراء{" "}
+                    </a>
+                  </li>
+                  <li className='nav-item'>
+                    <a href='#join' className='nav-link'>
+                      طلب الانضمام{" "}
+                    </a>
+                  </li>
+                  <li className='nav-item'>
+                    <a href='#join' className='nav-link'>
+                      طلب خدمة{" "}
+                    </a>
+                  </li>
+                </ul>
+                <form className='d-flex' role='search'>
+                  <button type='button' className='btn py-3 px-5'>
+                    <span className='login-btn'>تسجيل الدخول</span>
+                  </button>
+                </form>
               </div>
-            </a>
-            <button
-              className='navbar-toggler  '
-              type='button'
-              data-bs-toggle='collapse'
-              data-bs-target='#navbarSupportedContent'
-              aria-controls='navbarSupportedContent'
-              aria-expanded='false'
-              aria-label='Toggle navigation'
-            >
-              <span className='navbar-toggler-icon'></span>
-            </button>
-            <div
-              className='collapse navbar-collapse'
-              id='navbarSupportedContent'
-            >
-              <ul className='navbar-nav m-auto mb-2 mb-lg-0 linkStyles'>
-                <li className='nav-item'>
-                  <a href='#about-us' className='nav-link '>
-                    عن الشركة{" "}
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='#why-we-are-here ' className='nav-link'>
-                    لماذا نحن؟{" "}
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='#services' className='nav-link'>
-                    الخدمات{" "}
-                  </a>
-                </li>
-
-                <li className='nav-item'>
-                  <a href='#reviews' className='nav-link'>
-                    الآراء{" "}
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='#join' className='nav-link'>
-                    طلب الانضمام{" "}
-                  </a>
-                </li>
-                <li className='nav-item'>
-                  <a href='#join' className='nav-link'>
-                    طلب خدمة{" "}
-                  </a>
-                </li>
-              </ul>
-              <form className='d-flex' role='search'>
-                <button type='button' className='btn btn-warning py-3 px-5 '>
-                  <span className='login-btn'>تسجيل الدخول</span>
-                </button>
-              </form>
-            </div>
-          </nav>
+            </nav>
+          </div>
         </div>
 
         {/* Content */}
@@ -188,10 +207,10 @@ const MainPage = () => {
               <div className='stats-box d-flex justify-content-between align-items-center text-center p-4 rounded'>
                 {/* First Column */}
                 <div className='col'>
-                  <h6 className='text-muted mb-2 regularFont'>عدد المشاريع</h6>
-                  <h2 className='text-warning boldFont'>5092</h2>
+                  <h6 className='mb-2 regularFont'>عدد المشاريع</h6>
+                  <h2 className='boldFont'>5092</h2>
 
-                  <p className='text-muted mediumFont'>
+                  <p className='mediumFont'>
                     <img src={graph} alt='' />{" "}
                     <span className='text-success fw-bold'>90%</span> أعلى خلال
                     عام{" "}
@@ -199,9 +218,9 @@ const MainPage = () => {
                 </div>
 
                 <div className='col border-end'>
-                  <h6 className='text-muted mb-2 regularFont'>عدد الشركاء</h6>
-                  <h2 className='text-warning boldFont'>1005</h2>
-                  <p className='text-muted mediumFont'>
+                  <h6 className='mb-2 regularFont'>عدد الشركاء</h6>
+                  <h2 className='boldFont'>1005</h2>
+                  <p className='mediumFont'>
                     <img src={graph} alt='' />{" "}
                     <span className='text-success fw-bold'>75%</span> أعلى خلال
                     عام <i className='bi bi-arrow-up-right'></i>
