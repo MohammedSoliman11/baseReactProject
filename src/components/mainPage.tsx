@@ -182,16 +182,16 @@ const MainPage = () => {
           </div>
         </div>
 
-        <div className='container  projectsNum '>
+        <div className='container  projectsNum'>
           <div className='row justify-content-center'>
             <div className='col-8'>
               <div className='stats-box d-flex justify-content-between align-items-center text-center p-4 rounded'>
                 {/* First Column */}
                 <div className='col'>
-                  <h6 className='text-muted mb-2'>عدد المشاريع</h6>
-                  <h2 className='text-warning fw-bold '>5092</h2>
+                  <h6 className='text-muted mb-2 regularFont'>عدد المشاريع</h6>
+                  <h2 className='text-warning boldFont'>5092</h2>
 
-                  <p className='text-muted small'>
+                  <p className='text-muted mediumFont'>
                     <img src={graph} alt='' />{" "}
                     <span className='text-success fw-bold'>90%</span> أعلى خلال
                     عام{" "}
@@ -199,9 +199,9 @@ const MainPage = () => {
                 </div>
 
                 <div className='col border-end'>
-                  <h6 className='text-muted mb-2'>عدد الشركاء</h6>
-                  <h2 className='text-warning fw-bold '>1005</h2>
-                  <p className='text-muted small'>
+                  <h6 className='text-muted mb-2 regularFont'>عدد الشركاء</h6>
+                  <h2 className='text-warning boldFont'>1005</h2>
+                  <p className='text-muted mediumFont'>
                     <img src={graph} alt='' />{" "}
                     <span className='text-success fw-bold'>75%</span> أعلى خلال
                     عام <i className='bi bi-arrow-up-right'></i>

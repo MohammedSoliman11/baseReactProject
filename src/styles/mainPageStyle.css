@@ -102,8 +102,8 @@
 .home {
   background-image: linear-gradient(
       to right,
-      rgba(34, 32, 32, 0.541) 4%,
-      rgba(65, 63, 105, 0.973) 100%
+      #00000079 47.5%,
+      #13094AF2 95%
     ),
     url("../assets/images/bg.png");
   background-size: cover;
@@ -172,8 +172,15 @@ i {
   font-size: 0.9rem;
 }
 .projectsNum {
-  position: absolute;
-  left: 50%;
-  bottom: 30%;
-  transform: translate(-50%, 30%);
+  position: relative;
+  bottom: -13%;
+}
+.rounded h6 {
+  font-size: 20px;
+}
+.rounded h2 {
+  font-size: 40px;
+}
+.rounded p {
+  font-size: 14px;
 }
