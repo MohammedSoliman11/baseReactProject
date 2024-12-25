@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/froms.css";
+import "../styles/forms.css";
 import KSAFlag from "../assets/image.png";
 const Form = () => {
   // State to track the active form

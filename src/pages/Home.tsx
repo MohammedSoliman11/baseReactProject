@@ -1,12 +1,11 @@
 import "./../styles/Home.css";
-import light from "../assets/images/flat-color-icons_idea.png";
-import arrow from "../assets/images/mage_goals-fill.png";
 import game from "../assets/images/game-icons_road.png";
 import vector3 from "../assets/images/Vector (6).png";
 import vector4 from "../assets/images/Group 1171275311.png";
 import coloredVector from "../assets/images/Vector (8).png";
 import MainPage from "../components/mainPage";
 import AboutUs from "../components/aboutUs";
+import Vision from "../components/vision";
 
 const Home = () => {
   return (
@@ -14,63 +13,7 @@ const Home = () => {
       {/* Home */}
       <MainPage></MainPage>
       <AboutUs></AboutUs>
-
-      {/* section 4 */}
-      <div className='container my-5'>
-        <div className='row text-right'>
-          {/* Right Column */}
-          <div className='col-md-6 mb-4'>
-            <div className='content-box'>
-              <h4 className='title d-flex'>
-                <div className='lightIcon d-flex justify-content-center align-items-center border-warning '>
-                  <img src={light} alt='' className='lightImg' />
-                </div>
-                <div className='lightContent'>
-                  <span className='coloredP5 pe-2'>
-                    {" "}
-                    <span className='text-warning'>رؤية</span> المؤسسة
-                  </span>
-                </div>
-              </h4>
-              <p className='content-text me-5 text-justify'>
-                أن تكـــــــون مـــؤسســــــة حــــدود البنـــــــاء للمقاولات
-                العامـــة ،رائـــدة في الســــوق المحلي والعالمي، وذلك بتقديمها
-                أعلى مستويات التــــــقنية والجودة في مجال البناء، وأن نصبح
-                الخيــــار الأفضـــــل للعمـــــــلاء مـــــــن خـــــلال
-                تحقيـــــق الاستــــدامـة والتميـــــز في جــــودة المشاريـع
-                المنجـــــزة فـــي الوقــــت المحــــدد وبأسعـار مناسبـــة
-                ومنافســـــة.
-              </p>
-            </div>
-          </div>
-
-          {/* Left Column */}
-          <div className='col-md-6 mb-4'>
-            <div className='content-box'>
-              <h4 className='title d-flex'>
-                <div className='lightIcon d-flex justify-content-center align-items-center border-warning '>
-                  <img src={arrow} alt='' className='lightImg' />
-                </div>
-                <div className='lightContent'>
-                  <span className='coloredP5 pe-2'>
-                    {" "}
-                    <span className='text-warning'>رسالة</span> المؤسسة
-                  </span>
-                </div>
-              </h4>
-              <p className='content-text me-5 text-justify'>
-                نسعى في مؤسسة حدود البناء للمقاولات العامة لتقـديم ما يتطلع إليه
-                العميل وذلك بإيجاد حــلول البناـــء والتي تتماـــشي مع
-                الميزانيـــات المختلفــة الأمـــــــر الذي يسهــــــم في
-                إيجــــــاد خيارات متعددة للمبـــاني السكني - التجـــــاري وفقآ
-                لاحتياج العمـــلاء، ومواكية تقديـــم واهتمام المؤسسة بمعايير
-                الجودة.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <Vision></Vision>
       {/* section 5 */}
       <div id='why-we-are-here' className='we container-fluid mb-5'>
         <div className='why-us-section py-5 text-white'>
