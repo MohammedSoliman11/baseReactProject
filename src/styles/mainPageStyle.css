@@ -1,0 +1,179 @@
+/* Using Global Fonts */
+@font-face {
+  font-family: "dinBold";
+  src: url("../assets/Fonts/din-next-lt-w23/din-next-lt-w23-bold.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "dinRegular";
+  src: url("../assets/Fonts/din-next-lt-w23/din-next-lt-w23-regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "dinMedium";
+  src: url("../assets/Fonts/din-next-lt-w23/DinNextLTW23Medium.ttf")
+    format("truetype");
+}
+
+/* Using Main Colors */
+:root {
+  /* Gray Colors */
+  --garyBG: #1d1f1f;
+  --gary600: #333333;
+  --gary500: #444444;
+  --gary400: #666666;
+  --gary300: #a5a5a5;
+  --gary200: #d6d6d6;
+  --gary100: #eeeeee;
+  --gary50: #f8f8f8;
+  --white: white;
+
+  /* Brand Colors */
+  --brandMain: #160c4d;
+  --brandMain25: #1601f540;
+  --brandMain10: #1601f51a;
+  --brandMain5: #1601f50d;
+
+  /* Error Colors */
+  --error: #f50b0b;
+  --error10: #fee7e7;
+  --error5: #fef2f2;
+
+  /* Success Colors */
+  --success: #00af6c;
+  --success25: #00af6c40;
+
+  /* Warning Colors */
+  --warnig: #ffaf44;
+  --warning25: #ffaf4440;
+}
+.regularFont {
+  font-family: "dinRegular";
+}
+.mediumFont {
+  font-family: "dinMedium";
+}
+.boldFont {
+  font-family: "dinBold";
+}
+.bar-container {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bar-container::after {
+  content: "";
+  top: 0;
+  margin-right: 30px;
+  display: block;
+  position: absolute;
+  width: 7%;
+  height: 70%;
+  background-color: white; /* Bar color */
+  margin-top: 6px;
+}
+.bar-container2 {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bar-container2::after {
+  content: "";
+  top: 0;
+  margin-right: 105%;
+  display: block;
+  position: absolute;
+  width: 0.5%;
+  height: 70%;
+  background-color: white; /* Bar color */
+  margin-top: 6px;
+}
+.date {
+  font-size: 16px;
+}
+
+/* Home */
+.home {
+  background-image: linear-gradient(
+      to right,
+      rgba(34, 32, 32, 0.541) 4%,
+      rgba(65, 63, 105, 0.973) 100%
+    ),
+    url("../assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 794px;
+  width: 100%;
+}
+.navbar-brand{
+  margin-right: 0px !important;
+}
+.linkStyles li a {
+  color: var(--white) !important;
+  font-family: "dinMedium";
+}
+.login-btn {
+  color: #2e255f;
+
+  font-family: "dinRegular";
+}
+.btn {
+  border-radius: 12px !important;
+}
+/* .show {
+  background-color: var(--brandMain);
+} */
+ .homeContent{
+  max-width: 630px;
+ }
+.firstP {
+  color: var(--warnig);
+  font-size: 24px;
+}
+.firstP2 {
+  font-size: 39px;
+}
+.firstP3 {
+  font-size: 24px;
+}
+.service {
+  background-color: rgba(255, 255, 255, 0.164);
+  border: 1px solid white !important;
+  border-radius: 12px;
+  padding: 15px 30px;
+}
+
+.stats-box {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.border-end {
+  border-right: 1px solid #dee2e6; /* Divider between columns */
+}
+
+.text-warning {
+  color: #ffcc00; /* Gold color for numbers */
+}
+
+.text-success {
+  color: #28a745; /* Green text for percentages */
+}
+
+i {
+  font-size: 0.9rem;
+}
+.projectsNum {
+  position: absolute;
+  left: 50%;
+  bottom: 35%;
+  transform: translate(-50%, 30%);
+}
