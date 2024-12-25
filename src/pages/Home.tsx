@@ -1,11 +1,6 @@
-// src/pages/Home.jsx
-// import React from "react";
 import "./../styles/Home.css";
-
-import vector from "../assets/images/Vector (3).png";
 import light from "../assets/images/flat-color-icons_idea.png";
 import arrow from "../assets/images/mage_goals-fill.png";
-import vector2 from "../assets/images/Vector (5).png";
 import game from "../assets/images/game-icons_road.png";
 import vector3 from "../assets/images/Vector (6).png";
 import vector4 from "../assets/images/Group 1171275311.png";
@@ -19,37 +14,6 @@ const Home = () => {
       {/* Home */}
       <MainPage></MainPage>
       <AboutUs></AboutUs>
-      {/* Section 3 */}
-      <div className='section3 container-fluid mt-5 mb-5'>
-        <h5 className=' text-white coloredP3 mb-5 pt-5 text-center'>
-          كلمة مدير{" "}
-          <span className='text-warning borderr border-warning'>المؤسسة</span>
-        </h5>
-        <h5>
-          <div className='qoute d-flex align-content-center justify-content-center'>
-            <div className='firstQouteIcon'>
-              <img src={vector} alt='' className='w-75' />
-            </div>
-            <div className='quoteText'>
-              <p className='text-justify text-white  fs-5'>
-                إنــــه لمــن دواعــي فخـــــــــرنا واعتزازنا أن نكـــــون بهذا
-                الصــــــرح العملاق، متميــــــــزون بجودة ما نقدمه لعملائنا
-                وحرصاً منا على أن نكون على قدر الثقة التي نحظــــى بها في
-                العديــــــد من الأعمال والمشاريع،نتطلع لخـــــدمتكـم على أكمــل
-                وجــــه من خـــــلال فـــــريق عمــــل متخصص همـــه الأول
-                ارضـــاؤكـــــم، والعمـــــل على إنجـــــــاز الأعمال وتنفيذها
-                بأفضل المواصــفات وفقاً للأصول الفنية لأن تحقيــــق رضــــــا
-                العمــلاء وإتمــــام الأعمــــــــــــــال الموكلــــة إلينــــا
-                في الوقت المحــدد هي ركزتين أســاسيتين للتميز والتطـــــــوير
-                والاستمــــــــــرارية في ســــوق العمل بنجـــــــاح
-              </p>
-            </div>
-            <div className='secondQouteIcon d-flex top-0 '>
-              <img src={vector2} alt='' className='w-75' />
-            </div>
-          </div>
-        </h5>
-      </div>
 
       {/* section 4 */}
       <div className='container my-5'>

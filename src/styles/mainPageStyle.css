@@ -51,7 +51,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 794px;
+  min-height: 794px;
   width: 100%;
 }
 .navbar-brand{
@@ -124,7 +124,7 @@ i {
 }
 .projectsNum {
   position: relative;
-  bottom: -13%;
+    top: 100px;
 }
 .rounded h6 {
   font-size: 20px;

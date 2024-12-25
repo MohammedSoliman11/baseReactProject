@@ -37,10 +37,42 @@
 }
 .underLine {
   border-bottom: 1px solid var(--secondary) !important;
-  color: var(--secondary);
 }
 .rounded{
   display: block;
   max-width: 100%;
   height: auto;
 }
+
+/* section3 */
+.section3 {
+  background-image: linear-gradient(
+      to right,
+      var(--background-sections) 82%,
+      var(--background-sections) 82%
+    ),
+    url("../assets/images/37c72c4e8da526d887301b5f08672e0f.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 557px;
+  width: 100%;
+}
+.section3 h5{
+  font-size: 32px;
+}
+
+.quoteText {
+  font-size: 30px;
+  line-height: 52.5px;
+  text-align: justify; /* Align the text to both left and right */
+  text-justify: inter-word; /* Justify by adjusting word spacing */
+}
+
+
+/* .secondQuoteIcon {
+  flex-direction: column;
+  flex-flow: column-reverse;
+  top: 0;
+  padding-bottom: 25px;
+} */

@@ -31,7 +31,7 @@
   --brandMain25: #1601f540;
   --brandMain10: #1601f51a;
   --brandMain5: #1601f50d;
-
+  --background-sections: #160C4DD1;
   --secondary: #EBAE3B;
   /* Error Colors */
   --error: #f50b0b;
@@ -55,5 +55,10 @@
 }
 .boldFont {
   font-family: "dinBold";
-  /* font-size: 20px; */
+}
+.brandMain-color{
+  color: var(--brandMain);
+}
+.secondary-color{
+  color: var(--secondary);
 }
