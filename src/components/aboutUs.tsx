@@ -28,14 +28,16 @@ const AboutUs = () => {
             </p>
           </div>
           {/* Left Section - Image */}
-          <div className='col-md-6 position-relative'>
-            <div className='orange-box'></div>
-            <img
-              src={about}
-              alt='Construction Plans'
-              className='img-fluid rounded'
-            />
-            <div className='dotted-box'></div>
+          <div className='col-md-6 position-relative d-inline-block'>
+            <div className='img-container'>
+              <div className='orange-box'></div>
+              <img
+                src={about}
+                alt='Construction Plans'
+                className='img-fluid rounded'
+              />
+              <div className='dotted-box'></div>
+            </div>
           </div>
         </div>
       </div>

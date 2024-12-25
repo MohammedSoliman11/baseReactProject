@@ -1,31 +1,3 @@
-/* Using Global Fonts */
-@font-face {
-  font-family: "dinBold";
-  src: url("../assets/Fonts/din-next-lt-w23/din-next-lt-w23-bold.ttf")
-    format("truetype");
-}
-@font-face {
-  font-family: "dinRegular";
-  src: url("../assets/Fonts/din-next-lt-w23/din-next-lt-w23-regular.ttf")
-    format("truetype");
-}
-@font-face {
-  font-family: "dinMedium";
-  src: url("../assets/Fonts/din-next-lt-w23/DinNextLTW23Medium.ttf")
-    format("truetype");
-}
-
-/* Using Main Colors */
-
-.regularFont {
-  font-family: "dinRegular";
-}
-.mediumFont {
-  font-family: "dinMedium";
-}
-.boldFont {
-  font-family: "dinBold";
-}
 .bar-container {
   position: relative;
   display: inline-block;

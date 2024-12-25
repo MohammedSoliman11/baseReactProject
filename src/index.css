@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "dinBold";
+  src: url("./assets/Fonts/din-next-lt-w23/din-next-lt-w23-bold.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "dinRegular";
+  src: url("./assets/Fonts/din-next-lt-w23/din-next-lt-w23-regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "dinMedium";
+  src: url("./assets/Fonts/din-next-lt-w23/DinNextLTW23Medium.ttf")
+    format("truetype");
+}
+
 :root {
   /* Gray Colors */
   --garyBG: #1d1f1f;
@@ -15,11 +31,8 @@
   --brandMain25: #1601f540;
   --brandMain10: #1601f51a;
   --brandMain5: #1601f50d;
-  /* Secondary Colors */
-  --secondary: #EBAE3B;
-  --secondary25: #fcb50340;
-  --secondary10: #fcb5031a;
 
+  --secondary: #EBAE3B;
   /* Error Colors */
   --error: #f50b0b;
   --error10: #fee7e7;
@@ -34,10 +47,13 @@
   --warning25: #ffaf4440;
 }
 
-.secondary-color{
-  color: var(--secondary);
+.regularFont {
+  font-family: "dinRegular";
 }
-
-.brandMain-color{
-  color: var(--brandMain);
+.mediumFont {
+  font-family: "dinMedium";
+}
+.boldFont {
+  font-family: "dinBold";
+  /* font-size: 20px; */
 }
