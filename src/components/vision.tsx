@@ -5,7 +5,7 @@ const Vision = () => {
   return (
     <>
       {/* section 4 */}
-      <div className='container my-5'>
+      <div className='container my-5 py-5'>
         <div className='row text-right'>
           {/* Right Column */}
           <div className='col-md-6 my-2'>
