@@ -156,6 +156,7 @@ i {
 }
 .rounded h6 {
   font-size: 20px;
+  color: var(--brandMain);
 }
 .rounded h2 {
   color: var(--secondary);
@@ -163,4 +164,5 @@ i {
 }
 .rounded p {
   font-size: 14px;
+  color: var(--gray300);
 }

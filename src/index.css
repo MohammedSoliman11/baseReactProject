@@ -33,3 +33,11 @@
   --warnig: #ffaf44;
   --warning25: #ffaf4440;
 }
+
+.secondary-color{
+  color: var(--secondary);
+}
+
+.brandMain-color{
+  color: var(--brandMain);
+}

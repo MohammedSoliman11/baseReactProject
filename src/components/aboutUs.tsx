@@ -1,23 +1,24 @@
 import about from "../assets/images/Rectangle 15.png";
+import "../styles/aboutUs.css";
 const AboutUs = () => {
   return (
     <>
       {/* Section 2 */}
       <div id='about-us' className='container section2 mb-5'>
-        <h5 className=' text-dark fw-bold mb-5 text-center'>
-          عن <span className='text-warning borderr border-warning'>الشركة</span>
+        <h5 className='mb-5 text-center mediumFont'>
+          عن <span className='underLine'>الشركة</span>
         </h5>
         <div className='row align-items-center'>
           {/* Right Section - Text */}
           <div className='col-md-6'>
-            <h2 className='fw-bold text-warning mb-4'>
-              مؤسسة حدود البناء{" "}
-              <span className='text-dark'>للمقاولات العامة</span>
+            <h2 className='mb-4 boldFont aboutUs-title'>
+              <span className='secondary-color'> مؤسسة حدود البناء </span>
+              <span className='brandMain-color'> للمقاولات العامة </span>
             </h2>
-            <p className='coloredP1'>
+            <p className='boldFont brandMain-color aboutUs-subtitle'>
               التميز هو أساس ما نقوم به مــن أجـــــل بنـــــــاء المستقبــــل
             </p>
-            <p className='text-muted  coloredP2'>
+            <p className='regularFont brandMain-color aboutUs-subtitle'>
               {" "}
               مؤسسة حدود البناء للمقاولات العامة لا تقتصر فقط أعمالها على
               المقاولات من أعمال البناء وغيرها، بل تمتد أيضاً إلى الأنشطة
