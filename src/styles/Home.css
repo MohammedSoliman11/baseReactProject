@@ -2,12 +2,11 @@
 /* Custom Styling for AboutUs Component */
 .orange-box {
   position: absolute;
-  top: -15px;
-
-  left: 125px;
-  width: 120px;
-  height: 120px;
-  background-color: #ffcc00; /* Orange color */
+  top: -20px;
+  right: 375px;
+  width: 162.3px;
+  height: 136.84px;
+  background-color: #EBAE3B;
   z-index: -1;
 }
 
