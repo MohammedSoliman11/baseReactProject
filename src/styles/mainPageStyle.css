@@ -112,6 +112,9 @@
   height: 794px;
   width: 100%;
 }
+.navbar-brand{
+  margin-right: 0px !important;
+}
 .linkStyles li a {
   color: var(--white) !important;
   font-family: "dinMedium";
@@ -127,14 +130,15 @@
 /* .show {
   background-color: var(--brandMain);
 } */
+ .homeContent{
+  max-width: 630px;
+ }
 .firstP {
   color: var(--warnig);
   font-size: 24px;
 }
 .firstP2 {
   font-size: 39px;
-  font-family: "dinBold";
-  max-width: 630px;
 }
 .firstP3 {
   font-size: 24px;
@@ -170,6 +174,6 @@ i {
 .projectsNum {
   position: absolute;
   left: 50%;
-  bottom: -10%;
-  transform: translate(-50%, 50%);
+  bottom: 35%;
+  transform: translate(-50%, 30%);
 }
