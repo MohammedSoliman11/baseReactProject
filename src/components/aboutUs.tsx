@@ -1,7 +1,7 @@
 import about from "../assets/images/Rectangle 15.png";
 import vector from "../assets/images/Vector (3).png";
 import vector2 from "../assets/images/Vector (5).png";
-import "../styles/aboutUs.css";
+import "../styles/AboutUs.css";
 const AboutUs = () => {
   return (
     <>
