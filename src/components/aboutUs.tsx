@@ -52,10 +52,10 @@ const AboutUs = () => {
           </h5>
           <div className='regularFont d-flex align-content-center justify-content-center mt-4'>
             <div className='row'>
-              <div className='col-md-1 firstQuoteIcon d-flex align-items-start justify-content-end pt-4'>
+              <div className='col-md-2 firstQuoteIcon d-flex align-items-start justify-content-end pt-4'>
                 <img src={vector} alt='' className='' />
               </div>
-              <div className='col-md-9 quoteText'>
+              <div className='col-md-8 quoteText'>
                 <p className='text-white'>
                   إنــــه لمــن دواعــي فخـــــــــرنا واعتزازنا أن نكـــــون
                   بهذا الصــــــرح العملاق، متميــــــــزون بجودة ما نقدمه
@@ -68,10 +68,10 @@ const AboutUs = () => {
                   العمــلاء وإتمــــام الأعمــــــــــــــال الموكلــــة
                   إلينــــا في الوقت المحــدد هي ركزتين أســــــاسيتين للتميز
                   والتطـــــــوير والاستمـــــــــــــــرارية في ســــــــوق
-                  العمل بنجـــــــاح
+                  العمل بنجــاح
                 </p>
               </div>
-              <div className='col-md-1 secondQuoteIcon d-flex align-items-end justify-content-start pb-5'>
+              <div className='col-md-2 secondQuoteIcon d-flex align-items-end justify-content-start pb-5'>
                 <img src={vector2} alt='' className='' />
               </div>
             </div>

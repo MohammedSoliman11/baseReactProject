@@ -51,6 +51,7 @@
       var(--background-sections) 82%,
       var(--background-sections) 82%
     ),
+    linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04)), 
     url("../assets/images/37c72c4e8da526d887301b5f08672e0f.jpg");
   background-size: cover;
   background-position: center;
