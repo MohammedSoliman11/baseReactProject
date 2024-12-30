@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../styles/landing-page-styles/forms.css";
-import IMAGE_PATH from "../../images/Image-path";
-const { KSAFlag } = IMAGE_PATH;
+import KSAFlag from "../../assets/image.png";
+
 const Form = () => {
   // State to track the active form
   const [activeForm, setActiveForm] = useState("join"); // 'join' or 'service'

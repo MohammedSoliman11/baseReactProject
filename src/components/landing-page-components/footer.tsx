@@ -1,21 +1,17 @@
-// import React from "react";
 import "../../styles/landing-page-styles/footer.css"; // Import your CSS
 
-import IMAGE_PATH from "../../images/Image-path";
-const {
-  Logo,
-  facebook,
-  X,
-  insta,
-  snap,
-  tiktok,
-  youtube,
-  callFooter,
-  whatsapp,
-  smsFooter,
-  googlePly,
-  apple,
-} = IMAGE_PATH;
+import Logo from "../../assets/images/Rectangle 1 (1).png";
+import facebook from "../../assets/images/Vector (9).png";
+import X from "../../assets/images/Group.png";
+import insta from "../../assets/images/instagram (2) 1.png";
+import snap from "../../assets/images/snapchat (1) 1.png";
+import tiktok from "../../assets/images/Vector (10).png";
+import youtube from "../../assets/images/Vector (11).png";
+import callFooter from "../../assets/images/call.png";
+import whatsapp from "../../assets/images/whatsapp.png";
+import smsFooter from "../../assets/images/sms.png";
+import googlePly from "../../assets/images/GooglePlay.jpg";
+import apple from "../../assets/images/appStore.jpg";
 
 const Footer = () => {
   return (

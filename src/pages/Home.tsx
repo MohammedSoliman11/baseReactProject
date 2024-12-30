@@ -1,12 +1,15 @@
 import "../styles/landing-page-styles/Home.css";
-import IMAGE_PATH from "../images/Image-path";
+
 import MainPage from "../components/landing-page-components/mainPage";
 import AboutUs from "../components/landing-page-components/aboutUs";
 import Vision from "../components/landing-page-components/vision";
 import Footer from "../components/landing-page-components/footer";
 import Form from "../components/landing-page-components/forms";
+import gameHome from "../assets/images/game-icons_road.png";
+import vector3Home from "../assets/images/Vector (6).png";
+import vector4Home from "../assets/images/Group 1171275311.png";
+import coloredVectorHome from "../assets/images/Vector (8).png";
 
-const { game, vector3, vector4, coloredVector } = IMAGE_PATH;
 const Home = () => {
   return (
     <>
@@ -90,7 +93,7 @@ const Home = () => {
             <div className='col-md-4 mb-4'>
               <div className='service-card p-4'>
                 <div className='icon-circle2 projectCard1 mb-3 service-card1 '>
-                  <img src={game} alt='Roads' />
+                  <img src={gameHome} alt='Roads' />
                 </div>
                 <h5 className='mediumFont fontSize-24'>مشاريع الطرق</h5>
                 <p className='card-text regularFont fontSize-16'>
@@ -104,7 +107,7 @@ const Home = () => {
             <div className='col-md-4 mb-4'>
               <div className='service-card p-4'>
                 <div className='icon-circle2 secondary-bgColor mb-3'>
-                  <img src={vector3} alt='Buildings' />
+                  <img src={vector3Home} alt='Buildings' />
                 </div>
                 <h5 className='mediumFont fontSize-24'>مشاريع المباني</h5>
                 <p className='card-text regularFont fontSize-16'>
@@ -118,7 +121,7 @@ const Home = () => {
             <div className='col-md-4 mb-4'>
               <div className='service-card p-4'>
                 <div className='icon-circle2 infra-bg mb-3'>
-                  <img src={vector4} alt='Infrastructure' />
+                  <img src={vector4Home} alt='Infrastructure' />
                 </div>
                 <h5 className='mediumFont fontSize-24'>
                   مشاريع البنية التحتية
@@ -162,7 +165,7 @@ const Home = () => {
                   {/* First Slide */}
                   <div className='carousel-item active'>
                     <div className='testimonial-card mx-auto'>
-                      <img src={coloredVector} alt='' />
+                      <img src={coloredVectorHome} alt='' />
                       <h5 className='mediumFont fontSize-20 brandMain-color mt-3'>
                         Janna Khaled
                       </h5>
@@ -179,7 +182,7 @@ const Home = () => {
                   {/* Second Slide */}
                   <div className='carousel-item active'>
                     <div className='testimonial-card mx-auto'>
-                      <img src={coloredVector} alt='' />
+                      <img src={coloredVectorHome} alt='' />
                       <h5 className='mediumFont fontSize-20 brandMain-color mt-3'>
                         Janna Khaled
                       </h5>
