@@ -1,11 +1,9 @@
-import "./../styles/mainPageStyle.css";
-import smsIcon from "../assets/sms.png";
-import callIcon from "../assets/call.png";
-import calender from "../assets/Vector.png";
-import clockImg from "../assets/Vector (1).png";
-import globalImg from "../assets/Vector (2).png";
-import Logo from "../assets/images/Rectangle 1 (1).png";
-import graph from "../assets/images/ic-trending-up-24px (1).png";
+import "../../styles/landing-page-styles/mainPageStyle.css";
+
+import IMAGE_PATH from "../../images/Image-path";
+
+const { sms, call, calender, clockImg, globalImg, Logo, graph } = IMAGE_PATH;
+
 import { useEffect, useState } from "react";
 
 const MainPage = () => {
@@ -74,10 +72,10 @@ const MainPage = () => {
             {/* Right Side */}
             <div className='iconContainer d-flex fs-6'>
               <div className='bar-container pt-1'>
-                <img src={smsIcon} alt='' className='w-75' />
+                <img src={sms} alt='' className='w-75' />
               </div>
               <div className='callIcon me-4 pt-1'>
-                <img src={callIcon} className='w-75' alt='' />
+                <img src={call} className='w-75' alt='' />
               </div>
             </div>
             {/* Leftt Side */}
@@ -171,7 +169,10 @@ const MainPage = () => {
                   </li>
                 </ul>
                 <form className='d-flex' role='search'>
-                  <button type='button' className='btn py-3 px-5'>
+                  <button
+                    type='button'
+                    className='btn secondary-bgColor py-3 px-5'
+                  >
                     <span className='login-btn'>تسجيل الدخول</span>
                   </button>
                 </form>

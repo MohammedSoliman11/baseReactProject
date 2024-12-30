@@ -47,7 +47,7 @@
       #00000079 47.5%,
       #13094AF2 95%
     ),
-    url("../assets/images/bg.png");
+    url("../../assets/images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -65,10 +65,6 @@
   color: #2e255f;
 
   font-family: "dinRegular";
-}
-.btn {
-  border-radius: 12px !important;
-  background-color: var(--secondary) !important;;
 }
 
 .navbar1{

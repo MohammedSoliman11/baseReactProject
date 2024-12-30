@@ -6,8 +6,8 @@
   position: absolute;
   top: -25px;
   left: -25px;
-  width: 162.3px;
-  height: 136.84px;
+  width: 35%;
+  height: 35%;
   background-color: var(--secondary); /* Adjust the color of the box */
   z-index: -1;
 }
@@ -46,12 +46,8 @@
 
 /* section3 */
 .section3 {
-  background-image: linear-gradient(
-      to right,
-      var(--background-sections) 82%,
-      var(--background-sections) 82%
-    ),
-    url("../assets/images/37c72c4e8da526d887301b5f08672e0f.jpg");
+  background-image: linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80%),
+    url("../../assets/images/37c72c4e8da526d887301b5f08672e0f.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +59,7 @@
 }
 
 .quoteText {
-  font-size: 30px;
+  font-size: 27px;
   line-height: 52.5px;
   text-align: justify; /* Align the text to both left and right */
   text-justify: inter-word; /* Justify by adjusting word spacing */

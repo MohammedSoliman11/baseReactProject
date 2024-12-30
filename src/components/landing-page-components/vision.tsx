@@ -1,6 +1,8 @@
-import light from "../assets/images/flat-color-icons_idea.png";
-import arrow from "../assets/images/mage_goals-fill.png";
-import "../styles/vision.css";
+import "../../styles/landing-page-styles/vision.css";
+
+import IMAPGE_PATH from "../../images/Image-path";
+const { light, arrow } = IMAPGE_PATH;
+
 const Vision = () => {
   return (
     <>
