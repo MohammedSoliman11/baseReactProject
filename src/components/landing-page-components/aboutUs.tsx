@@ -1,6 +1,9 @@
 import "../../styles/landing-page-styles/AboutUs.css";
-import IMAGE_PATH from "../../images/Image-path";
-const { about, vector, vector2 } = IMAGE_PATH;
+
+import about from "../../assets/images/Rectangle15.png";
+import vector from "../../assets/images/Vector (3).png";
+import vector2 from "../../assets/images/Vector (5).png";
+
 const AboutUs = () => {
   return (
     <>

@@ -1,8 +1,12 @@
 import "../../styles/landing-page-styles/mainPageStyle.css";
 
-import IMAGE_PATH from "../../images/Image-path";
-
-const { sms, call, calender, clockImg, globalImg, Logo, graph } = IMAGE_PATH;
+import sms from "../../assets/images/sms1.png";
+import call from "../../assets/images/call1.png";
+import calender from "../../assets/Vector.png";
+import clockImg from "../../assets/Vector (1).png";
+import globalImg from "../../assets/Vector (2).png";
+import Logo from "../../assets/images/Rectangle 1 (1).png";
+import graph from "../../assets/images/ic-trending-up-24px (1).png";
 
 import { useEffect, useState } from "react";
 
