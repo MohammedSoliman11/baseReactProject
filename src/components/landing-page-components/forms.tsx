@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styles/froms.css";
-import KSAFlag from "../assets/image.png";
+import "../../styles/landing-page-styles/forms.css";
+import IMAGE_PATH from "../../images/Image-path";
+const { KSAFlag } = IMAGE_PATH;
 const Form = () => {
   // State to track the active form
   const [activeForm, setActiveForm] = useState("join"); // 'join' or 'service'
@@ -11,12 +11,15 @@ const Form = () => {
   const showServiceForm = () => setActiveForm("service");
 
   return (
-    <div id='join' className='container d-flex justify-content-center mt-5'>
+    <div
+      id='join'
+      className='formMain container d-flex justify-content-center mt-5'
+    >
       {/* Toggle Buttons */}
-      <div className='col-md-8'>
-        <div className='d-flex justify-content-center mb-4 tabs'>
+      <div className='col-md-10'>
+        <div className='d-flex justify-content-center mb-4 tabs mediumFont'>
           <button
-            className={`col-md-6 btn ${
+            className={`col-md-6 btn fontSize-32 ${
               activeForm === "join" ? "active" : ""
             } tab`}
             onClick={showJoinForm}
@@ -24,7 +27,7 @@ const Form = () => {
             طلب انضمام
           </button>
           <button
-            className={`col-md-6 btn ${
+            className={`col-md-6 btn  fontSize-32 ${
               activeForm === "service" ? "active " : ""
             } tab`}
             onClick={showServiceForm}
@@ -43,7 +46,7 @@ const Form = () => {
 
 // "طلب انضمام" Form
 const JoinForm = () => (
-  <form>
+  <form className='mediumFont'>
     <div className='mb-3'>
       <div className='input-container'>
         <label className='input-label'>الاسم الثلاثي</label>
@@ -155,7 +158,7 @@ const JoinForm = () => (
 
 // "طلب خدمة" Form
 const ServiceForm = () => (
-  <form>
+  <form className='mediumFont'>
     <div className='mb-3'>
       <div className='input-container'>
         <label className='input-label'>الاسم الثلاثي</label>

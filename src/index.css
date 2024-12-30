@@ -62,3 +62,18 @@
 .secondary-color{
   color: var(--secondary);
 }
+.secondary-bgColor{
+  background-color: var(--secondary) !important;
+}
+.fontSize-32{
+  font-size: 32px !important;
+}
+.fontSize-24{
+  font-size: 24px;
+}
+.fontSize-40{
+  font-size: 40px;
+}
+.fontSize-16{
+  font-size: 16px;
+}

@@ -1,0 +1,24 @@
+/* Section 4 */
+/* General Text Alignment */
+.text-right {
+  text-align: right;
+}
+
+/* Box Styling */
+.content-box {
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lightIcon {
+  border: 0.5px solid;
+  border-radius: 50%;
+
+}
+.text-justify {
+  text-align: justify;
+}

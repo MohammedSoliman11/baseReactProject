@@ -2,25 +2,20 @@
 /* Footer Container */
 .footer
 {
-  background-image:linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80% ), url("../assets/images/bb.jpg");
+  padding-top: 100px;
+  background-image:linear-gradient(to bottom, #160C4DE5, #000000 ), url("../../assets/images/bb.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
+  min-height: 545px;
 }
 
 .footer-container {
-   
   color: #fff;
   font-family: "Arial", sans-serif;
 }
 
 /* Footer Title Styling */
-.footer-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
 
 /* Links and Icons */
 .footer-container ul {
@@ -40,28 +35,8 @@
   padding: 7px;
   border-color: rgba(235, 174, 59, 1);
 }
-
-.getIT
-{
-  text-align: left;
-  display: block;
-  font-size: 13px;
-  color: #2E255F;
-}
-.googleStyle
-{
-  font-size: 17px;
-  font-weight: bold;
-  color: #2E255F;
-}
-.googleStyle
-{
+.storeLinks{
   border-radius: 5px;
-}
-.google
-{
- 
-  margin-bottom: 10px;
 }
 
 

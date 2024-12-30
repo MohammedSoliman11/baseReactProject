@@ -1,54 +1,3 @@
-/* Section 4 */
-/* General Text Alignment */
-.text-right {
-  text-align: right;
-}
-
-/* Box Styling */
-.content-box {
-  height: 100%;
-  background-color: #ffffff;
-  padding: 20px;
-  border: 1px solid #e6e6e6;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Title Styling */
-.title {
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-
-.icon {
-  font-size: 20px;
-  margin-left: 8px;
-}
-
-/* Text Styling */
-.content-text {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.8;
-}
-
-.lightImg {
-  width: 80%;
-}
-.lightIcon {
-  border: 0.5px solid;
-  border-radius: 50%;
-  padding: 3px;
-}
-.coloredP5 {
-  color: rgba(22, 12, 77, 1);
-}
-.text-justify {
-  text-align: justify;
-  font-size: 16px;
-  color: rgba(22, 12, 77, 0.65);
-  font-weight: 400;
-}
 
 /* section 5 */
 .we {
@@ -57,11 +6,11 @@
       rgba(65, 63, 105, 0.959) 1%,
       rgba(65, 63, 105, 0.925) 80%
     ),
-    url("../assets/images/6f7e431dfc49da91637306e45c3239eb.jpg");
+    url("../../assets/images/6f7e431dfc49da91637306e45c3239eb.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 350px;
+  min-height: 350px;
 }
 /* Section Background */
 
@@ -70,15 +19,12 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
-  background-color: #fcb503; /* White background for icons */
-  color: white; /* Number color */
-  font-size: 1.5rem;
-  font-weight: bold;
+  width: 56px;
+  height: 56px;
+  background-color: var(--secondary); /* White background for icons */
   border-radius: 50%; /* Makes it circular */
-  margin: 0 auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  align-items: flex-end;
 }
 
 /* Heading Styling */
@@ -139,6 +85,7 @@ h2 span.text-warning {
 }
 .service-card1 {
   border: 2px solid rgba(156, 143, 240, 0.699);
+  background-color: #4C466C;
 }
 .card-title2 {
   color: #2e255f;
@@ -148,7 +95,9 @@ h2 span.text-warning {
   width: 45px;
   height: 45px;
 }
-
+.infra-bg{
+  background-color: #0A8CD7;
+}
 /* Card Title Styling */
 .card-title {
   font-size: 1.2rem;
@@ -156,20 +105,11 @@ h2 span.text-warning {
 }
 
 .card-text {
-  font-size: 0.9rem;
-  color: #555555;
-  line-height: 1.6;
+  color: #160C4DA6;
 }
-.presentIT {
-  color: rgba(22, 12, 77, 1);
-}
-.projectCard1 {
-  background-color: rgba(76, 70, 108, 1);
-}
-
 /* section 7 */
 .bidSlider {
-  height: 573px;
+  min-height: 573px;
 }
 .review-background {
   background-image: linear-gradient(
@@ -177,7 +117,7 @@ h2 span.text-warning {
       rgba(65, 63, 105, 0.959) 1%,
       rgba(65, 63, 105, 0.925) 80%
     ),
-    url("../assets/images/image.png");
+    url("../../assets/images/image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -186,7 +126,6 @@ h2 span.text-warning {
 /* Container for the layers */
 .layered-container {
   position: relative;
-  width: 1000px;
   height: 515px;
   margin: 1px auto;
 
@@ -204,7 +143,7 @@ h2 span.text-warning {
 /* Layer 1: Largest */
 .layer-1 {
   width: 650px;
-  height: 310px;
+  min-height: 310px;
   background-color: #dee2e6; /* Yellow */
   z-index: 1;
 }
@@ -212,15 +151,16 @@ h2 span.text-warning {
 /* Layer 2: Medium */
 .layer-2 {
   width: 620px;
-  height: 330px;
+  min-height: 330px;
   background-color: whitesmoke; /* Dark Purple */
   z-index: 2;
 }
 
 /* Layer 3: Smallest */
 .layer-3 {
-  width: 580px;
-  height: 350px;
+  /* width: 580px; */
+  max-width: 580px;
+  min-height: 350px;
   /*background-color: white;  Light Blue */
   /* left: 210px;
   top: 25px; */
@@ -229,24 +169,23 @@ h2 span.text-warning {
 
 .dotted-box2 {
   position: absolute;
-  bottom: 407px;
-  right: 147px;
-  width: 130px;
-  height: 170px;
+  top: -35px;
+  right: -75px;
+  width: 20%;
+  height: 30%;
   background-image: radial-gradient(white 1px, transparent 2px);
   background-size: 10px 10px;
-  z-index: 0;
+  z-index: -999;
 }
 .dotted-box3 {
-  position: absolute;
-  bottom: 100px;
-
-  left: 120px;
-  width: 130px;
-  height: 130px;
   background-image: radial-gradient(rgba(235, 174, 59, 1) 1px, transparent 2px);
   background-size: 10px 10px;
   z-index: 50;
+  position: absolute;
+  bottom: -25px;
+  left: -75px;
+  width: 20%;
+  height: 30%;
 }
 /* kjhjgvhfcgd */
 
@@ -264,8 +203,8 @@ h2 span.text-warning {
   text-align: center;
   border-radius: 20px;
   position: relative;
-  width: 580px;
-  height: 350px;
+  /* width: 580px; */
+  min-height: 350px;
   padding: 7%;
 }
 
@@ -281,7 +220,7 @@ h2 span.text-warning {
 
 /* Star Rating */
 .stars {
-  color: #fcb503;
+  color: #FEB62F;
   font-size: 1rem;
 }
 

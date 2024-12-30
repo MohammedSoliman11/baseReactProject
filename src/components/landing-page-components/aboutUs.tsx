@@ -1,7 +1,6 @@
-import about from "../assets/images/Rectangle 15.png";
-import vector from "../assets/images/Vector (3).png";
-import vector2 from "../assets/images/Vector (5).png";
-import "../styles/AboutUs.css";
+import "../../styles/landing-page-styles/AboutUs.css";
+import IMAGE_PATH from "../../images/Image-path";
+const { about, vector, vector2 } = IMAGE_PATH;
 const AboutUs = () => {
   return (
     <>
@@ -52,10 +51,10 @@ const AboutUs = () => {
           </h5>
           <div className='regularFont d-flex align-content-center justify-content-center mt-4'>
             <div className='row'>
-              <div className='col-md-1 firstQuoteIcon d-flex align-items-start justify-content-end pt-4'>
+              <div className='col-md-2 firstQuoteIcon d-flex align-items-start justify-content-end pt-4'>
                 <img src={vector} alt='' className='' />
               </div>
-              <div className='col-md-9 quoteText'>
+              <div className='col-md-8 quoteText'>
                 <p className='text-white'>
                   إنــــه لمــن دواعــي فخـــــــــرنا واعتزازنا أن نكـــــون
                   بهذا الصــــــرح العملاق، متميــــــــزون بجودة ما نقدمه
@@ -67,11 +66,11 @@ const AboutUs = () => {
                   المواصــفات وفقاً للأصول الفنية لأن تحقيــــق رضــــــا
                   العمــلاء وإتمــــام الأعمــــــــــــــال الموكلــــة
                   إلينــــا في الوقت المحــدد هي ركزتين أســــــاسيتين للتميز
-                  والتطـــــــوير والاستمـــــــــــــــرارية في ســــــــوق
-                  العمل بنجـــــــاح
+                  والتطـــــــوير والاستمـــــــــــــــرارية في ســـوق العمل
+                  بنجــاح
                 </p>
               </div>
-              <div className='col-md-1 secondQuoteIcon d-flex align-items-end justify-content-start pb-5'>
+              <div className='col-md-2 secondQuoteIcon d-flex align-items-end justify-content-start pb-5'>
                 <img src={vector2} alt='' className='' />
               </div>
             </div>
