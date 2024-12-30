@@ -1,6 +1,6 @@
 .formMain{
       position: relative;
-      z-index: 9999;
+      z-index: 1;
       bottom: -142px;
       background-color: #ffffff;
       min-height: 1000px;
