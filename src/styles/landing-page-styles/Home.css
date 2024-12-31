@@ -1,0 +1,277 @@
+
+/* section 5 */
+.we {
+  background-image: linear-gradient(
+      to right,
+      rgba(65, 63, 105, 0.959) 1%,
+      rgba(65, 63, 105, 0.925) 80%
+    ),
+    url("../../assets/images/6f7e431dfc49da91637306e45c3239eb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 350px;
+}
+/* Section Background */
+
+/* Circular Icon Styling */
+.icon-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  background-color: var(--secondary); /* White background for icons */
+  border-radius: 50%; /* Makes it circular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  align-items: flex-end;
+}
+
+/* Heading Styling */
+h2 span.text-warning {
+  color: #fcb503; /* Custom warning color */
+}
+
+/* Feature Item Text */
+.feature-item h5 {
+  font-weight: bold;
+}
+
+.feature-item p {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+/* section 6 */
+/* Section Background */
+.services-section {
+  background-color: #ffffff;
+}
+
+/* Section Header Styling */
+.section-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3d3d3d;
+}
+
+.section-header .text-warning {
+  color: #fcb503; /* Custom orange color */
+}
+
+/* Service Card Styling */
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon Circle Styling */
+.icon-circle2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+}
+.service-card1 {
+  border: 2px solid rgba(156, 143, 240, 0.699);
+  background-color: #4C466C;
+}
+.card-title2 {
+  color: #2e255f;
+  padding-bottom: 7px;
+}
+.icon-circle img {
+  width: 45px;
+  height: 45px;
+}
+.infra-bg{
+  background-color: #0A8CD7;
+}
+/* Card Title Styling */
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #160C4DA6;
+}
+/* section 7 */
+.bidSlider {
+  min-height: 573px;
+}
+.review-background {
+  background-image: linear-gradient(
+      to right,
+      rgba(65, 63, 105, 0.959) 1%,
+      rgba(65, 63, 105, 0.925) 80%
+    ),
+    url("../../assets/images/image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 550px;
+}
+/* Container for the layers */
+.layered-container {
+  position: relative;
+  height: 515px;
+  margin: 1px auto;
+
+  overflow: hidden;
+}
+
+/* Base style for layers */
+.layer {
+  position: absolute;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  margin-bottom: 100px;
+}
+
+/* Layer 1: Largest */
+.layer-1 {
+  width: 650px;
+  min-height: 310px;
+  background-color: #dee2e6; /* Yellow */
+  z-index: 1;
+}
+
+/* Layer 2: Medium */
+.layer-2 {
+  width: 620px;
+  min-height: 330px;
+  background-color: whitesmoke; /* Dark Purple */
+  z-index: 2;
+}
+
+/* Layer 3: Smallest */
+.layer-3 {
+  /* width: 580px; */
+  max-width: 580px;
+  min-height: 350px;
+  /*background-color: white;  Light Blue */
+  /* left: 210px;
+  top: 25px; */
+  z-index: 3;
+}
+
+.dotted-box2 {
+  position: absolute;
+  top: -35px;
+  right: -75px;
+  width: 20%;
+  height: 30%;
+  background-image: radial-gradient(white 1px, transparent 2px);
+  background-size: 10px 10px;
+  z-index: -999;
+}
+.dotted-box3 {
+  background-image: radial-gradient(rgba(235, 174, 59, 1) 1px, transparent 2px);
+  background-size: 10px 10px;
+  z-index: 50;
+  position: absolute;
+  bottom: -25px;
+  left: -75px;
+  width: 20%;
+  height: 30%;
+}
+/* kjhjgvhfcgd */
+
+/* Section Background */
+.testimonial-section {
+  position: relative;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background-color: #ffffff;
+  color: #333333;
+  padding: 2rem;
+  max-width: 580px;
+  text-align: center;
+  border-radius: 20px;
+  position: relative;
+  /* width: 580px; */
+  min-height: 350px;
+  padding: 7%;
+}
+
+/* Quote Icon */
+.quote-icon {
+  font-size: 3rem;
+  color: #fcb503;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Star Rating */
+.stars {
+  color: #FEB62F;
+  font-size: 1rem;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Custom Arrows */
+.custom-arrow,
+.custom-arrow {
+  background-color: #ffffff;
+}
+
+.custom-arrow .carousel-control-prev-icon,
+.custom-arrow .carousel-control-next-icon {
+  background-color: #160c4d;
+  border-radius: 50%;
+  width: 40%;
+  margin: 10%;
+}
+.icon-container3 {
+  background-color: #160c4d;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+}
+
+/* Pagination Dots */
+.carousel-indicators [data-bs-target] {
+  background-color: #fcb503;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+/* Arrow styling */
+.arrow {
+  color: #4d3c77; /* Dark purple arrow */
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Hover effect for the button */
+.circular-btn:hover {
+  transform: scale(1.1); /* Slight zoom */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+.button-container {
+  margin-right: 170px;
+  padding-top: 20px;
+}

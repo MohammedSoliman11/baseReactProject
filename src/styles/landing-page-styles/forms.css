@@ -1,16 +1,11 @@
-button.btn {
-  font-weight: bold;
+.formMain{
+      position: relative;
+      z-index: 1;
+      bottom: -142px;
+      background-color: #ffffff;
+      min-height: 1000px;
+      border-radius: 16px;
 }
-
-button.btn-warning {
-  color: #fff;
-}
-
-button.btn-light {
-  color: #000;
-}
-
-
 .gradient-button {
   background: linear-gradient(to right, #5a4a8e, #10084d); /* Gradient */
   color: white;
@@ -125,19 +120,17 @@ button.btn-light {
   border-bottom: 2px solid #f0f0f0;
 }
 
-.tab {
-  padding: 10px 20px;
-  color: #9e9e9e; /* Inactive text color */
+/* .tab {
+  padding: 10px 20px;/
   cursor: pointer;
   font-size: 18px;
-}
+} */
 
 .tab.active {
-  color: #f4a61e; /* Active text color */
-  border-bottom: 2px solid #f4a61e; /* Active tab underline */
+  color: #f4a61e !important; /* Active text color */
+  border-bottom: 2px solid #f4a61e !important; /* Active tab underline */
   border-top: 0px;
   border-left: 0px;
   border-right: 0px;
-  font-weight: bold;
   border-radius: 0px;
 }

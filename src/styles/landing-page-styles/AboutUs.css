@@ -1,0 +1,74 @@
+.img-container{
+  position: relative;
+  display: inline-block; /* Ensures it fits to the content */
+}
+.orange-box {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 35%;
+  height: 35%;
+  background-color: var(--secondary); /* Adjust the color of the box */
+  z-index: -1;
+}
+
+.dotted-box {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  width: 80px;
+  height: 100px;
+  background-image: radial-gradient(black 1px, transparent 1px);
+  background-size: 8px 8px;
+  z-index: 5;
+  opacity: 0.5;
+}
+.section2 {
+  margin-top: 150px;
+}
+.section2 h5{
+  font-size: 32px;
+}
+.aboutUs-title{
+  font-size: 39px;
+}
+.aboutUs-subtitle{
+  font-size: 20px;
+}
+.underLine {
+  border-bottom: 1px solid var(--secondary) !important;
+}
+.rounded{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* section3 */
+.section3 {
+  background-image: linear-gradient(to right, rgba(65, 63, 105, 0.959) 1%, rgba(65, 63, 105, 0.925) 80%),
+    url("../../assets/images/37c72c4e8da526d887301b5f08672e0f.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 557px;
+  width: 100%;
+}
+.section3 h5{
+  font-size: 32px;
+}
+
+.quoteText {
+  font-size: 27px;
+  line-height: 52.5px;
+  text-align: justify; /* Align the text to both left and right */
+  text-justify: inter-word; /* Justify by adjusting word spacing */
+}
+
+
+/* .secondQuoteIcon {
+  flex-direction: column;
+  flex-flow: column-reverse;
+  top: 0;
+  padding-bottom: 25px;
+} */
