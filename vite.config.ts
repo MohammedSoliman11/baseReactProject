@@ -9,4 +9,5 @@ export default defineConfig({
       "@": "/src",
     },
   },
+  base: "/", // Keep '/' if deploying to the root domain
 });
