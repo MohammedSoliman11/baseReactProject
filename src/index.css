@@ -59,8 +59,14 @@
 .brandMain-color{
   color: var(--brandMain);
 }
+.brandMain-bgColor{
+  background-color: var(--brandMain) !important;
+}
 .secondary-color{
   color: var(--secondary);
+}
+.gray400-color{
+  color: var(--gary400);
 }
 .secondary-bgColor{
   background-color: var(--secondary) !important;
@@ -76,4 +82,10 @@
 }
 .fontSize-16{
   font-size: 16px;
+}
+.fontSize-14{
+  font-size: 14px;
+}
+.fontSize-12{
+  font-size: 12px;
 }
