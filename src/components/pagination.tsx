@@ -42,7 +42,9 @@ const Pagination: React.FC<PaginationProps> = ({
         <li className={`${currentPage === 1 ? "disabled" : ""}`}>
           <button
             className='page-link'
-            onClick={() => handlePageChange(currentPage - 1)}
+            onClick={() =>
+              handlePageChange(currentPage - 1 >= 1 ? currentPage - 1 : 1)
+            }
           >
             &raquo;
           </button>

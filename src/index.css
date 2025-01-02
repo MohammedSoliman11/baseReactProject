@@ -41,6 +41,7 @@
   /* Success Colors */
   --success: #00af6c;
   --success25: #00af6c40;
+  --success5: #009E800D;
 
   /* Warning Colors */
   --warnig: #ffaf44;
@@ -61,6 +62,9 @@
 }
 .brandMain-bgColor{
   background-color: var(--brandMain) !important;
+}
+.success5-color{
+  color: var(--success5);
 }
 .secondary-color{
   color: var(--secondary);

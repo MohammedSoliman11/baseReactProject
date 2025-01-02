@@ -26,18 +26,18 @@ const TopBar = () => {
         <div className='d-flex justify-content-center align-items-center gap-2'>
           <div className=''>
             <button className='btn btn-light p-2'>
-              <i className='bi bi-bell text-warning'></i>
+              <i className='bi bi-bell-fill secondary-color'></i>
             </button>
           </div>
           <div className=''>
             <button className='btn btn-light p-2'>
-              <i className='bi bi-envelope text-info'></i>
+              <i className='bi bi-envelope-fill text-primary'></i>
             </button>
           </div>
 
           <div className=''>
             <button className='btn btn-light p-2'>
-              <i className='bi bi-person-circle text-primary'></i>
+              <i className='bi bi-person-fill text-success'></i>
             </button>
           </div>
         </div>
@@ -54,7 +54,12 @@ const TopBar = () => {
               src={KSAFlag} // Replace with the flag icon
               alt='Arabic'
               className='me-2'
-              style={{ width: "20px", height: "15px" }}
+              style={{
+                width: "20px",
+                height: "20px",
+                borderRadius: "50%",
+                margin: "10px",
+              }}
             />
             العربية
           </button>

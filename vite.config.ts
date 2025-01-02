@@ -1,13 +1,13 @@
-// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
+  root: ".", // Set project root (where index.html is located)
   plugins: [react()],
-  resolve: {
-    alias: {
-      "@": "/src",
+  build: {
+    outDir: "dist", // Output directory for production build
+    rollupOptions: {
+      input: "./index.html", // Path to index.html
     },
   },
-  base: "/", // Keep '/' if deploying to the root domain
 });

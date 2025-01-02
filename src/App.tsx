@@ -2,14 +2,14 @@
 // import "./App.css"; // Import your CSS
 import Home from "./pages/Home";
 import Layout from "./layout/Layout";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { TableTabs } from "./components/dashboard-components/table-tabs";
 // import Sidebar from "./components/side-bar";
 
 const App = () => {
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/dashboard' element={<Layout />}>
@@ -23,7 +23,7 @@ const App = () => {
             />
           </Route>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 };
