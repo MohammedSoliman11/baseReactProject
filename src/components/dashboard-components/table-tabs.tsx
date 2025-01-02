@@ -1,8 +1,8 @@
 import TableWithPagination from "./table";
-import { data } from "../../store/data";
+import { data, reportData } from "../../store/data";
 import { tableHeaders } from "../../store/table-headers/table-headers";
 import { useState } from "react";
-const { suggested } = tableHeaders;
+const { suggested, reports } = tableHeaders;
 import "../../styles/dashboard-styles/table-tabs.css";
 export const TableTabs = () => {
   const [activeForm, setActiveForm] = useState("Form1"); // 'join' or 'service'
@@ -31,26 +31,28 @@ export const TableTabs = () => {
           </p>
         </div>
         <div className='d-flex justify-content-between'>
-          <div className=''>
-            <button className='btn btn-light p-2'>
+          <div className='mx-2'>
+            <button className='btn p-2'>
               <i className='bi bi-download text-info'></i>
             </button>
           </div>
-          <div className=''>
-            <button className='btn btn-light p-2'>
+          <div className='mx-2'>
+            <button className='btn p-2'>
               <i className='bi bi-sliders d-inline-block rotate-icon secondary-color'></i>
             </button>
           </div>
-          <div className=''>
-            <button className='btn btn-light p-2'>
+          <div className='mx-2'>
+            <button className='btn p-2'>
               <i className='bi bi-printer-fill brandMain-color '></i>
             </button>
           </div>
           <button
-            className='btn brandMain-bgColor text-white px-4 py-2'
+            className='btn brandMain-bgColor px-4 py-2'
             onClick={showForm1}
           >
-            + إضافة
+            <span className='text-white mediumFont fontSize-14 '>
+              <i className='bi bi-plus'></i> إضافة
+            </span>
           </button>
         </div>
       </div>
@@ -96,8 +98,9 @@ export const TableTabs = () => {
         </div>
       </div>
       <TableWithPagination
-        data={data}
-        columns={suggested}
+        data={activeForm == "Form1" ? data : reportData}
+        columns={activeForm == "Form1" ? suggested : reports}
+        currentPageParam={1}
       ></TableWithPagination>
     </div>
   );
