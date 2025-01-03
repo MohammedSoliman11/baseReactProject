@@ -1,0 +1,43 @@
+/* footer */
+/* Footer Container */
+.footer
+{
+  padding-top: 100px;
+  background-image:linear-gradient(to bottom, #160C4DE5, #000000 ), url("../../assets/images/bb.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 545px;
+}
+
+.footer-container {
+  color: #fff;
+  font-family: "Arial", sans-serif;
+}
+
+/* Footer Title Styling */
+
+/* Links and Icons */
+.footer-container ul {
+  padding-left: 0;
+}
+
+.footer-container li {
+  margin-bottom: 0.5rem;
+}
+
+.faceIcon
+{
+  width: 35px;
+  height: 35px;
+  border: 1.5px solid red;
+  border-radius: 50%;
+  padding: 7px;
+  border-color: rgba(235, 174, 59, 1);
+}
+.storeLinks{
+  border-radius: 5px;
+}
+
+
+

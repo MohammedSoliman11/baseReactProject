@@ -1,69 +1,95 @@
+@font-face {
+  font-family: "dinBold";
+  src: url("./assets/Fonts/din-next-lt-w23/din-next-lt-w23-bold.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "dinRegular";
+  src: url("./assets/Fonts/din-next-lt-w23/din-next-lt-w23-regular.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "dinMedium";
+  src: url("./assets/Fonts/din-next-lt-w23/DinNextLTW23Medium.ttf")
+    format("truetype");
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Gray Colors */
+  --garyBG: #1d1f1f;
+  --gary600: #333333;
+  --gary500: #444444;
+  --gary400: #666666;
+  --gary300: #a5a5a5;
+  --gary200: #d6d6d6;
+  --gary100: #eeeeee;
+  --gary50: #f8f8f8;
+  --white: white;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Brand Colors */
+  --brandMain: #160c4d;
+  --brandMain25: #1601f540;
+  --brandMain10: #1601f51a;
+  --brandMain5: #1601f50d;
+  --background-sections: #160C4DD1;
+  --secondary: #EBAE3B;
+  /* Error Colors */
+  --error: #f50b0b;
+  --error10: #fee7e7;
+  --error5: #fef2f2;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-}
+  /* Success Colors */
+  --success: #00af6c;
+  --success25: #00af6c40;
+  --success5: #009E800D;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  /* Warning Colors */
+  --warnig: #ffaf44;
+  --warning25: #ffaf4440;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.regularFont {
+  font-family: "dinRegular";
 }
-button:hover {
-  border-color: #646cff;
+.mediumFont {
+  font-family: "dinMedium";
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.boldFont {
+  font-family: "dinBold";
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.brandMain-color{
+  color: var(--brandMain);
+}
+.brandMain-bgColor{
+  background-color: var(--brandMain) !important;
+}
+.success5-color{
+  color: var(--success5);
+}
+.secondary-color{
+  color: var(--secondary);
+}
+.gray400-color{
+  color: var(--gary400);
+}
+.secondary-bgColor{
+  background-color: var(--secondary) !important;
+}
+.fontSize-32{
+  font-size: 32px !important;
+}
+.fontSize-24{
+  font-size: 24px;
+}
+.fontSize-40{
+  font-size: 40px;
+}
+.fontSize-16{
+  font-size: 16px;
+}
+.fontSize-14{
+  font-size: 14px;
+}
+.fontSize-12{
+  font-size: 12px;
 }

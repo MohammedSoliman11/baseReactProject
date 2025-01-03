@@ -1,0 +1,136 @@
+.bar-container {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bar-container::after {
+  content: "";
+  top: 0;
+  margin-right: 30px;
+  display: block;
+  position: absolute;
+  width: 7%;
+  height: 70%;
+  background-color: white; /* Bar color */
+  margin-top: 6px;
+}
+.bar-container2 {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.bar-container2::after {
+  content: "";
+  top: 0;
+  margin-right: 105%;
+  display: block;
+  position: absolute;
+  width: 0.5%;
+  height: 70%;
+  background-color: white; /* Bar color */
+  margin-top: 6px;
+}
+.date {
+  font-size: 16px;
+}
+
+/* Home */
+.home {
+  background-image: linear-gradient(
+      to right,
+      #00000079 47.5%,
+      #13094AF2 95%
+    ),
+    url("../../assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 794px;
+  width: 100%;
+}
+.navbar-brand{
+  margin-right: 0px !important;
+}
+.linkStyles li a {
+  color: var(--white) !important;
+  font-family: "dinMedium";
+}
+.login-btn {
+  color: #2e255f;
+
+  font-family: "dinRegular";
+}
+
+.navbar1{
+  background-color: var(--brandMain);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right:0;
+  line-height: 32px;
+  height: 932px;
+  width: 100%;
+}
+.homeContent{
+  max-width: 630px;
+}
+.firstP {
+  color: var(--secondary);
+  font-size: 24px;
+}
+.firstP2 {
+  font-size: 39px;
+}
+.firstP3 {
+  font-size: 24px;
+}
+.service {
+  background-color: rgba(255, 255, 255, 0.164);
+  border: 1px solid white !important;
+  border-radius: 12px;
+  padding: 15px 30px;
+}
+
+.stats-box {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.border-end {
+  border-right: 1px solid #dee2e6; /* Divider between columns */
+}
+
+.text-warning {
+  color: #ffcc00; /* Gold color for numbers */
+}
+
+.text-success {
+  color: #28a745; /* Green text for percentages */
+}
+
+i {
+  font-size: 0.9rem;
+}
+.projectsNum {
+  position: relative;
+    top: 100px;
+}
+.rounded h6 {
+  font-size: 20px;
+  color: var(--brandMain);
+}
+.rounded h2 {
+  color: var(--secondary);
+  font-size: 40px;
+}
+.rounded p {
+  font-size: 14px;
+  color: var(--gray300);
+}

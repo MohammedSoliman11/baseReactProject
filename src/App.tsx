@@ -1,25 +1,30 @@
-// src/App.jsx
 // import React from "react";
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+// import "./App.css"; // Import your CSS
 import Home from "./pages/Home";
-import About from "./pages/About";
 import Layout from "./layout/Layout";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { TableTabs } from "./components/dashboard-components/table-tabs";
+// import Sidebar from "./components/side-bar";
 
 const App = () => {
-  const routes = createHashRouter([{
-    path: "/",
-    element: <Layout />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/Home", element: <Home /> },
-      { path: "/about", element: <About /> },
-    ],
-  }
-]);
-
   return (
-    <RouterProvider router={routes}>
-    </RouterProvider>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/dashboard' element={<Layout />}>
+            <Route
+              index
+              element={
+                <div className='mt-4'>
+                  <TableTabs />
+                </div>
+              }
+            />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 };
 
