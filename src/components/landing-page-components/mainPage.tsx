@@ -9,6 +9,7 @@ import Logo from "../../assets/images/Rectangle 1 (1).png";
 import graph from "../../assets/images/ic-trending-up-24px (1).png";
 
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MainPage = () => {
   // Make current time
@@ -170,6 +171,12 @@ const MainPage = () => {
                     <a href='#join' className='nav-link'>
                       طلب خدمة{" "}
                     </a>
+                  </li>
+                  <li className='nav-item'>
+                    {/* <Link to='/'>Home</Link> */}
+                    <Link to='/dashboard' className='nav-link'>
+                      الميزانية
+                    </Link>
                   </li>
                 </ul>
                 <form className='d-flex' role='search'>
