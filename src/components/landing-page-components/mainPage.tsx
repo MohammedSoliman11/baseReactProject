@@ -21,8 +21,8 @@ const MainPage = () => {
     })
   );
 
-  const [HomeClass, setHomeClass] = useState("home");
   const [Navbar, setNavbar] = useState("");
+  const [NavbarShow, setNavbarShow] = useState("");
 
   //    Make current date
   const [currentDate, setCurrentDate] = useState(
@@ -53,16 +53,17 @@ const MainPage = () => {
     );
   }, []);
 
-  // const homeToggle = 0;
-
   const setHomeClassFun = () => {
-    console.log(HomeClass);
-    if (HomeClass === "home1") setHomeClass("home");
-    else setHomeClass("home1");
-
     console.log(Navbar);
     if (Navbar == "") setNavbar("navbar1");
     else setNavbar("");
+    if (NavbarShow == "show") setNavbarShow("");
+    else setNavbarShow("show");
+  };
+
+  const closeNavbar = () => {
+    setNavbar("");
+    setNavbarShow("");
   };
 
   return (
@@ -127,64 +128,80 @@ const MainPage = () => {
               <button
                 className='navbar-toggler  '
                 type='button'
-                data-bs-toggle='collapse'
-                data-bs-target='#navbarSupportedContent'
-                aria-controls='navbarSupportedContent'
-                aria-expanded='false'
-                aria-label='Toggle navigation'
                 onClick={setHomeClassFun}
               >
                 <span className='navbar-toggler-icon'></span>
               </button>
               <div
-                className='collapse navbar-collapse'
+                className={NavbarShow + " collapse navbar-collapse "}
                 id='navbarSupportedContent'
               >
                 <ul className='navbar-nav m-auto mb-2 mb-lg-0 linkStyles'>
                   <li className='nav-item'>
-                    <a href='#about-us' className='nav-link '>
+                    <a
+                      href='#about-us'
+                      className='nav-link'
+                      onClick={closeNavbar}
+                    >
                       عن الشركة{" "}
                     </a>
                   </li>
                   <li className='nav-item'>
-                    <a href='#why-we-are-here ' className='nav-link'>
+                    <a
+                      href='#why-we-are-here '
+                      className='nav-link'
+                      onClick={closeNavbar}
+                    >
                       لماذا نحن؟{" "}
                     </a>
                   </li>
                   <li className='nav-item'>
-                    <a href='#services' className='nav-link'>
+                    <a
+                      href='#services'
+                      className='nav-link'
+                      onClick={closeNavbar}
+                    >
                       الخدمات{" "}
                     </a>
                   </li>
 
                   <li className='nav-item'>
-                    <a href='#reviews' className='nav-link'>
+                    <a
+                      href='#reviews'
+                      className='nav-link'
+                      onClick={closeNavbar}
+                    >
                       الآراء{" "}
                     </a>
                   </li>
                   <li className='nav-item'>
-                    <a href='#join' className='nav-link'>
+                    <a href='#join' className='nav-link' onClick={closeNavbar}>
                       طلب الانضمام{" "}
                     </a>
                   </li>
                   <li className='nav-item'>
-                    <a href='#join' className='nav-link'>
+                    <a href='#join' className='nav-link' onClick={closeNavbar}>
                       طلب خدمة{" "}
                     </a>
                   </li>
                   <li className='nav-item'>
-                    {/* <Link to='/'>Home</Link> */}
-                    <Link to='/dashboard' className='nav-link'>
-                      الميزانية
+                    <Link
+                      to='/dashboard'
+                      className='nav-link'
+                      onClick={closeNavbar}
+                    >
+                      لوحة التحكم
                     </Link>
                   </li>
                 </ul>
-                <form className='d-flex' role='search'>
+                <form>
                   <button
                     type='button'
                     className='btn secondary-bgColor py-3 px-5'
                   >
-                    <span className='login-btn'>تسجيل الدخول</span>
+                    <span className='brandMain-color mediumFont'>
+                      تسجيل الدخول
+                    </span>
                   </button>
                 </form>
               </div>
@@ -213,7 +230,7 @@ const MainPage = () => {
           </div>
         </div>
 
-        <div className='container  projectsNum'>
+        <div className='container projectsNum'>
           <div className='row justify-content-center'>
             <div className='col-8'>
               <div className='stats-box d-flex justify-content-between align-items-center text-center p-4 rounded'>
@@ -224,8 +241,7 @@ const MainPage = () => {
 
                   <p className='mediumFont'>
                     <img src={graph} alt='' />{" "}
-                    <span className='text-success fw-bold'>90%</span> أعلى خلال
-                    عام{" "}
+                    <span className='text-success'>90%</span> أعلى خلال عام{" "}
                   </p>
                 </div>
 
@@ -234,8 +250,7 @@ const MainPage = () => {
                   <h2 className='boldFont'>1005</h2>
                   <p className='mediumFont'>
                     <img src={graph} alt='' />{" "}
-                    <span className='text-success fw-bold'>75%</span> أعلى خلال
-                    عام <i className='bi bi-arrow-up-right'></i>
+                    <span className='text-success'>75%</span> أعلى خلال عام
                   </p>
                 </div>
               </div>

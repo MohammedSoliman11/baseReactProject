@@ -10,5 +10,5 @@ export interface RowData {
 export interface TableWithPaginationProps {
   data: RowData[];
   columns: Column[];
-  currentPageParam: number;
+  // tableName: string;
 }

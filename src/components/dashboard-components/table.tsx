@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import Pagination from "../pagination";
 import { TableWithPaginationProps } from "../../types";
+import TableActionsComponent from "./table-actions";
 
 const TableWithPagination: React.FC<TableWithPaginationProps> = ({
   data,
   columns,
+  // tableName,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 10;
@@ -29,7 +31,13 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
           {currentData.map((row, index) => (
             <tr key={index}>
               {columns.map((col, i) => (
-                <td key={i}>{row[col.field]}</td>
+                <td key={i}>
+                  {col.field == "actions" ? (
+                    <TableActionsComponent />
+                  ) : (
+                    row[col.field]
+                  )}
+                </td>
               ))}
             </tr>
           ))}
