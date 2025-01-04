@@ -2,35 +2,39 @@ import TableWithPagination from "./table";
 import { data, reportData } from "../../store/data";
 import { tableHeaders } from "../../store/table-headers/table-headers";
 import { useState } from "react";
-const { suggested, reports } = tableHeaders;
+const tableData = tableHeaders;
 import "../../styles/dashboard-styles/table-tabs.css";
 export const TableTabs = () => {
-  const [activeForm, setActiveForm] = useState("Form1"); // 'join' or 'service'
+  const [activeTable, setActiveTable] = useState("suggestedBudget"); // 'join' or 'service'
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const values: any = {
-    Form1: "الميزانية المقترحة",
-    Form2: "بيـان الحجوزات والمناقلات والصرف",
-    Form3: "ميزانية العام",
-    Form4: "ميزانية التعزيز",
+    suggestedBudget: "الميزانية المقترحة",
+    reports: "بيـان الحجوزات والمناقلات والصرف",
+    annualBudget: "ميزانية العام",
+    reinforcementBudget: "ميزانية التعزيز",
   };
-  // Toggle between forms
-  const showForm1 = () => setActiveForm("Form1");
-  const showForm2 = () => setActiveForm("Form2");
-  const showForm3 = () => setActiveForm("Form3");
-  const showForm4 = () => setActiveForm("Form4");
+  // Toggle between Tables
+  const showsuggestedBudget = () => setActiveTable("suggestedBudget");
+  const showreports = () => setActiveTable("reports");
+  const showannualBudget = () => setActiveTable("annualBudget");
+  const showreinforcementBudget = () => setActiveTable("reinforcementBudget");
   return (
     <div className='mx-5'>
       <div className='d-flex justify-content-between my-3'>
         <div className=''>
           <p className='mediumFont fontSize-16 brandMain-color'>
-            {values[activeForm]}
+            {values[activeTable]}
             <span className='gray400-color regularFont fontSize-12'>
               {" "}
-              ({data.length})
+              (
+              {activeTable === "suggestedBudget"
+                ? data.length
+                : reportData.length}
+              )
             </span>
           </p>
         </div>
-        <div className='d-flex justify-content-between'>
+        <div className='d-flex justify-content-between align-items-center'>
           <div className='mx-2'>
             <button className='btn p-2'>
               <i className='bi bi-download text-info'></i>
@@ -48,9 +52,9 @@ export const TableTabs = () => {
           </div>
           <button
             className='btn brandMain-bgColor px-4 py-2'
-            onClick={showForm1}
+            onClick={showsuggestedBudget}
           >
-            <span className='text-white mediumFont fontSize-14 '>
+            <span className='text-white mediumFont fontSize-14 d-flex flex-no-wrap'>
               <i className='bi bi-plus'></i> إضافة
             </span>
           </button>
@@ -62,45 +66,44 @@ export const TableTabs = () => {
           <div className='d-flex justify-content-center mb-4 tabs regularFont'>
             <button
               className={`col-md-3 btn fontSize-14 ${
-                activeForm === "Form1" ? "active" : ""
+                activeTable === "suggestedBudget" ? "active" : ""
               } budget`}
-              onClick={showForm1}
+              onClick={showsuggestedBudget}
             >
               الميزانية المقترحة
             </button>
             <button
               className={`col-md-3 btn  fontSize-14 ${
-                activeForm === "Form2" ? "active " : ""
+                activeTable === "reports" ? "active " : ""
               } budget`}
-              onClick={showForm2}
+              onClick={showreports}
             >
               بيـان الحجوزات والمناقلات والصرف
             </button>
             <button
               className={`col-md-3 btn  fontSize-14 ${
-                activeForm === "Form3" ? "active " : ""
+                activeTable === "annualBudget" ? "active " : ""
               } budget `}
-              onClick={showForm3}
+              onClick={showannualBudget}
             >
               ميزانية العام
             </button>
             <button
               className={`col-md-3 btn  fontSize-14 ${
-                activeForm === "Form4" ? "active " : ""
+                activeTable === "reinforcementBudget" ? "active " : ""
               } budget`}
-              onClick={showForm4}
+              onClick={showreinforcementBudget}
             >
               ميزانية التعزيز{" "}
             </button>
           </div>
 
-          {/* Form Content */}
+          {/* Table Content */}
         </div>
       </div>
       <TableWithPagination
-        data={activeForm == "Form1" ? data : reportData}
-        columns={activeForm == "Form1" ? suggested : reports}
-        currentPageParam={1}
+        data={activeTable == "suggestedBudget" ? data : reportData}
+        columns={tableData[activeTable]}
       ></TableWithPagination>
     </div>
   );
