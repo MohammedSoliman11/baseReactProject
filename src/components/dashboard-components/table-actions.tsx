@@ -1,15 +1,15 @@
-// import { ITableActions } from "../../types/table-actions";
+import { ITableActions } from "../../types/table-actions";
 
-const TableActionsComponent = () => {
+const TableActionsComponent: React.FC<ITableActions> = ({ show }) => {
   return (
     <div>
-      {/* {show === true ? ( */}
-      <button className='btn'>
-        <i className='bi bi-eye-fill text-success'></i>
-      </button>
-      {/* ) : (
+      {show === true ? (
+        <button className='btn'>
+          <i className='bi bi-eye-fill text-success'></i>
+        </button>
+      ) : (
         ""
-      )} */}
+      )}
       <button className='btn'>
         <i className='bi bi-download text-info'></i>
       </button>
