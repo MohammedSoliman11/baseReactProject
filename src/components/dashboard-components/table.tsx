@@ -6,7 +6,7 @@ import TableActionsComponent from "./table-actions";
 const TableWithPagination: React.FC<TableWithPaginationProps> = ({
   data,
   columns,
-  // tableName,
+  tableName,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const rowsPerPage = 10;
@@ -18,8 +18,8 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
   );
 
   return (
-    <div className='table-responsive regularFont fontSize-12'>
-      <table className='table text-center'>
+    <div className='regularFont fontSize-12'>
+      <table className='table table-responsive text-center'>
         <thead>
           <tr>
             {columns.map((col, index) => (
@@ -33,7 +33,9 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
               {columns.map((col, i) => (
                 <td key={i}>
                   {col.field == "actions" ? (
-                    <TableActionsComponent />
+                    <TableActionsComponent
+                      show={tableName === "reinforcementBudget" ? false : true}
+                    />
                   ) : (
                     row[col.field]
                   )}

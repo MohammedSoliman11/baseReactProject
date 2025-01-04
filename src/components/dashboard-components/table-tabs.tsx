@@ -104,6 +104,7 @@ export const TableTabs = () => {
       <TableWithPagination
         data={activeTable == "suggestedBudget" ? data : reportData}
         columns={tableData[activeTable]}
+        tableName={activeTable}
       ></TableWithPagination>
     </div>
   );
