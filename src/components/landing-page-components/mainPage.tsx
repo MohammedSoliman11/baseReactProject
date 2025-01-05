@@ -66,6 +66,13 @@ const MainPage = () => {
     setNavbarShow("");
   };
 
+  const scrollToForm = () => {
+    const formElement = document.getElementById("join");
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       {/* Home */}
@@ -224,7 +231,7 @@ const MainPage = () => {
               تمتـــد أيضاً إلى الأنشطــــة التــخصصيـــــة والمكملـــة لنشاط
               المقاولات والتي تتمثل بخدمات ما قبل البناء وبعده
             </p>
-            <button className='service mt-3 mediumFont'>
+            <button className='service mt-3 mediumFont' onClick={scrollToForm}>
               <span className='text-white px-4 py-3'>اطلب خدمة</span>
             </button>
           </div>
@@ -257,6 +264,8 @@ const MainPage = () => {
             </div>
           </div>
         </div>
+
+        <form id='serviceForm'>{/* Form content here */}</form>
       </div>
     </>
   );

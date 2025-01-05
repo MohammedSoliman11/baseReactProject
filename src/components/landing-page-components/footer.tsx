@@ -12,6 +12,7 @@ import whatsapp from "../../assets/images/whatsapp.png";
 import smsFooter from "../../assets/images/sms.png";
 import googlePly from "../../assets/images/GooglePlay.jpg";
 import apple from "../../assets/images/appStore.jpg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -56,12 +57,42 @@ const Footer = () => {
             <div className='col-md-2 mb-4 mb-md-0'>
               <h5 className=''>الصفحات الرئيسية</h5>
               <ul className='list-unstyled pe-2 '>
-                <li>عن الشركة</li>
-                <li>لماذا نحن</li>
-                <li>الآراء</li>
-                <li>الخدمات</li>
-                <li>طلب الانضمام</li>
-                <li>طلب خدمة</li>
+                <li className=''>
+                  <a href='#about-us' className='nav-link'>
+                    عن الشركة{" "}
+                  </a>
+                </li>
+                <li className=''>
+                  <a href='#why-we-are-here ' className='nav-link'>
+                    لماذا نحن؟{" "}
+                  </a>
+                </li>
+                <li className=''>
+                  <a href='#services' className='nav-link'>
+                    الخدمات{" "}
+                  </a>
+                </li>
+
+                <li className=''>
+                  <a href='#reviews' className='nav-link'>
+                    الآراء{" "}
+                  </a>
+                </li>
+                <li className=''>
+                  <a href='#join' className='nav-link'>
+                    طلب الانضمام{" "}
+                  </a>
+                </li>
+                <li className=''>
+                  <a href='#join' className='nav-link'>
+                    طلب خدمة{" "}
+                  </a>
+                </li>
+                <li className=''>
+                  <Link to='/dashboard' className='nav-link'>
+                    لوحة التحكم
+                  </Link>
+                </li>
               </ul>
             </div>
             {/* Section 3: Contact Information */}
