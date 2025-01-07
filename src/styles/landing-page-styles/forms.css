@@ -1,24 +1,27 @@
 .formMain{
   position: relative;
   z-index: 1;
-  bottom: -142px;
+  bottom: -100px;
   background-color: #ffffff;
   border-radius: 16px;
+  padding-top: 25px;
   padding-bottom: 100px;
+
+  .gradient-button {
+    background: linear-gradient(to right, #5a4a8e, #10084d); /* Gradient */
+    color: white;
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
 }
-.gradient-button {
-  background: linear-gradient(to right, #5a4a8e, #10084d); /* Gradient */
-  color: white;
-  border: none;
-  border-radius: 12px; /* Rounded corners */
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
-}
+
 
 .gradient-button:hover {
   background: linear-gradient(to right, #6a5ca0, #2b1f6d); /* Lighter gradient on hover */

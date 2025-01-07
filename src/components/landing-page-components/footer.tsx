@@ -18,7 +18,7 @@ const Footer = () => {
   return (
     <>
       {/* footer */}
-      <div className='footer d-flex flex-column justify-content-center align-items-center mt-5 mediumFont fontSize-16'>
+      <div className='lh-lg footer d-flex flex-column justify-content-center align-items-center mediumFont fontSize-16'>
         <footer className='container'>
           <div className='row text-white'>
             {/* Section 4: About & Social Media */}

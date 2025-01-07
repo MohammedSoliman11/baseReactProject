@@ -13,7 +13,7 @@ const Form = () => {
   return (
     <div
       id='join'
-      className='formMain container d-flex justify-content-center mt-5'
+      className='shadow-lg formMain container d-flex justify-content-center'
     >
       {/* Toggle Buttons */}
       <div className='col-md-10'>
