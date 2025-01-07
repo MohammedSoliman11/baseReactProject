@@ -38,7 +38,6 @@ h2 span.text-warning {
 }
 
 .feature-item p {
-  font-size: 12px;
   margin-top: 10px;
 }
 
@@ -235,7 +234,13 @@ h2 span.text-warning {
 .custom-arrow {
   background-color: #ffffff;
 }
+.carousel-control-prev {
+  left: -25% !important;
+}
 
+.carousel-control-next{
+  right: -25% !important;
+}
 .custom-arrow .carousel-control-prev-icon,
 .custom-arrow .carousel-control-next-icon {
   background-color: #160c4d;

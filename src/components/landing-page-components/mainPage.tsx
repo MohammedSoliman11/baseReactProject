@@ -54,7 +54,7 @@ const MainPage = () => {
   }, []);
 
   const setHomeClassFun = () => {
-    console.log(Navbar);
+    //console.log(Navbar);
     if (Navbar == "") setNavbar("navbar1");
     else setNavbar("");
     if (NavbarShow == "show") setNavbarShow("");

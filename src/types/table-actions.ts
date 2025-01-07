@@ -1,3 +1,4 @@
 export interface ITableActions {
-  show: boolean;
+  tableName: string;
+  currentIndex: number;
 }

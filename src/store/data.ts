@@ -1,9 +1,9 @@
 import { RowData } from "../types";
 export const data: RowData[] = [
   {
-    id: "الاول",
+    id: "الثاني",
     current_year: 2024,
-    item: 23278000,
+    item: 23455,
     budget: 34000,
     category: "First",
     economic_classification_number: 34000,
@@ -127,7 +127,7 @@ export const data: RowData[] = [
     past_year: 2023,
   },
   {
-    id: "الاول",
+    id: "الثالث",
     current_year: 2024,
     item: 23278000,
     budget: 34000,

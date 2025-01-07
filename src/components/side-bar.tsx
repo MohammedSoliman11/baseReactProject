@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <div
       className={`flex-column brandMain-bgColor mediumFont text-white`}
-      style={{ height: "100vh" }}
+      style={{ height: "100%" }}
     >
       <div className='text-center py-4'>
         <img
@@ -17,7 +17,7 @@ const Sidebar = () => {
           style={{ maxWidth: "80px" }}
         />
       </div>
-      <ul className='nav flex-column mt-4'>
+      <ul className='nav flex-column mt-4 side-bar-nav'>
         <li className='nav-item'>
           <a href='#dashboard' className='nav-link text-white p-3'>
             لوحة التحكم
