@@ -15,7 +15,7 @@ const Pagination: React.FC<PaginationProps> = ({
   const pages = [...Array(totalPages).keys()].map((x) => x + 1).reverse();
 
   return (
-    <nav>
+    <div>
       <ul className='pagination justify-content-center '>
         <li className={` ${currentPage === totalPages ? "disabled" : ""}`}>
           <button
@@ -50,7 +50,7 @@ const Pagination: React.FC<PaginationProps> = ({
           </button>
         </li>
       </ul>
-    </nav>
+    </div>
   );
 };
 

@@ -31,7 +31,12 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
           {currentData.map((row, index) => (
             <tr key={index}>
               {columns.map((col, i) => (
-                <td key={i}>
+                <td
+                  style={
+                    tableName === "reinforcementBudget" ? { width: "20%" } : {}
+                  }
+                  key={i}
+                >
                   {col.field == "actions" ? (
                     <TableActionsComponent
                       show={tableName === "reinforcementBudget" ? false : true}
