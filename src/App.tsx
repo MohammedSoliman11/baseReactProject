@@ -3,7 +3,7 @@
 import Home from "./pages/Home";
 import Layout from "./layout/Layout";
 import { Route, Routes } from "react-router-dom";
-import { TableTabs } from "./components/dashboard-components/table-tabs";
+import { TableTabs } from "./components/dashboard-components/budget/table-tabs";
 // import Sidebar from "./components/side-bar";
 
 const App = () => {

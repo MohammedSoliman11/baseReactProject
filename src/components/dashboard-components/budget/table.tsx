@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Pagination from "../pagination";
-import { TableWithPaginationProps } from "../../types";
+import Pagination from "../../pagination";
+import { TableWithPaginationProps } from "../../../types";
 import TableActionsComponent from "./table-actions";
 
 const TableWithPagination: React.FC<TableWithPaginationProps> = ({
@@ -32,14 +32,13 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
             <tr key={index}>
               {columns.map((col, i) => (
                 <td
-                  style={
-                    tableName === "reinforcementBudget" ? { width: "20%" } : {}
-                  }
+                  style={col.field == "actions" ? { width: "25%" } : {}}
                   key={i}
                 >
                   {col.field == "actions" ? (
                     <TableActionsComponent
-                      show={tableName === "reinforcementBudget" ? false : true}
+                      tableName={tableName}
+                      currentIndex={10 * currentPage - (9 - index)}
                     />
                   ) : (
                     row[col.field]

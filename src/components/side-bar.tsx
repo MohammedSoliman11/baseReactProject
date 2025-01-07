@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <div
       className={`flex-column brandMain-bgColor mediumFont text-white`}
-      style={{ height: "900px" }}
+      style={{ height: "100%" }}
     >
       <div className='text-center py-4'>
         <img
