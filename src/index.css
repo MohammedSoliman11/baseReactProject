@@ -69,11 +69,18 @@
 .secondary-color{
   color: var(--secondary);
 }
-.gray400-color{
-  color: var(--gary400);
-}
+
 .secondary-bgColor{
   background-color: var(--secondary) !important;
+}
+.Gray400-color{
+  color: var(--gary400) !important;
+}
+.Gray500-color{
+  color: var(--gary500) !important;
+}
+.Gray100-bgColor{
+  background-color: var(--gary100) !important;
 }
 .fontSize-32{
   font-size: 32px !important;
