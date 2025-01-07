@@ -9,7 +9,7 @@ export default function Layout() {
     <div className='layout'>
       {/* <Navbar /> */}
       <div className='container-fluid m-0 p-0'>
-        <div className='row'>
+        <div className='row' style={{ height: "100vh" }}>
           {/* <div class='col-md-4'>.col-md-4</div>
           <div class='col-md-4 offset-md-0'>.col-md-4 .offset-md-4</div> */}
           <div className='col-lg-2 p-0 m-0'>
