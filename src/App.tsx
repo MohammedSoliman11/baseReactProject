@@ -4,6 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import { TableTabs } from "./components/dashboard-components/budget/table-tabs";
 
 import routes from "./Routes/appRoutes";
+import AddNewItemSuggestedBudgetComponent from "./components/dashboard-components/budget/add-items-suggestedBudget";
+import AddNewItemReportComponent from "./components/dashboard-components/budget/add-items-reports";
+import NotFound from "./pages/Page-Not-Found";
 
 const App = () => {
   return (
@@ -19,7 +22,16 @@ const App = () => {
               </div>
             }
           />
+          <Route
+            path={routes.ADDNEWITEM_BUDGET_ROUTE}
+            element={<AddNewItemSuggestedBudgetComponent />}
+          />
+          <Route
+            path={routes.ADDNEWITEM_REPORTS_ROUTE}
+            element={<AddNewItemReportComponent />}
+          />
         </Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </>
   );
