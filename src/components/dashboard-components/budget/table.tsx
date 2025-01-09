@@ -50,9 +50,9 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
         </tbody>
       </table>
       <Pagination
-        currentPage={currentPage}
         totalPages={totalPages}
-        onPageChange={(page) => setCurrentPage(page)}
+        currentPage={currentPage}
+        onPageChange={(page: number) => setCurrentPage(page)}
       />
     </div>
   );
