@@ -7,6 +7,8 @@ import routes from "./Routes/appRoutes";
 import AddNewItemSuggestedBudgetComponent from "./components/dashboard-components/budget/add-items-suggestedBudget";
 import AddNewItemReportComponent from "./components/dashboard-components/budget/add-items-reports";
 import NotFound from "./pages/Page-Not-Found";
+import AddNewItemAnnualBudgetComponent from "./components/dashboard-components/budget/add-items-annualBudget";
+import AddNewItemreinforcementBudgetComponent from "./components/dashboard-components/budget/add-items-reinforcementBudget";
 
 const App = () => {
   return (
@@ -29,6 +31,14 @@ const App = () => {
           <Route
             path={routes.ADDNEWITEM_REPORTS_ROUTE}
             element={<AddNewItemReportComponent />}
+          />
+          <Route
+            path={routes.ADDNEWITEM_ANNUALBUDGET_ROUTE}
+            element={<AddNewItemAnnualBudgetComponent />}
+          />
+          <Route
+            path={routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE}
+            element={<AddNewItemreinforcementBudgetComponent />}
           />
         </Route>
         <Route path='*' element={<NotFound />} />
