@@ -6,6 +6,10 @@ const tableData = tableHeaders;
 import "../../../styles/dashboard-styles/budget/table-tabs.css";
 import ShowToastComponent from "./download-notification";
 import FilterModalComponent from "./filter-popup";
+import { Link } from "react-router-dom";
+
+import routes from "../../../Routes/appRoutes";
+
 export const TableTabs = () => {
   const [activeTable, setActiveTable] = useState("suggestedBudget"); // 'join' or 'service'
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,6 +18,14 @@ export const TableTabs = () => {
     reports: "بيـان الحجوزات والمناقلات والصرف",
     annualBudget: "ميزانية العام",
     reinforcementBudget: "ميزانية التعزيز",
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const route: any = {
+    suggestedBudget: routes.ADDNEWITEM_BUDGET_ROUTE,
+    reports: routes.ADDNEWITEM_REPORTS_ROUTE,
+    annualBudget: routes.ADDNEWITEM_ANNUALBUDGET_ROUTE,
+    reinforcementBudget: routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE,
   };
   // Toggle between Tables
   const showsuggestedBudget = () => setActiveTable("suggestedBudget");
@@ -41,21 +53,23 @@ export const TableTabs = () => {
             <ShowToastComponent></ShowToastComponent>
           </div>
           <div className='mx-2'>
-            <FilterModalComponent></FilterModalComponent>
+            <FilterModalComponent
+              tableName={activeTable}
+            ></FilterModalComponent>
           </div>
           <div className='mx-2'>
             <button className='btn btn-light p-2'>
               <i className='bi bi-printer-fill brandMain-color '></i>
             </button>
           </div>
-          <button
+          <Link
+            to={route[activeTable]}
             className='btn btn-light brandMain-bgColor px-4 py-2'
-            onClick={showsuggestedBudget}
           >
             <span className='text-white mediumFont fontSize-14 d-flex flex-no-wrap'>
               <i className='bi bi-plus'></i> إضافة
             </span>
-          </button>
+          </Link>
         </div>
       </div>
 
