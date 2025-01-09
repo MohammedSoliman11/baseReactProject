@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 // import "../../../styles/dashboard-styles/show-info-popup.css";
-import "../../../styles/dashboard-styles/delete-popup.css";
+import "../../../styles/dashboard-styles/budget/delete-popup.css";
 
 function FilterModalComponent() {
   const [show, setShow] = useState(false);

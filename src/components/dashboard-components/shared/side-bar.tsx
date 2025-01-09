@@ -1,7 +1,6 @@
 // import React from "react";
-import "../styles/side-bar.css";
-
-import Logo from "../assets/images/Rectangle 1 (1).png";
+import "../../../styles/dashboard-styles/shared/side-bar.css";
+import Logo from "../../../assets/images/Rectangle 1 (1).png";
 
 const Sidebar = () => {
   return (

@@ -3,7 +3,7 @@ import { data, reportData } from "../../../store/data";
 import { tableHeaders } from "../../../store/table-headers/table-headers";
 import { useState } from "react";
 const tableData = tableHeaders;
-import "../../../styles/dashboard-styles/table-tabs.css";
+import "../../../styles/dashboard-styles/budget/table-tabs.css";
 import ShowToastComponent from "./download-notification";
 import FilterModalComponent from "./filter-popup";
 export const TableTabs = () => {
