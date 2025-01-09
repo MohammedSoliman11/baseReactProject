@@ -1,5 +1,5 @@
 // filepath: /d:/work/freelance/reactProject/baseReactProject/src/components/NotFound.tsx
-import React from "react";
+// import React from "react";
 
 const NotFound = () => {
   return (
