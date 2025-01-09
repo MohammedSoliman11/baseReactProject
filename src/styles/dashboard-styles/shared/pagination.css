@@ -1,0 +1,39 @@
+.pagination-button-left{
+  background-color: #F8F8F8;
+  background-image: url("../../../assets/icons/arrow_left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.pagination-button-left:hover{
+  background-color: var(--brandMain);
+  background-image: url("../../../assets/icons/arrow_left_light.svg");
+}
+
+
+.pagination-button-right{
+  background-color: #F8F8F8;
+  background-image: url("../../../assets/icons/arrow_right.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.pagination-button-right:hover{
+  background-color: var(--brandMain);
+  background-image: url("../../../assets/icons/arrow_right_light.svg");
+}
+
+.active>.page-link, .page-link.active{
+  background-color: #FFFFFF !important;
+  color: var(--brandMain) !important;
+}
+.page-link{
+  color: var(--gary300) !important;
+  border:none !important;
+}
