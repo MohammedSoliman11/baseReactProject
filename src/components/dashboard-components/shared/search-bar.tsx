@@ -1,6 +1,6 @@
 // import React from "react";
-import "../styles/top-bar.css";
-import KSAFlag from "../assets/image.png";
+import "../../../styles/dashboard-styles/shared/top-bar.css";
+import KSAFlag from "../../../assets/image.png";
 
 const TopBar = () => {
   return (

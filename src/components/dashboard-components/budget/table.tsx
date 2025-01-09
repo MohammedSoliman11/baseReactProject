@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Pagination from "../../pagination";
+import Pagination from "../shared/pagination";
 import { TableWithPaginationProps } from "../../../types";
 import TableActionsComponent from "./table-actions";
 

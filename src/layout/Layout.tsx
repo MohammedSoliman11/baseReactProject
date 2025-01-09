@@ -1,8 +1,8 @@
 // import React from "react";
 // import Navbar from "../components/navbar";
 import { Outlet } from "react-router-dom";
-import Sidebar from "../components/side-bar";
-import TopBar from "../components/search-bar";
+import Sidebar from "../components/dashboard-components/shared/side-bar";
+import TopBar from "../components/dashboard-components/shared/search-bar";
 
 export default function Layout() {
   return (

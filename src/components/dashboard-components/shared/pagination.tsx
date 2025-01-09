@@ -1,5 +1,5 @@
 import React from "react";
-import { PaginationProps } from "../types";
+import { PaginationProps } from "../../../types";
 
 const Pagination: React.FC<PaginationProps> = ({
   currentPage,

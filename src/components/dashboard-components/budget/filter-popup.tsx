@@ -1,10 +1,49 @@
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 // import "../../../styles/dashboard-styles/show-info-popup.css";
-import "../../../styles/dashboard-styles/delete-popup.css";
+import "../../../styles/dashboard-styles/budget/delete-popup.css";
+import { IFilterPopup, IFilterRowsContent } from "../../../types";
 
-function FilterModalComponent() {
+const FilterModalComponent: React.FC<IFilterPopup> = (props) => {
   const [show, setShow] = useState(false);
+
+  const filterRowContent: IFilterRowsContent = {
+    suggestedBudget: [
+      [
+        { label: "الباب", inputType: "select" },
+        { label: "البند", inputType: "select" },
+      ],
+      [
+        { label: "رقم التصنيف", inputType: "text" },
+        { label: "رقم العام الحالي", inputType: "text" },
+      ],
+    ],
+    reports: [
+      // { label: "رقم التصنيف الاقتصادي", inputType: "text" },
+      // { label: "البند المنقول منه", inputType: "text" },
+      // { label: "البند المنقول له", inputType: "text" },
+      // { label: "المبلغ", inputType: "text" },
+      // { label: "المحجوز منه", inputType: "text" },
+      // { label: "العام الحالي", inputType: "text" },
+      // { label: "العام الماضي", inputType: "text" },
+    ],
+    annualBudget: [
+      [
+        { label: "الباب", inputType: "select" },
+        { label: "رقم المشروع", inputType: "text" },
+      ],
+      [
+        { label: "رقم الإضاح", inputType: "text" },
+        { label: "رقم العام الحالي", inputType: "text" },
+      ],
+    ],
+    reinforcementBudget: [
+      [
+        { label: "الباب", inputType: "select" },
+        { label: "البند", inputType: "select" },
+      ],
+    ],
+  };
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -21,49 +60,54 @@ function FilterModalComponent() {
         </Modal.Header>
         <Modal.Body>
           <div className='container'>
-            <div className='row p-1'>
-              <div className='col-6'>
-                <label className='form-label mediumFont Gray500-color'>
-                  الباب
-                </label>
+            {filterRowContent[props.tableName].map((row, index) => (
+              <div key={index}>
+                <div className='row p-1'>
+                  <div className='col-6'>
+                    <label className='form-label mediumFont Gray500-color'>
+                      {row[0].label}
+                    </label>
+                  </div>
+                  <div className='col-6'>
+                    <label className='form-label mediumFont Gray500-color'>
+                      {row[1].label}
+                    </label>
+                  </div>
+                </div>
+                <div className='row p-1'>
+                  <div className='col-6'>
+                    {row[0].inputType === "text" && (
+                      <input
+                        type='text'
+                        placeholder='اكتب قيمة النص'
+                        className='w-100 input-field'
+                      />
+                    )}
+                    {row[0].inputType === "select" && (
+                      <select className='w-100 input-field'>
+                        <option>اختر الباب</option>
+                        <option>option2</option>
+                      </select>
+                    )}
+                  </div>
+                  <div className='col-6'>
+                    {row[0].inputType === "text" && (
+                      <input
+                        type='text'
+                        placeholder='اكتب قيمة النص'
+                        className='w-100 input-field'
+                      />
+                    )}
+                    {row[0].inputType === "select" && (
+                      <select className='w-100 input-field'>
+                        <option>اختر الباب</option>
+                        <option>option2</option>
+                      </select>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div className='col-6'>
-                <label className='form-label mediumFont Gray500-color'>
-                  رقم المشروع
-                </label>
-              </div>
-            </div>
-            <div className='row p-1'>
-              <div className='col-6'>
-                <select name='gender' id='gender' className='w-100 input-field'>
-                  <option>اختر الباب</option>
-                  <option>option2</option>
-                </select>
-              </div>
-              <div className='col-6'>
-                <input
-                  type='text'
-                  placeholder='اكتب قيمة النص'
-                  className='w-100 input-field'
-                />
-              </div>
-            </div>
-            <div className='row p-1'>
-              <div className='col-12'>
-                <label className='mediumFont' htmlFor=''>
-                  العام الحالي
-                </label>
-              </div>
-            </div>
-            <div className='row p-1'>
-              <div className='col-12'>
-                <input
-                  type='text'
-                  placeholder='اكتب رقم العام الحالي'
-                  className='w-100 input-field'
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </Modal.Body>
         <Modal.Footer className='d-flex justify-content-center align-items-center'>
@@ -80,6 +124,6 @@ function FilterModalComponent() {
       </Modal>
     </>
   );
-}
+};
 
 export default FilterModalComponent;
