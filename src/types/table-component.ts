@@ -11,4 +11,6 @@ export interface TableWithPaginationProps {
   data: RowData[];
   columns: Column[];
   tableName: string;
+  onPageChange: (page: number) => void;
+  currentPage: number;
 }

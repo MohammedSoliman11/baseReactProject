@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import routes from "../../../Routes/appRoutes";
 
 export const TableTabs = () => {
+  const [currentPage, setCurrentPage] = useState(1);
   const [activeTable, setActiveTable] = useState("suggestedBudget"); // 'join' or 'service'
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const values: any = {
@@ -20,6 +21,7 @@ export const TableTabs = () => {
     reinforcementBudget: "ميزانية التعزيز",
   };
 
+  console.log("current page table tabe: ", currentPage);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const route: any = {
     suggestedBudget: routes.ADDNEWITEM_BUDGET_ROUTE,
@@ -28,12 +30,24 @@ export const TableTabs = () => {
     reinforcementBudget: routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE,
   };
   // Toggle between Tables
-  const showsuggestedBudget = () => setActiveTable("suggestedBudget");
-  const showreports = () => setActiveTable("reports");
-  const showannualBudget = () => setActiveTable("annualBudget");
-  const showreinforcementBudget = () => setActiveTable("reinforcementBudget");
+  const showsuggestedBudget = () => {
+    setActiveTable("suggestedBudget");
+    setCurrentPage(1);
+  };
+  const showreports = () => {
+    setActiveTable("reports");
+    setCurrentPage(1);
+  };
+  const showannualBudget = () => {
+    setActiveTable("annualBudget");
+    setCurrentPage(1);
+  };
+  const showreinforcementBudget = () => {
+    setActiveTable("reinforcementBudget");
+    setCurrentPage(1);
+  };
   return (
-    <div className='mx-5'>
+    <div className='mx-5 mt-4'>
       <div className='d-flex justify-content-between my-3'>
         <div className=''>
           <p className='mediumFont fontSize-16 brandMain-color'>
@@ -121,6 +135,8 @@ export const TableTabs = () => {
         data={activeTable == "suggestedBudget" ? data : reportData}
         columns={tableData[activeTable]}
         tableName={activeTable}
+        onPageChange={(page: number) => setCurrentPage(page)}
+        currentPage={currentPage}
       ></TableWithPagination>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { IPaginationProps } from "../../../types";
 import "../../../styles/dashboard-styles/shared/pagination.css";
 
@@ -7,27 +7,32 @@ const Pagination: React.FC<IPaginationProps> = ({
   currentPage,
   onPageChange,
 }) => {
-  const [page, setPage] = useState(currentPage || 1);
-
   const handlePageChange = (pageNumber: number) => {
     if (pageNumber >= 1 && pageNumber <= totalPages) {
-      setPage(pageNumber);
       onPageChange(pageNumber);
     }
   };
 
   const renderPageNumbers = () => {
+    console.log("current page pagination : ", currentPage);
     const pages = [];
     for (let i = totalPages; i >= 1; i--) {
-      if (i === 1 || i === totalPages || (i >= page - 3 && i <= page + 3)) {
+      if (
+        i === 1 ||
+        i === totalPages ||
+        (i >= currentPage - 3 && i <= currentPage + 3)
+      ) {
         pages.push(
-          <li key={i} className={`page-item ${page === i ? "active" : ""}`}>
+          <li
+            key={i}
+            className={`page-item ${currentPage === i ? "active" : ""}`}
+          >
             <button className='page-link' onClick={() => handlePageChange(i)}>
               {i}
             </button>
           </li>
         );
-      } else if (i === page - 4 || i === page + 4) {
+      } else if (i === currentPage - 4 || i === currentPage + 4) {
         pages.push(
           <li key={i} className='page-item'>
             <span className='page-link'>...</span>
@@ -42,18 +47,22 @@ const Pagination: React.FC<IPaginationProps> = ({
     <div>
       <ul className='pagination justify-content-center align-items-center'>
         {/* Next Arrow */}
-        <li className={`page-item ${page === totalPages ? "disabled" : ""}`}>
+        <li
+          className={`page-item ${
+            currentPage === totalPages ? "disabled" : ""
+          }`}
+        >
           <button
             className='pagination-button-right'
-            onClick={() => handlePageChange(page + 1)}
+            onClick={() => handlePageChange(currentPage + 1)}
           ></button>
         </li>
         {renderPageNumbers()}
         {/* Previous Arrow */}
-        <li className={`page-item ${page === 1 ? "disabled" : ""}`}>
+        <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
           <button
             className='pagination-button-left'
-            onClick={() => handlePageChange(page - 1)}
+            onClick={() => handlePageChange(currentPage - 1)}
           ></button>
         </li>
       </ul>
