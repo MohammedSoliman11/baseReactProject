@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Pagination from "../shared/pagination";
 import { TableWithPaginationProps } from "../../../types";
 import TableActionsComponent from "./table-actions";
@@ -7,10 +7,11 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
   data,
   columns,
   tableName,
+  onPageChange: setCurrentPage,
+  currentPage,
 }) => {
-  const [currentPage, setCurrentPage] = useState(1);
+  console.log("current page table : ", currentPage);
   const rowsPerPage = 10;
-
   const totalPages = Math.ceil(data.length / rowsPerPage);
   const currentData = data.slice(
     (currentPage - 1) * rowsPerPage,
@@ -32,7 +33,7 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
             <tr key={index}>
               {columns.map((col, i) => (
                 <td
-                  style={col.field == "actions" ? { width: "25%" } : {}}
+                  // style={col.field == "actions" }
                   key={i}
                 >
                   {col.field == "actions" ? (
@@ -51,8 +52,8 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
       </table>
       <Pagination
         totalPages={totalPages}
-        currentPage={currentPage}
         onPageChange={(page: number) => setCurrentPage(page)}
+        currentPage={currentPage}
       />
     </div>
   );
