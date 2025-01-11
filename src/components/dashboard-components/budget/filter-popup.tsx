@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
-// import "../../../styles/dashboard-styles/show-info-popup.css";
 import "../../../styles/dashboard-styles/budget/delete-popup.css";
 import { IFilterPopup, IFilterRowsContent } from "../../../types";
 
@@ -91,14 +90,14 @@ const FilterModalComponent: React.FC<IFilterPopup> = (props) => {
                     )}
                   </div>
                   <div className='col-6'>
-                    {row[0].inputType === "text" && (
+                    {row[1].inputType === "text" && (
                       <input
                         type='text'
                         placeholder='اكتب قيمة النص'
                         className='w-100 input-field'
                       />
                     )}
-                    {row[0].inputType === "select" && (
+                    {row[1].inputType === "select" && (
                       <select className='w-100 input-field'>
                         <option>اختر الباب</option>
                         <option>option2</option>
