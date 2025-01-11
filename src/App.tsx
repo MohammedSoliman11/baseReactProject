@@ -1,43 +1,51 @@
-import Home from "./pages/Home";
-import Layout from "./layout/Layout";
 import { Route, Routes } from "react-router-dom";
+
+import Layout from "./layout/Layout";
+
 import { TableTabs } from "./components/dashboard-components/budget/table-tabs";
 
-import routes from "./Routes/appRoutes";
-import AddNewItemSuggestedBudgetComponent from "./components/dashboard-components/budget/add-items-suggestedBudget";
-import AddNewItemReportComponent from "./components/dashboard-components/budget/add-items-reports";
+import budgetComponents from "./components/dashboard-components/budget";
+const {
+  AddNewItemSuggestedBudgetComponent,
+  AddNewItemReportComponent,
+  AddNewItemAnnualBudgetComponent,
+  AddNewItemreinforcementBudgetComponent,
+} = budgetComponents;
+
 import NotFound from "./pages/Page-Not-Found";
-import AddNewItemAnnualBudgetComponent from "./components/dashboard-components/budget/add-items-annualBudget";
-import AddNewItemreinforcementBudgetComponent from "./components/dashboard-components/budget/add-items-reinforcementBudget";
+import Home from "./pages/Home";
+
+import path from "./Routes/appRoutes";
+const {
+  HOME_ROUTE,
+  ADDNEWITEM_BUDGET_ROUTE,
+  DASHBOARD_ROUTE,
+  ADDNEWITEM_REPORTS_ROUTE,
+  ADDNEWITEM_ANNUALBUDGET_ROUTE,
+  ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE,
+} = path;
 
 const App = () => {
   return (
     <>
       <Routes>
-        <Route path={routes.HOME_ROUTE} element={<Home />} />
-        <Route path={routes.DASHBOARD_ROUTE} element={<Layout />}>
+        <Route path={HOME_ROUTE} element={<Home />} />
+        <Route path={DASHBOARD_ROUTE} element={<Layout />}>
+          <Route index element={<TableTabs />} />
           <Route
-            index
-            element={
-              <div className='mt-4'>
-                <TableTabs />
-              </div>
-            }
-          />
-          <Route
-            path={routes.ADDNEWITEM_BUDGET_ROUTE}
+            path={ADDNEWITEM_BUDGET_ROUTE}
             element={<AddNewItemSuggestedBudgetComponent />}
           />
           <Route
-            path={routes.ADDNEWITEM_REPORTS_ROUTE}
+            path={ADDNEWITEM_REPORTS_ROUTE}
             element={<AddNewItemReportComponent />}
           />
           <Route
-            path={routes.ADDNEWITEM_ANNUALBUDGET_ROUTE}
+            path={ADDNEWITEM_ANNUALBUDGET_ROUTE}
             element={<AddNewItemAnnualBudgetComponent />}
           />
           <Route
-            path={routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE}
+            path={ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE}
             element={<AddNewItemreinforcementBudgetComponent />}
           />
         </Route>
