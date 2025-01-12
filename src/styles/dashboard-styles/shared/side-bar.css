@@ -9,19 +9,11 @@
     background-color: #4b4b7c;
     border-radius: 4px;
   }
-  .nav-link.active::after{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background-color: #FFFFFF;
-  }
+  
   .side-white-decoration{
-    width: 20px;
+    width: 8px;
     background-color: #FFFFFF;
-    border-radius: 4px;
+    border-radius: 4px 0px 0px 4px;
   }
   /* .nav-item {
     margin-bottom: 1rem;
