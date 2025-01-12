@@ -8,7 +8,51 @@ const AddNewItemReportComponent = () => {
           <label htmlFor=''>إضافة ميزانية مناقلة </label>
         </div>
       </div>
+
       <div className='row mt-5 py-2'>
+        <div className='col-6'>
+          <label htmlFor=''>البند المحجوز منه</label>
+        </div>
+      </div>
+      <div className='row '>
+        <div className='col-6'>
+          <select name='' id='' className='w-100 input-field'>
+            <option value=''>option1</option>
+            <option value=''>option1</option>
+          </select>
+        </div>
+      </div>
+
+      <div className='row mt-2 py-2'>
+        <div className='col-6'>
+          <label htmlFor=''>قيمة المبلغ المحجوز</label>
+        </div>
+        <div className='col'>
+          <label htmlFor=''>العام</label>
+        </div>
+      </div>
+      <div className='row '>
+        <div className='col-6'>
+          <input
+            type='text'
+            name=''
+            id=''
+            className='w-100 input-field'
+            placeholder='اكتب قيمة النص'
+          ></input>
+        </div>
+        <div className='col-6'>
+          <input
+            type='text'
+            name=''
+            id=''
+            className='w-100 input-field'
+            placeholder='اكتب قيمة النص'
+          ></input>
+        </div>
+      </div>
+
+      <div className='row mt-2 py-2'>
         <div className='col-6'>
           <label htmlFor=''>رقم المشروع المنقول منه</label>
         </div>

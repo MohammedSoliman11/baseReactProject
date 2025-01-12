@@ -10,7 +10,8 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
   onPageChange: setCurrentPage,
   currentPage,
 }) => {
-  console.log("current page table : ", currentPage);
+  console.log("data : ", data);
+  // console.log("current page table : ", currentPage);
   const rowsPerPage = 10;
   const totalPages = Math.ceil(data.length / rowsPerPage);
   const currentData = data.slice(
@@ -33,13 +34,13 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
             <tr key={index}>
               {columns.map((col, i) => (
                 <td
-                  // style={col.field == "actions" }
+                  style={col.field == "actions" ? { width: "15%" } : {}}
                   key={i}
                 >
                   {col.field == "actions" ? (
                     <TableActionsComponent
                       tableName={tableName}
-                      currentIndex={10 * currentPage - (9 - index)}
+                      currentIndex={10 * currentPage - (10 - index)}
                     />
                   ) : (
                     row[col.field]

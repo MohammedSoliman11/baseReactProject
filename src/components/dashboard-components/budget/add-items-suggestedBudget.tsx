@@ -147,6 +147,22 @@ const AddNewItemSuggestedBudgetComponent = () => {
         </div>
       </div>
 
+      <div className='row mt-2 py-2'>
+        <div className='col-12'>
+          <label htmlFor=''>الملاحظات</label>
+        </div>
+      </div>
+      <div className='row'>
+        <div className='col-12'>
+          <textarea
+            name=''
+            id=''
+            className='w-100 input-field'
+            placeholder='اكتب قيمة النص'
+          ></textarea>
+        </div>
+      </div>
+
       <div className='d-flex justify-content-center mt-2 py-2'>
         <button className='btn btn-light brandMain-bgColor text-white px-5 py-2 mx-2'>
           حفظ

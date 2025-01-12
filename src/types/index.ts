@@ -1,7 +1,13 @@
 import { IPaginationProps } from "./pagination-component";
-import { Column, RowData, TableWithPaginationProps } from "./table-component";
+import {
+  Column,
+  IData,
+  RowData,
+  TableWithPaginationProps,
+} from "./table-component";
 import { tableHeadersType } from "./table-header";
 import { IFilterPopup, IFilterRowsContent } from "./filter-popup";
+import { IInfoFieldsType } from "./info-fields";
 
 export {
   type IPaginationProps,
@@ -11,4 +17,6 @@ export {
   type TableWithPaginationProps,
   type IFilterPopup,
   type IFilterRowsContent,
+  type IInfoFieldsType,
+  type IData,
 };
