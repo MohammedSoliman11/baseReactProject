@@ -1,5 +1,5 @@
 import TableWithPagination from "./table";
-import { data, reportData } from "../../../store/data";
+import { mainData } from "../../../store/data";
 import { tableHeaders } from "../../../store/table-headers/table-headers";
 import { useState } from "react";
 const tableData = tableHeaders;
@@ -21,7 +21,7 @@ export const TableTabs = () => {
     reinforcementBudget: "ميزانية التعزيز",
   };
 
-  console.log("current page table tabe: ", currentPage);
+  // console.log("current page table tabe: ", currentPage);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const route: any = {
     suggestedBudget: routes.ADDNEWITEM_BUDGET_ROUTE,
@@ -47,18 +47,14 @@ export const TableTabs = () => {
     setCurrentPage(1);
   };
   return (
-    <div className='mt-4'>
+    <div className='mt-4 px-5'>
       <div className='d-flex justify-content-between my-3'>
         <div className=''>
           <p className='mediumFont fontSize-16 brandMain-color'>
             {values[activeTable]}
             <span className='Gray400-color regularFont fontSize-12'>
               {" "}
-              (
-              {activeTable === "suggestedBudget"
-                ? data.length
-                : reportData.length}
-              )
+              ( {mainData[activeTable].length} )
             </span>
           </p>
         </div>
@@ -132,7 +128,7 @@ export const TableTabs = () => {
       </div>
 
       <TableWithPagination
-        data={activeTable == "suggestedBudget" ? data : reportData}
+        data={mainData[activeTable]}
         columns={tableData[activeTable]}
         tableName={activeTable}
         onPageChange={(page: number) => setCurrentPage(page)}

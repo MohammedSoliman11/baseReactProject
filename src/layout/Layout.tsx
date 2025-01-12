@@ -12,11 +12,11 @@ export default function Layout() {
         <div className='row m-0' style={{ height: "100vh" }}>
           {/* <div class='col-md-4'>.col-md-4</div>
           <div class='col-md-4 offset-md-0'>.col-md-4 .offset-md-4</div> */}
-          <div className='col-lg-2 p-0 m-0'>
+          <div className='col-xl-2 p-0 m-0'>
             <Sidebar />
           </div>
           {/* <div className='col-md-2'></div> */}
-          <div className='col-lg-10 p-0 m-0'>
+          <div className='col-xl-10 p-0 m-0'>
             <div className='row mx-0'>
               <TopBar />
               <Outlet />

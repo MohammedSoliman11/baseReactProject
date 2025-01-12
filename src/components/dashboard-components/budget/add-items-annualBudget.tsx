@@ -9,7 +9,7 @@ const AddNewItemAnnualBudgetComponent = () => {
         </div>
       </div>
 
-      <div className='row mt-2 py-2'>
+      <div className='row mt-5 py-2'>
         <div className='col-6'>
           <label htmlFor=''>الميزانية المقترحة</label>
         </div>

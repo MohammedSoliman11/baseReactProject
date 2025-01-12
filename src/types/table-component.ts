@@ -6,6 +6,9 @@ export interface Column {
 export interface RowData {
   [key: string]: string | number; // Generic key-value for each row
 }
+export interface IData {
+  [key: string]: RowData[];
+}
 
 export interface TableWithPaginationProps {
   data: RowData[];
