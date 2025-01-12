@@ -47,7 +47,7 @@ export const TableTabs = () => {
     setCurrentPage(1);
   };
   return (
-    <div className='mx-5 mt-4'>
+    <div className='mt-4'>
       <div className='d-flex justify-content-between my-3'>
         <div className=''>
           <p className='mediumFont fontSize-16 brandMain-color'>
