@@ -105,7 +105,7 @@ const JoinForm = () => (
     </div>
     <div className='mb-3'>
       <div className='input-container'>
-        <label className='input-label'>اسم الشركة</label>
+        <label className='input-label'>اسم الشركة / المؤسسة</label>
         <span className='required'>*</span>
         <input
           type='text'

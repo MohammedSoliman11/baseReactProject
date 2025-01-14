@@ -1,13 +1,23 @@
-// import React from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../../styles/dashboard-styles/shared/side-bar.css";
 import Logo from "../../../assets/images/Rectangle 1 (1).png";
-import { Link } from "react-router-dom";
 import routes from "../../../Routes/appRoutes";
-import { useState } from "react";
+
+const {
+  DASHBOARD_ROUTE,
+  PROJECTS_ROUTE,
+  SUMMARIES_ROUTE,
+  STUDY_ROUTE,
+  SERVICE_REQUESTS_ROUTE,
+  JOIN_REQUESTS_ROUTE,
+  LOGOUT_ROUTE,
+  SUGGESTEDTABLE_ROUTE,
+} = routes;
 
 const Sidebar = () => {
   const [activeTab, setActiveTab] = useState("budget");
-
+  const navigate = useNavigate();
   return (
     <div
       className={`flex-column brandMain-bgColor mediumFont text-white`}
@@ -27,121 +37,137 @@ const Sidebar = () => {
           {activeTab === "dashboard" && (
             <span className='side-white-decoration'>""</span>
           )}
-          <a
-            href='#dashboard'
-            onClick={() => setActiveTab("dashboard")}
+          <button
+            onClick={() => {
+              setActiveTab("dashboard");
+              navigate(DASHBOARD_ROUTE);
+            }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +
               (activeTab === "dashboard" ? "active" : "")
             }
           >
             لوحة التحكم
-          </a>
+          </button>
         </li>
         <li className='nav-item d-flex'>
           {activeTab === "budget" && (
             <span className='side-white-decoration'>""</span>
           )}
-          <Link
-            to={routes.DASHBOARD_ROUTE}
-            onClick={() => setActiveTab("budget")}
+          <button
+            onClick={() => {
+              setActiveTab("budget");
+              navigate(SUGGESTEDTABLE_ROUTE);
+            }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +
               (activeTab === "budget" ? "active" : "")
             }
           >
             الميزانية
-          </Link>
+          </button>
         </li>
         <li className='nav-item d-flex'>
           {activeTab === "projects" && (
             <span className='side-white-decoration'>""</span>
           )}
-          <a
-            href='#projects'
-            onClick={() => setActiveTab("projects")}
+          <button
+            onClick={() => {
+              setActiveTab("projects");
+              navigate(PROJECTS_ROUTE);
+            }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +
               (activeTab === "projects" ? "active" : "")
             }
           >
             طرح المشاريع
-          </a>
+          </button>
         </li>
         <li className='nav-item d-flex'>
           {activeTab === "summaries" && (
             <span className='side-white-decoration'>""</span>
           )}
-          <a
-            href='#summaries'
-            onClick={() => setActiveTab("summaries")}
+          <button
+            onClick={() => {
+              setActiveTab("summaries");
+              navigate(SUMMARIES_ROUTE);
+            }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +
               (activeTab === "summaries" ? "active" : "")
             }
           >
             مستخلصات
-          </a>
+          </button>
         </li>
         <li className='nav-item d-flex'>
           {activeTab === "study" && (
             <span className='side-white-decoration'>""</span>
           )}
-          <a
-            href='#study'
-            onClick={() => setActiveTab("study")}
+          <button
+            onClick={() => {
+              setActiveTab("study");
+              navigate(STUDY_ROUTE);
+            }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +
               (activeTab === "study" ? "active" : "")
             }
           >
             دراسة المشروع
-          </a>
+          </button>
         </li>
         <li className='nav-item d-flex'>
           {activeTab === "service-requests" && (
             <span className='side-white-decoration'>""</span>
           )}
-          <a
-            href='#service-requests'
-            onClick={() => setActiveTab("service-requests")}
+          <button
+            onClick={() => {
+              setActiveTab("service-requests");
+              navigate(SERVICE_REQUESTS_ROUTE);
+            }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +
               (activeTab === "service-requests" ? "active" : "")
             }
           >
             طلبات الخدمة
-          </a>
+          </button>
         </li>
         <li className='nav-item d-flex'>
           {activeTab === "join-requests" && (
             <span className='side-white-decoration'>""</span>
           )}
-          <a
-            href='#join-requests'
-            onClick={() => setActiveTab("join-requests")}
+          <button
+            onClick={() => {
+              setActiveTab("join-requests");
+              navigate(JOIN_REQUESTS_ROUTE);
+            }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +
               (activeTab === "join-requests" ? "active" : "")
             }
           >
             طلبات الانضمام
-          </a>
+          </button>
         </li>
         <li className='nav-item d-flex'>
           {activeTab === "logout" && (
             <span className='side-white-decoration'>""</span>
           )}
-          <a
-            href='#logout'
-            onClick={() => setActiveTab("logout")}
+          <button
+            onClick={() => {
+              setActiveTab("logout");
+              navigate(LOGOUT_ROUTE);
+            }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +
               (activeTab === "logout" ? "active" : "")
             }
           >
             تسجيل خروج
-          </a>
+          </button>
         </li>
       </ul>
     </div>

@@ -15,7 +15,6 @@ const annualBudget: Column[] = infoFields.annualBudget;
 const InfoModalComponent: React.FC<IShowInfo> = (props) => {
   const [show, setShow] = useState(false);
 
-  console.log("props.table name : ", props.tableName);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 

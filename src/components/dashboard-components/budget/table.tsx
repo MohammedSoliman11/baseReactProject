@@ -10,8 +10,6 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
   onPageChange: setCurrentPage,
   currentPage,
 }) => {
-  console.log("data : ", data);
-  // console.log("current page table : ", currentPage);
   const rowsPerPage = 10;
   const totalPages = Math.ceil(data.length / rowsPerPage);
   const currentData = data.slice(

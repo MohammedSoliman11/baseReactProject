@@ -9,9 +9,13 @@ import Logo from "../../assets/images/Rectangle 1 (1).png";
 import graph from "../../assets/images/ic-trending-up-24px (1).png";
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import routes from "../../Routes/appRoutes";
+const { SUGGESTEDTABLE_ROUTE } = routes;
 
 const MainPage = () => {
+  const navigate = useNavigate();
   // Make current time
   const [Time, setTime] = useState(
     new Date().toLocaleTimeString("en-US", {
@@ -52,9 +56,22 @@ const MainPage = () => {
       })
     );
   }, []);
+  useEffect(() => {
+    const toggleNavVisibility = () => {
+      if (window.scrollY > 100) {
+        setNavbarShow("");
+        setNavbar("");
+      }
+    };
+
+    window.addEventListener("scroll", toggleNavVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", toggleNavVisibility);
+    };
+  }, []);
 
   const setHomeClassFun = () => {
-    //console.log(Navbar);
     if (Navbar == "") setNavbar("navbar1");
     else setNavbar("");
     if (NavbarShow == "show") setNavbarShow("");
@@ -192,13 +209,15 @@ const MainPage = () => {
                     </a>
                   </li>
                   <li className='nav-item'>
-                    <Link
-                      to='/dashboard'
+                    <button
+                      onClick={() => {
+                        closeNavbar();
+                        navigate(SUGGESTEDTABLE_ROUTE);
+                      }}
                       className='nav-link'
-                      onClick={closeNavbar}
                     >
                       لوحة التحكم
-                    </Link>
+                    </button>
                   </li>
                 </ul>
                 <form>

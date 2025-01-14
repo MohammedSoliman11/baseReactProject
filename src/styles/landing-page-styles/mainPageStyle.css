@@ -61,6 +61,10 @@
   color: var(--white) !important;
   font-family: "dinMedium";
 }
+.linkStyles li button {
+  color: var(--white) !important;
+  font-family: "dinMedium";
+}
 .login-btn {
   color: #2e255f;
 
