@@ -8,12 +8,15 @@ export default {
   SERVICE_REQUESTS_ROUTE: "/dashboard/service-requests",
   JOIN_REQUESTS_ROUTE: "/dashboard/join-requests",
   LOGOUT_ROUTE: "/dashboard/logout",
+
   REPORTTABLE_ROUTE: "/dashboard/budget/reports",
   SUGGESTEDTABLE_ROUTE: "/dashboard/budget/suggested-budget",
-  ADDNEWITEM_BUDGET_ROUTE:
-    "/dashboard/budget/suggested-budget/add-suggested-budget",
-  ADDNEWITEM_REPORTS_ROUTE: "/dashboard/budget/reports/add-reports",
-  ADDNEWITEM_ANNUALBUDGET_ROUTE: "/dashboard/budget/add-annual-budget",
+  ANNUALTABLE_ROUTE: "/dashboard/budget/annual-budget",
+  REINFORCEMENTTABLE_ROUTE: "/dashboard/budget/reinforcement-budget",
+
+  ADDNEWITEM_BUDGET_ROUTE: "/dashboard/budget/suggested-budget/add",
+  ADDNEWITEM_REPORTS_ROUTE: "/dashboard/budget/reports/add",
+  ADDNEWITEM_ANNUALBUDGET_ROUTE: "/dashboard/budget/annual-budget/add",
   ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE:
     "/dashboard/budget/add-reinforcement-budget",
 };

@@ -6,13 +6,13 @@ import routes from "../../../Routes/appRoutes";
 
 const {
   DASHBOARD_ROUTE,
-  BUDGET_ROUTE,
   PROJECTS_ROUTE,
   SUMMARIES_ROUTE,
   STUDY_ROUTE,
   SERVICE_REQUESTS_ROUTE,
   JOIN_REQUESTS_ROUTE,
   LOGOUT_ROUTE,
+  SUGGESTEDTABLE_ROUTE,
 } = routes;
 
 const Sidebar = () => {
@@ -57,7 +57,7 @@ const Sidebar = () => {
           <button
             onClick={() => {
               setActiveTab("budget");
-              navigate(BUDGET_ROUTE);
+              navigate(SUGGESTEDTABLE_ROUTE);
             }}
             className={
               "nav-link text-white p-4 px-5 w-100 " +

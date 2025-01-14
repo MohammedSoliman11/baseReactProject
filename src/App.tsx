@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
-
 import Layout from "./layout/Layout";
-
 import { TableTabs } from "./components/dashboard-components/budget/table-tabs";
-
 import budgetComponents from "./components/dashboard-components/budget";
+import NotFound from "./pages/Page-Not-Found";
+import Home from "./pages/Home";
+import path from "./Routes/appRoutes";
+
 const {
   AddNewItemSuggestedBudgetComponent,
   AddNewItemReportComponent,
@@ -12,10 +13,6 @@ const {
   AddNewItemreinforcementBudgetComponent,
 } = budgetComponents;
 
-import NotFound from "./pages/Page-Not-Found";
-import Home from "./pages/Home";
-
-import path from "./Routes/appRoutes";
 const {
   BUDGET_ROUTE,
   HOME_ROUTE,
@@ -32,55 +29,70 @@ const {
   ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE,
   REPORTTABLE_ROUTE,
   SUGGESTEDTABLE_ROUTE,
+  ANNUALTABLE_ROUTE,
+  REINFORCEMENTTABLE_ROUTE,
 } = path;
 
 const App = () => {
   return (
-    <>
-      <Routes>
-        <Route path={HOME_ROUTE} element={<Home />} />
-        <Route path={DASHBOARD_ROUTE} element={<Layout />}>
+    <Routes>
+      <Route path={HOME_ROUTE} element={<Home />} />
+      <Route element={<Layout />}>
+        {/* Dashboard Routing */}
+        <Route path={DASHBOARD_ROUTE} element={<NotFound />} />
+
+        {/* Budget Routing */}
+        <Route path={BUDGET_ROUTE}>
+          {/* Suggested Budget Table Routing */}
           <Route
-            path={BUDGET_ROUTE}
+            path={SUGGESTEDTABLE_ROUTE}
             element={<TableTabs TableName='suggestedBudget' />}
-          >
-            <Route
-              path={SUGGESTEDTABLE_ROUTE}
-              element={<TableTabs TableName='suggestedBudget' />}
-            >
-              <Route
-                path={ADDNEWITEM_BUDGET_ROUTE}
-                element={<AddNewItemSuggestedBudgetComponent />}
-              />
-            </Route>
-            <Route
-              path={REPORTTABLE_ROUTE}
-              element={<TableTabs TableName='report' />}
-            >
-              <Route
-                path={ADDNEWITEM_REPORTS_ROUTE}
-                element={<AddNewItemReportComponent />}
-              />
-            </Route>
-            <Route
-              path={ADDNEWITEM_ANNUALBUDGET_ROUTE}
-              element={<AddNewItemAnnualBudgetComponent />}
-            />
-            <Route
-              path={ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE}
-              element={<AddNewItemreinforcementBudgetComponent />}
-            />
-          </Route>
-          <Route path={PROJECTS_ROUTE} element={<NotFound />} />
-          <Route path={SUMMARIES_ROUTE} element={<NotFound />} />
-          <Route path={STUDY_ROUTE} element={<NotFound />} />
-          <Route path={SERVICE_REQUESTS_ROUTE} element={<NotFound />} />
-          <Route path={JOIN_REQUESTS_ROUTE} element={<NotFound />} />
-          <Route path={LOGOUT_ROUTE} element={<NotFound />} />
+          />
+          <Route
+            path={ADDNEWITEM_BUDGET_ROUTE}
+            element={<AddNewItemSuggestedBudgetComponent />}
+          />
+
+          {/* Reports Table Routing */}
+          <Route
+            path={REPORTTABLE_ROUTE}
+            element={<TableTabs TableName='reports' />}
+          />
+          <Route
+            path={ADDNEWITEM_REPORTS_ROUTE}
+            element={<AddNewItemReportComponent />}
+          />
+
+          {/* Annual Budget Table Routing */}
+          <Route
+            path={ANNUALTABLE_ROUTE}
+            element={<TableTabs TableName='annualBudget' />}
+          />
+          <Route
+            path={ADDNEWITEM_ANNUALBUDGET_ROUTE}
+            element={<AddNewItemAnnualBudgetComponent />}
+          />
+
+          {/* Reinforcement Budget Table Routing */}
+          <Route
+            path={REINFORCEMENTTABLE_ROUTE}
+            element={<TableTabs TableName='reinforcementBudget' />}
+          />
+          <Route
+            path={ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE}
+            element={<AddNewItemreinforcementBudgetComponent />}
+          />
         </Route>
-        <Route path='*' element={<NotFound />} />
-      </Routes>
-    </>
+
+        <Route path={PROJECTS_ROUTE} element={<NotFound />} />
+        <Route path={SUMMARIES_ROUTE} element={<NotFound />} />
+        <Route path={STUDY_ROUTE} element={<NotFound />} />
+        <Route path={SERVICE_REQUESTS_ROUTE} element={<NotFound />} />
+        <Route path={JOIN_REQUESTS_ROUTE} element={<NotFound />} />
+        <Route path={LOGOUT_ROUTE} element={<NotFound />} />
+      </Route>
+      <Route path='*' element={<NotFound />} />
+    </Routes>
   );
 };
 

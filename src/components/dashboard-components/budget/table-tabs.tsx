@@ -1,39 +1,23 @@
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 import TableWithPagination from "./table";
 import { mainData } from "../../../store/data";
 import { tableHeaders } from "../../../store/table-headers/table-headers";
-import { useState } from "react";
 const tableData = tableHeaders;
 import "../../../styles/dashboard-styles/budget/table-tabs.css";
 import ShowToastComponent from "./download-notification";
 import FilterModalComponent from "./filter-popup";
-import { useNavigate } from "react-router-dom";
 
 import routes from "../../../Routes/appRoutes";
-
-const { SUGGESTEDTABLE_ROUTE, REPORTTABLE_ROUTE } = routes;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const TableTabs: React.FC<any> = (props) => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   console.log("current table : ", props.TableName);
-  const [activeTable, setActiveTable] = useState(props.TableName); // 'join' or 'service'
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const values: any = {
-    suggestedBudget: "الميزانية المقترحة",
-    reports: "بيـان الحجوزات والمناقلات والصرف",
-    annualBudget: "ميزانية العام",
-    reinforcementBudget: "ميزانية التعزيز",
-  };
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const route: any = {
-    suggestedBudget: routes.ADDNEWITEM_BUDGET_ROUTE,
-    reports: routes.ADDNEWITEM_REPORTS_ROUTE,
-    annualBudget: routes.ADDNEWITEM_ANNUALBUDGET_ROUTE,
-    reinforcementBudget: routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE,
-  };
-  // Toggle between Tables
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [activeTable, setActiveTable] = useState(props.TableName);
   const showsuggestedBudget = () => {
     setActiveTable("suggestedBudget");
     setCurrentPage(1);
@@ -49,6 +33,22 @@ export const TableTabs: React.FC<any> = (props) => {
   const showreinforcementBudget = () => {
     setActiveTable("reinforcementBudget");
     setCurrentPage(1);
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const values: any = {
+    suggestedBudget: "الميزانية المقترحة",
+    reports: "بيـان الحجوزات والمناقلات والصرف",
+    annualBudget: "ميزانية العام",
+    reinforcementBudget: "ميزانية التعزيز",
+  };
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const route: any = {
+    suggestedBudget: routes.ADDNEWITEM_BUDGET_ROUTE,
+    reports: routes.ADDNEWITEM_REPORTS_ROUTE,
+    annualBudget: routes.ADDNEWITEM_ANNUALBUDGET_ROUTE,
+    reinforcementBudget: routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE,
   };
   return (
     <div className='mt-4 px-5'>
@@ -97,7 +97,10 @@ export const TableTabs: React.FC<any> = (props) => {
               className={`col-md-3 btn fontSize-14 ${
                 activeTable === "suggestedBudget" ? "active" : ""
               } budget`}
-              onClick={showsuggestedBudget}
+              onClick={() => {
+                navigate(routes.SUGGESTEDTABLE_ROUTE);
+                showsuggestedBudget();
+              }}
             >
               الميزانية المقترحة
             </button>
@@ -105,7 +108,10 @@ export const TableTabs: React.FC<any> = (props) => {
               className={`col-md-3 btn  fontSize-14 ${
                 activeTable === "reports" ? "active " : ""
               } budget`}
-              onClick={showreports}
+              onClick={() => {
+                navigate(routes.REPORTTABLE_ROUTE);
+                showreports();
+              }}
             >
               بيـان الحجوزات والمناقلات والصرف
             </button>
@@ -113,7 +119,10 @@ export const TableTabs: React.FC<any> = (props) => {
               className={`col-md-3 btn  fontSize-14 ${
                 activeTable === "annualBudget" ? "active " : ""
               } budget `}
-              onClick={showannualBudget}
+              onClick={() => {
+                navigate(routes.ANNUALTABLE_ROUTE);
+                showannualBudget();
+              }}
             >
               ميزانية العام
             </button>
@@ -121,7 +130,10 @@ export const TableTabs: React.FC<any> = (props) => {
               className={`col-md-3 btn  fontSize-14 ${
                 activeTable === "reinforcementBudget" ? "active " : ""
               } budget`}
-              onClick={showreinforcementBudget}
+              onClick={() => {
+                navigate(routes.REINFORCEMENTTABLE_ROUTE);
+                showreinforcementBudget();
+              }}
             >
               ميزانية التعزيز{" "}
             </button>

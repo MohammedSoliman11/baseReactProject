@@ -15,7 +15,7 @@ import apple from "../../assets/images/appStore.jpg";
 import { useNavigate } from "react-router-dom";
 
 import routes from "../../Routes/appRoutes";
-const { BUDGET_ROUTE } = routes;
+const { SUGGESTEDTABLE_ROUTE } = routes;
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -94,7 +94,7 @@ const Footer = () => {
                 </li>
                 <li className=''>
                   <button
-                    onClick={() => navigate(BUDGET_ROUTE)}
+                    onClick={() => navigate(SUGGESTEDTABLE_ROUTE)}
                     className='nav-link'
                   >
                     لوحة التحكم
@@ -127,44 +127,7 @@ const Footer = () => {
                 <li>الانظمة واللوائح</li>
               </ul>
             </div>
-            {/* Section 5: App Links */}
-            {/* <div className='col-md-2 mb-4 mb-md-0'>
-                <h5 className=''>حمل التطبيق الخاص بنا</h5>
-
-                <a href='' className='text-decoration-none'>
-                  <div className='google d-flex googleStyle bg-white align-items-center px-4 py-2 flex-row-reverse '>
-                    <div className='google-img'>
-                      <img
-                        src={googlePly} // Replace with Play Store logo
-                        alt='Google Play'
-                        className='googleImg'
-                      />
-                    </div>
-
-                    <div className='anchor ms-2'>
-                      <span className='getIT'>GET IT ON</span>
-                      <span className='googleStyle'>Google Play</span>
-                    </div>
-                  </div>
-                </a>
-
-                <a href='' className='text-decoration-none'>
-                  <div className='google d-flex googleStyle bg-white align-items-center px-4 py-2 flex-row-reverse '>
-                    <div className='google-img'>
-                      <img
-                        src={apple} // Replace with Play Store logo
-                        alt='Google Play'
-                        className='googleImg'
-                      />
-                    </div>
-
-                    <div className='anchor ms-2'>
-                      <span className='getIT'>GET IT ON</span>
-                      <span className=' googleStyle'>App Store</span>
-                    </div>
-                  </div>
-                </a>
-              </div> */}
+            {/* Section 5: Download App */}
             <div className='col-md-2 mb-4 mb-md-0'>
               <h5 className=''>حمل التطبيق الخاص بنا</h5>
               <div className='mb-2'>

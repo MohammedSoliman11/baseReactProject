@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import routes from "../../Routes/appRoutes";
-const { BUDGET_ROUTE } = routes;
+const { SUGGESTEDTABLE_ROUTE } = routes;
 
 const MainPage = () => {
   const navigate = useNavigate();
@@ -212,7 +212,7 @@ const MainPage = () => {
                     <button
                       onClick={() => {
                         closeNavbar();
-                        navigate(BUDGET_ROUTE);
+                        navigate(SUGGESTEDTABLE_ROUTE);
                       }}
                       className='nav-link'
                     >
