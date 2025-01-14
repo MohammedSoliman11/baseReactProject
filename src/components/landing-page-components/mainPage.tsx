@@ -52,9 +52,22 @@ const MainPage = () => {
       })
     );
   }, []);
+  useEffect(() => {
+    const toggleNavVisibility = () => {
+      if (window.scrollY > 100) {
+        setNavbarShow("");
+        setNavbar("");
+      }
+    };
+
+    window.addEventListener("scroll", toggleNavVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", toggleNavVisibility);
+    };
+  }, []);
 
   const setHomeClassFun = () => {
-    //console.log(Navbar);
     if (Navbar == "") setNavbar("navbar1");
     else setNavbar("");
     if (NavbarShow == "show") setNavbarShow("");
