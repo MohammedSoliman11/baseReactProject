@@ -10,8 +10,8 @@ const Vision = () => {
       <div className='container my-5 py-5'>
         <div className='row text-right'>
           {/* Right Column */}
-          <div className='col-md-6 my-2'>
-            <div className='content-box'>
+          <div className=' col-md-6 my-2'>
+            <div className='content-box service-card'>
               <h4 className='d-flex align-items-center'>
                 <div className='lightIcon secondary-color p-1 ms-2'>
                   <img src={light} alt='' className='secondary-color' />
@@ -39,7 +39,7 @@ const Vision = () => {
 
           {/* Left Column */}
           <div className='col-md-6 my-2'>
-            <div className='content-box'>
+            <div className='content-box service-card'>
               <h4 className='d-flex align-items-center'>
                 <div className='lightIcon secondary-color p-1 ms-2'>
                   <img src={arrow} alt='' className='' />
