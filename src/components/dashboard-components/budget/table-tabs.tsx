@@ -66,13 +66,13 @@ export const TableTabs: React.FC<any> = (props) => {
           <div className='mx-2'>
             <ShowToastComponent></ShowToastComponent>
           </div>
-          {activeTable !== "reports" && (
+          {
             <div className='mx-2'>
               <FilterModalComponent
                 tableName={activeTable}
               ></FilterModalComponent>
             </div>
-          )}
+          }
           <div className='mx-2'>
             <button className='btn btn-light p-2'>
               <i className='bi bi-printer-fill brandMain-color '></i>

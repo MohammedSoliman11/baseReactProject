@@ -18,13 +18,14 @@ const FilterModalComponent: React.FC<IFilterPopup> = (props) => {
       ],
     ],
     reports: [
-      // { label: "رقم التصنيف الاقتصادي", inputType: "text" },
-      // { label: "البند المنقول منه", inputType: "text" },
-      // { label: "البند المنقول له", inputType: "text" },
-      // { label: "المبلغ", inputType: "text" },
-      // { label: "المحجوز منه", inputType: "text" },
-      // { label: "العام الحالي", inputType: "text" },
-      // { label: "العام الماضي", inputType: "text" },
+      [
+        { label: "الباب", inputType: "select" },
+        { label: "البند", inputType: "select" },
+      ],
+      [
+        { label: "رقم التصنيف", inputType: "text" },
+        { label: "رقم العام الحالي", inputType: "text" },
+      ],
     ],
     annualBudget: [
       [
