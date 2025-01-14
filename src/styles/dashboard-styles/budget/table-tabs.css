@@ -1,0 +1,12 @@
+.budget.active{
+  color: var(--brandMain) !important; /* Active text color */
+  border-bottom: 2px solid var(--brandMain) !important; /* Active tab underline */
+  background-color: var(--gary100) !important;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-radius: 0px;
+}
+.rotate-icon{
+  transform: rotate(90deg);
+}

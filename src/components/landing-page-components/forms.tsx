@@ -13,7 +13,7 @@ const Form = () => {
   return (
     <div
       id='join'
-      className='formMain container d-flex justify-content-center mt-5'
+      className='shadow-lg formMain container d-flex justify-content-center'
     >
       {/* Toggle Buttons */}
       <div className='col-md-10'>
@@ -209,33 +209,9 @@ const ServiceForm = () => (
     </div>
     <div className='mb-3'>
       <div className='input-container'>
-        <label className='input-label'>السجل التجاري</label>
-        <span className='required'>*</span>
-        <input
-          type='text'
-          id='tradeNumber'
-          placeholder='ادخل رقم السجل التجاري'
-          className='input-field'
-        />
-      </div>
-    </div>
-    <div className='mb-3'>
-      <div className='input-container'>
-        <label className='input-label'>السجل الضريبي</label>
-        <span className='required'>*</span>
-        <input
-          type='text'
-          id='taxNumber'
-          placeholder='ادخل رقم السجل الضريبي'
-          className='input-field'
-        />
-      </div>
-    </div>
-    <div className='mb-3'>
-      <div className='input-container'>
-        <label className='input-label'>لماذا تريد الانضمام الينا ؟</label>
+        <label className='input-label'>تفاصيل عن الخدمة المطلوبة</label>
         <textarea
-          placeholder='اكتب لماذا تريد الانضمام الينا ؟'
+          placeholder='اكتب تفاصيل عن الخدمة المطلوبة..'
           className='input-field'
           rows={5}
         />

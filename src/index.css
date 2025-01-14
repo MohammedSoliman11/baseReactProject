@@ -41,6 +41,7 @@
   /* Success Colors */
   --success: #00af6c;
   --success25: #00af6c40;
+  --success5: #009E800D;
 
   /* Warning Colors */
   --warnig: #ffaf44;
@@ -59,11 +60,27 @@
 .brandMain-color{
   color: var(--brandMain);
 }
+.brandMain-bgColor{
+  background-color: var(--brandMain) !important;
+}
+.success5-color{
+  color: var(--success5);
+}
 .secondary-color{
   color: var(--secondary);
 }
+
 .secondary-bgColor{
   background-color: var(--secondary) !important;
+}
+.Gray400-color{
+  color: var(--gary400) !important;
+}
+.Gray500-color{
+  color: var(--gary500) !important;
+}
+.Gray100-bgColor{
+  background-color: var(--gary100) !important;
 }
 .fontSize-32{
   font-size: 32px !important;
@@ -76,4 +93,10 @@
 }
 .fontSize-16{
   font-size: 16px;
+}
+.fontSize-14{
+  font-size: 14px;
+}
+.fontSize-12{
+  font-size: 12px;
 }

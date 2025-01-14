@@ -1,0 +1,33 @@
+/* Add spacing and alignment fixes */
+button {
+  border: none;
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.search-input {
+  background-color: #FFFFFF;
+  border: none !important;
+  padding: 5px;
+  flex-grow: 1;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button .fa-search {
+  font-size: 16px;
+  color: #333;
+}
