@@ -9,12 +9,14 @@ import gameHome from "../assets/images/game-icons_road.png";
 import vector3Home from "../assets/images/Vector (6).png";
 import vector4Home from "../assets/images/Group 1171275311.png";
 import coloredVectorHome from "../assets/images/Vector (8).png";
+import ScrollToTopButton from "../components/landing-page-components/scrollUpButton";
 
 const Home = () => {
   return (
     <>
       {/* Home */}
       <MainPage></MainPage>
+      <ScrollToTopButton></ScrollToTopButton>
       <AboutUs></AboutUs>
       <Vision></Vision>
       {/* section 5 */}
