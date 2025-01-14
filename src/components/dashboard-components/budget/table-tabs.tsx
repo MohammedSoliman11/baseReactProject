@@ -21,7 +21,6 @@ export const TableTabs = () => {
     reinforcementBudget: "ميزانية التعزيز",
   };
 
-  // console.log("current page table tabe: ", currentPage);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const route: any = {
     suggestedBudget: routes.ADDNEWITEM_BUDGET_ROUTE,

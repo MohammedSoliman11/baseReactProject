@@ -14,7 +14,6 @@ const Pagination: React.FC<IPaginationProps> = ({
   };
 
   const renderPageNumbers = () => {
-    // console.log("current page pagination : ", currentPage);
     const pages = [];
     for (let i = totalPages; i >= 1; i--) {
       if (
