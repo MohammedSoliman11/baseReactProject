@@ -12,9 +12,13 @@ import whatsapp from "../../assets/images/whatsapp.png";
 import smsFooter from "../../assets/images/sms.png";
 import googlePly from "../../assets/images/GooglePlay.jpg";
 import apple from "../../assets/images/appStore.jpg";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import routes from "../../Routes/appRoutes";
+const { BUDGET_ROUTE } = routes;
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <>
       {/* footer */}
@@ -89,9 +93,12 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className=''>
-                  <Link to='/dashboard' className='nav-link'>
+                  <button
+                    onClick={() => navigate(BUDGET_ROUTE)}
+                    className='nav-link'
+                  >
                     لوحة التحكم
-                  </Link>
+                  </button>
                 </li>
               </ul>
             </div>

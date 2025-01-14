@@ -6,13 +6,18 @@ const tableData = tableHeaders;
 import "../../../styles/dashboard-styles/budget/table-tabs.css";
 import ShowToastComponent from "./download-notification";
 import FilterModalComponent from "./filter-popup";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import routes from "../../../Routes/appRoutes";
 
-export const TableTabs = () => {
+const { SUGGESTEDTABLE_ROUTE, REPORTTABLE_ROUTE } = routes;
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const TableTabs: React.FC<any> = (props) => {
+  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
-  const [activeTable, setActiveTable] = useState("suggestedBudget"); // 'join' or 'service'
+  console.log("current table : ", props.TableName);
+  const [activeTable, setActiveTable] = useState(props.TableName); // 'join' or 'service'
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const values: any = {
     suggestedBudget: "الميزانية المقترحة",
@@ -73,14 +78,14 @@ export const TableTabs = () => {
               <i className='bi bi-printer-fill brandMain-color '></i>
             </button>
           </div>
-          <Link
-            to={route[activeTable]}
+          <button
+            onClick={() => navigate(route[activeTable])}
             className='btn btn-light brandMain-bgColor px-4 py-2'
           >
             <span className='text-white mediumFont fontSize-14 d-flex flex-no-wrap'>
               <i className='bi bi-plus'></i> إضافة
             </span>
-          </Link>
+          </button>
         </div>
       </div>
 

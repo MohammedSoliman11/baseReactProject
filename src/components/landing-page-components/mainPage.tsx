@@ -9,9 +9,13 @@ import Logo from "../../assets/images/Rectangle 1 (1).png";
 import graph from "../../assets/images/ic-trending-up-24px (1).png";
 
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import routes from "../../Routes/appRoutes";
+const { BUDGET_ROUTE } = routes;
 
 const MainPage = () => {
+  const navigate = useNavigate();
   // Make current time
   const [Time, setTime] = useState(
     new Date().toLocaleTimeString("en-US", {
@@ -205,13 +209,15 @@ const MainPage = () => {
                     </a>
                   </li>
                   <li className='nav-item'>
-                    <Link
-                      to='/dashboard'
+                    <button
+                      onClick={() => {
+                        closeNavbar();
+                        navigate(BUDGET_ROUTE);
+                      }}
                       className='nav-link'
-                      onClick={closeNavbar}
                     >
                       لوحة التحكم
-                    </Link>
+                    </button>
                   </li>
                 </ul>
                 <form>
