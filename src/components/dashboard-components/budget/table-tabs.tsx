@@ -16,7 +16,6 @@ export const TableTabs: React.FC<any> = (props) => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   console.log("current table : ", props.TableName);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeTable, setActiveTable] = useState(props.TableName);
   const showsuggestedBudget = () => {
     setActiveTable("suggestedBudget");
