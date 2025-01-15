@@ -18,6 +18,5 @@ export default {
   ADDNEWITEM_REPORTS_ROUTE: "/dashboard/budget/reports/add",
   ADDNEWITEM_ANNUALBUDGET_ROUTE: "/dashboard/budget/annual-budget/add",
   ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE:
-    "/dashboard/budget/add-reinforcement-budget",
+    "/dashboard/budget/reinforcement-budget/add",
 };
-//update
