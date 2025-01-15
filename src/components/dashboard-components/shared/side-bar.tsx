@@ -16,7 +16,7 @@ const {
 } = routes;
 
 const Sidebar = () => {
-  const [activeTab, setActiveTab] = useState("budget");
+  const [activeTab, setActiveTab] = useState("dashboard");
   const navigate = useNavigate();
   return (
     <div
