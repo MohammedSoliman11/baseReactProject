@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Layout from "./layout/Layout";
 import { TableTabs } from "./components/dashboard-components/budget/table-tabs";
 import budgetComponents from "./components/dashboard-components/budget";
@@ -34,10 +34,16 @@ const {
 } = path;
 
 const App = () => {
+  const location = useLocation();
+  const locationPart =
+    location.pathname.split("/")[2] === undefined
+      ? "dashboard"
+      : location.pathname.split("/")[2];
+  console.log(locationPart);
   return (
     <Routes>
       <Route path={HOME_ROUTE} element={<Home />} />
-      <Route element={<Layout />}>
+      <Route element={<Layout activeTab={locationPart} />}>
         {/* Dashboard Routing */}
         <Route path={DASHBOARD_ROUTE} element={<NotFound />} />
 
@@ -45,6 +51,12 @@ const App = () => {
         <Route path={BUDGET_ROUTE}>
           {/* Suggested Budget Table Routing */}
           <Route
+            index
+            path={BUDGET_ROUTE}
+            element={<TableTabs TableName='suggestedBudget' />}
+          />
+          <Route
+            index
             path={SUGGESTEDTABLE_ROUTE}
             element={<TableTabs TableName='suggestedBudget' />}
           />

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../../../styles/dashboard-styles/shared/side-bar.css";
 import Logo from "../../../assets/images/Rectangle 1 (1).png";
 import routes from "../../../Routes/appRoutes";
+import { ILayoutProp } from "../../../types/layout-props-type";
 
 const {
   DASHBOARD_ROUTE,
@@ -15,8 +16,8 @@ const {
   SUGGESTEDTABLE_ROUTE,
 } = routes;
 
-const Sidebar = () => {
-  const [activeTab, setActiveTab] = useState("dashboard");
+const Sidebar: React.FC<ILayoutProp> = ({ activeTabProp }) => {
+  const [activeTab, setActiveTab] = useState(activeTabProp);
   const navigate = useNavigate();
   return (
     <div

@@ -3,8 +3,9 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/dashboard-components/shared/side-bar";
 import TopBar from "../components/dashboard-components/shared/search-bar";
+import { ILayout } from "../types/layout-props-type";
 
-export default function Layout() {
+const Layout: React.FC<ILayout> = ({ activeTab }) => {
   return (
     <div className='layout'>
       {/* <Navbar /> */}
@@ -13,7 +14,7 @@ export default function Layout() {
           {/* <div class='col-md-4'>.col-md-4</div>
           <div class='col-md-4 offset-md-0'>.col-md-4 .offset-md-4</div> */}
           <div className='col-xl-2 p-0 m-0'>
-            <Sidebar />
+            <Sidebar activeTabProp={activeTab} />
           </div>
           {/* <div className='col-md-2'></div> */}
           <div className='col-xl-10 p-0 m-0'>
@@ -26,4 +27,6 @@ export default function Layout() {
       </div>
     </div>
   );
-}
+};
+
+export default Layout;
