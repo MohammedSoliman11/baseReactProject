@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import routes from "../../../Routes/appRoutes";
 const AddNewItemreinforcementBudgetComponent = () => {
+  const navigate = useNavigate();
   return (
     <div className='container p-5 mediumFont'>
       <div className='row'>
@@ -56,12 +57,12 @@ const AddNewItemreinforcementBudgetComponent = () => {
         <button className='btn btn-light brandMain-bgColor text-white px-5 py-2 mx-2'>
           حفظ
         </button>
-        <Link
-          to={routes.DASHBOARD_ROUTE}
+        <button
+          onClick={() => navigate(routes.REINFORCEMENTTABLE_ROUTE)}
           className='btn btn-light Gray100-bgColor px-5 py-2 mx-2'
         >
           إغلاق
-        </Link>
+        </button>
       </div>
     </div>
   );

@@ -3,12 +3,10 @@ import InfoModalComponent from "./show-info-popup";
 import ShowToastComponent from "./download-notification";
 import DeleteModalComponent from "./delete-popup";
 import routes from "../../../Routes/appRoutes";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const TableActionsComponent: React.FC<ITableActions> = (props) => {
-  // console.log(pros.currentIndex);
-  // show={tableName === "reinforcementBudget" ? false : true}
-  // console.log(props.tableName);
+  const navigate = useNavigate();
   return (
     <div className='d-flex justify-content-center align-items-center'>
       {props.tableName !== "reinforcementBudget" && (
@@ -19,30 +17,37 @@ const TableActionsComponent: React.FC<ITableActions> = (props) => {
       )}
       <ShowToastComponent></ShowToastComponent>
       {props.tableName === "suggestedBudget" && (
-        <Link to={routes.ADDNEWITEM_BUDGET_ROUTE} className='btn btn-light'>
+        <button
+          type='button'
+          onClick={() => navigate(routes.ADDNEWITEM_BUDGET_ROUTE)}
+          className='btn btn-light'
+        >
           <i className='bi bi-pencil-fill secondary-color'></i>
-        </Link>
+        </button>
       )}
       {props.tableName === "reports" && (
-        <Link to={routes.ADDNEWITEM_REPORTS_ROUTE} className='btn btn-light'>
+        <button
+          onClick={() => navigate(routes.ADDNEWITEM_REPORTS_ROUTE)}
+          className='btn btn-light'
+        >
           <i className='bi bi-pencil-fill secondary-color'></i>
-        </Link>
+        </button>
       )}
       {props.tableName === "annualBudget" && (
-        <Link
-          to={routes.ADDNEWITEM_ANNUALBUDGET_ROUTE}
+        <button
+          onClick={() => navigate(routes.ADDNEWITEM_ANNUALBUDGET_ROUTE)}
           className='btn btn-light'
         >
           <i className='bi bi-pencil-fill secondary-color'></i>
-        </Link>
+        </button>
       )}
       {props.tableName === "reinforcementBudget" && (
-        <Link
-          to={routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE}
+        <button
+          onClick={() => navigate(routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE)}
           className='btn btn-light'
         >
           <i className='bi bi-pencil-fill secondary-color'></i>
-        </Link>
+        </button>
       )}
 
       <DeleteModalComponent></DeleteModalComponent>
