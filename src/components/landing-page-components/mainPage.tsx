@@ -258,7 +258,7 @@ const MainPage = () => {
 
         <div className='container projectsNum'>
           <div className='row justify-content-center'>
-            <div className='col-8'>
+            <div className='col-md-9'>
               <div className='stats-box d-flex justify-content-between align-items-center text-center p-4 rounded'>
                 {/* First Column */}
                 <div className='col'>
