@@ -79,6 +79,18 @@
 .Gray500-color{
   color: var(--gary500) !important;
 }
+.Gray600-color{
+  color: var(--gary600) !important;
+}
+.Gray100-color{
+  color: var(--gary100) !important;
+}
+.Gray200-color{
+  color: var(--gary200) !important;
+}
+.Gray300-color{
+  color: var(--gary300) !important;
+} 
 .Gray100-bgColor{
   background-color: var(--gary100) !important;
 }

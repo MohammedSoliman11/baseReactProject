@@ -110,7 +110,7 @@ const FilterModalComponent: React.FC<IFilterPopup> = (props) => {
             ))}
           </div>
         </Modal.Body>
-        <Modal.Footer className='d-flex justify-content-center align-items-center'>
+        <Modal.Footer className='d-flex justify-content-center align-items-center mediumFont'>
           <button className='btn btn-light brandMain-bgColor text-white px-5 py-2'>
             تفعيل
           </button>

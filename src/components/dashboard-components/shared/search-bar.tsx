@@ -4,7 +4,7 @@ import KSAFlag from "../../../assets/image.png";
 
 const TopBar = () => {
   return (
-    <div className='col bg-light shadow p-3 d-flex justify-content-between'>
+    <div className='col shadow p-3 d-flex justify-content-between'>
       {/* Search Bar */}
       <div className='d-flex justify-content-start align-items-center gap-2 w-75 sm-w-100'>
         <div className='w-75'>

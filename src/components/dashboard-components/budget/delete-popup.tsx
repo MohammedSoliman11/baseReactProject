@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import "../../../styles/dashboard-styles/budget/delete-popup.css";
 
 function DeleteModalComponent() {
@@ -10,9 +10,9 @@ function DeleteModalComponent() {
 
   return (
     <>
-      <Button className='btn btn-light' onClick={handleShow}>
-        <i className='bi bi-trash-fill brandMain-color '></i>
-      </Button>
+      <button className='btn btn-light' onClick={handleShow}>
+        <i className='bi bi-trash-fill Gray300-color'></i>
+      </button>
 
       <Modal show={show} onHide={handleClose} centered className='modal'>
         <Modal.Body>
@@ -35,7 +35,7 @@ function DeleteModalComponent() {
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer className='d-flex justify-content-center align-items-center'>
+        <Modal.Footer className='d-flex justify-content-center align-items-center mediumFont'>
           <button className='btn btn-danger text-white px-5 py-2'>حذف</button>
           <button
             className='btn btn-light Gray100-bgColor px-5 py-2'

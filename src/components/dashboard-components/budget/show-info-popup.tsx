@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import "../../../styles/dashboard-styles/budget/show-info-popup.css";
 import { IShowInfo } from "../../../types/show-info";
 import { data } from "../../../store/data";
@@ -20,9 +20,9 @@ const InfoModalComponent: React.FC<IShowInfo> = (props) => {
 
   return (
     <>
-      <Button className='btn btn-light' onClick={handleShow}>
+      <button className='btn btn-light' onClick={handleShow}>
         <i className='bi bi-eye-fill text-success'></i>
-      </Button>
+      </button>
 
       {props.tableName === "suggestedBudget" && (
         <Modal show={show} onHide={handleClose} centered className='modal'>
@@ -47,15 +47,15 @@ const InfoModalComponent: React.FC<IShowInfo> = (props) => {
             </div>
           </Modal.Body>
           <Modal.Footer className='d-flex justify-content-center align-items-center mediumFont'>
-            <Button className='btn btn-light brandMain-bgColor text-white px-5 py-2'>
+            <button className='btn btn-light brandMain-bgColor text-white px-5 py-2'>
               <i className='bi bi-pencil'></i> تعديل
-            </Button>
-            <Button
+            </button>
+            <button
               className='btn btn-light Gray100-bgColor px-5 py-2'
               onClick={handleClose}
             >
               إغلاق
-            </Button>
+            </button>
           </Modal.Footer>
         </Modal>
       )}
@@ -84,15 +84,15 @@ const InfoModalComponent: React.FC<IShowInfo> = (props) => {
             </div>
           </Modal.Body>
           <Modal.Footer className='d-flex justify-content-center align-items-center mediumFont'>
-            <Button className='btn btn-light brandMain-bgColor text-white px-5 py-2'>
+            <button className='btn btn-light brandMain-bgColor text-white px-5 py-2'>
               <i className='bi bi-pencil'></i> تعديل
-            </Button>
-            <Button
+            </button>
+            <button
               className='btn btn-light Gray100-bgColor px-5 py-2'
               onClick={handleClose}
             >
               إغلاق
-            </Button>
+            </button>
           </Modal.Footer>
         </Modal>
       )}
@@ -125,15 +125,15 @@ const InfoModalComponent: React.FC<IShowInfo> = (props) => {
             </div>
           </Modal.Body>
           <Modal.Footer className='d-flex justify-content-center align-items-center mediumFont'>
-            <Button className='btn btn-light brandMain-bgColor text-white px-5 py-2'>
+            <button className='btn btn-light brandMain-bgColor text-white px-5 py-2'>
               <i className='bi bi-pencil'></i> تعديل
-            </Button>
-            <Button
+            </button>
+            <button
               className='btn btn-light Gray100-bgColor px-5 py-2'
               onClick={handleClose}
             >
               إغلاق
-            </Button>
+            </button>
           </Modal.Footer>
         </Modal>
       )}
