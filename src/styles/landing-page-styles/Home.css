@@ -1,4 +1,3 @@
-
 /* section 5 */
 .we {
   background-image: linear-gradient(
@@ -84,7 +83,7 @@ h2 span.text-warning {
 }
 .service-card1 {
   border: 2px solid rgba(156, 143, 240, 0.699);
-  background-color: #4C466C;
+  background-color: #4c466c;
 }
 .card-title2 {
   color: #2e255f;
@@ -94,8 +93,8 @@ h2 span.text-warning {
   width: 45px;
   height: 45px;
 }
-.infra-bg{
-  background-color: #0A8CD7;
+.infra-bg {
+  background-color: #0a8cd7;
 }
 /* Card Title Styling */
 .card-title {
@@ -104,7 +103,7 @@ h2 span.text-warning {
 }
 
 .card-text {
-  color: #160C4DA6;
+  color: #160c4da6;
 }
 /* section 7 */
 .bidSlider {
@@ -219,7 +218,7 @@ h2 span.text-warning {
 
 /* Star Rating */
 .stars {
-  color: #FEB62F;
+  color: #feb62f;
   font-size: 1rem;
 }
 
@@ -238,7 +237,7 @@ h2 span.text-warning {
   left: -25% !important;
 }
 
-.carousel-control-next{
+.carousel-control-next {
   right: -25% !important;
 }
 .custom-arrow .carousel-control-prev-icon,
@@ -279,4 +278,17 @@ h2 span.text-warning {
 .button-container {
   margin-right: 170px;
   padding-top: 20px;
+}
+
+/* Media Query for all pages here */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
 }
