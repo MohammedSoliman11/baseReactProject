@@ -42,11 +42,7 @@
 
 /* Home */
 .home {
-  background-image: linear-gradient(
-      to right,
-      #00000079 47.5%,
-      #13094AF2 95%
-    ),
+  background-image: linear-gradient(to right, #00000079 47.5%, #13094af2 95%),
     url("../../assets/images/bg.png");
   background-size: cover;
   background-position: center;
@@ -54,7 +50,7 @@
   min-height: 794px;
   width: 100%;
 }
-.navbar-brand{
+.navbar-brand {
   margin-right: 0px !important;
 }
 .linkStyles li a {
@@ -71,17 +67,17 @@
   font-family: "dinRegular";
 }
 
-.navbar1{
+.navbar1 {
   background-color: var(--brandMain);
   position: fixed;
   z-index: 1000;
   top: 0;
-  right:0;
+  right: 0;
   line-height: 32px;
   height: 932px;
   width: 100%;
 }
-.homeContent{
+.homeContent {
   max-width: 630px;
 }
 .firstP {
@@ -124,7 +120,7 @@ i {
 }
 .projectsNum {
   position: relative;
-    top: 100px;
+  top: 100px;
 }
 .rounded h6 {
   font-size: 20px;
@@ -137,4 +133,42 @@ i {
 .rounded p {
   font-size: 14px;
   color: var(--gray300);
+}
+.through-year {
+  color: #a5a5a5;
+}
+
+/* About Us */
+/* Media Query for all pages here */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .about-box {
+    font-size: 14px !important;
+  }
+  .about-box-num {
+    font-size: 24px !important;
+  }
+  .graph-img {
+    width: 24;
+    height: 24;
+  }
+  .about-box-margin {
+    margin-left: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }

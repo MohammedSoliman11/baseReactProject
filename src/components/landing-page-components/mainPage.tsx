@@ -94,127 +94,127 @@ const MainPage = () => {
     <>
       {/* Home */}
 
-      <div className='home pt-3 container-fluid'>
+      <div className="home pt-3 container-fluid">
         {/* Main NavBar */}
         <div className={Navbar}>
           {/* Navbar1 */}
-          <div className='container d-flex justify-content-between regularFont align-items-center'>
+          <div className="container d-flex justify-content-between regularFont align-items-center">
             {/* Right Side */}
-            <div className='iconContainer d-flex fs-6'>
-              <div className='bar-container pt-1'>
-                <img src={sms} alt='' className='w-75' />
+            <div className="iconContainer d-flex fs-6">
+              <div className="bar-container pt-1">
+                <img src={sms} alt="" className="w-75" />
               </div>
-              <div className='callIcon me-4 pt-1'>
-                <img src={call} className='w-75' alt='' />
+              <div className="callIcon me-4 pt-1">
+                <img src={call} className="w-75" alt="" />
               </div>
             </div>
             {/* Leftt Side */}
-            <div className='leftContent d-flex justify-content-end'>
-              <div className='d-flex align-items-center bar-container2'>
-                <div className='calenderImg w-75 '>
-                  <img src={calender} alt='' className='w-75' />
+            <div className="leftContent d-flex justify-content-end">
+              <div className="d-flex align-items-center bar-container2">
+                <div className="calenderImg w-75 ">
+                  <img src={calender} alt="" className="w-75" />
                 </div>
 
-                <span className='text-white fw-light mx-2 date pt-1 '>
+                <span className="text-white fw-light mx-2 date pt-1 ">
                   {currentDate.split("/").join(".")}
                 </span>
               </div>
 
-              <div className='d-flex align-items-center fw-light me-4  bar-container2'>
-                <div className='clockImg w-75 '>
-                  <img src={clockImg} alt='' className='w-75' />
+              <div className="d-flex align-items-center fw-light me-4  bar-container2">
+                <div className="clockImg w-75 ">
+                  <img src={clockImg} alt="" className="w-75" />
                 </div>
-                <span className='text-white mx-2  pt-1'>{Time}</span>
+                <span className="text-white mx-2  pt-1">{Time}</span>
               </div>
 
-              <div className='d-flex align-items-center me-4'>
-                <div className='clockImg w-75 '>
-                  <img src={globalImg} alt='' className='w-75' />
+              <div className="d-flex align-items-center me-4">
+                <div className="clockImg w-75 ">
+                  <img src={globalImg} alt="" className="w-75" />
                 </div>
-                <span className='text-white pt-1'>العربية</span>
+                <span className="text-white pt-1">العربية</span>
               </div>
             </div>
           </div>
 
           {/* Line */}
-          <div className='container text-white'>
+          <div className="container text-white">
             <hr />
           </div>
 
           {/* navbar2 */}
-          <div className='container'>
-            <nav className='navbar navbar-expand-lg'>
-              <a className='navbar-brand' href='#'>
-                <div className='logo d-flex'>
-                  <img src={Logo} alt='' className='w-75' />
+          <div className="container">
+            <nav className="navbar navbar-expand-lg">
+              <a className="navbar-brand" href="#">
+                <div className="logo d-flex">
+                  <img src={Logo} alt="" className="w-75" />
                 </div>
               </a>
               <button
-                className='navbar-toggler  '
-                type='button'
+                className="navbar-toggler  "
+                type="button"
                 onClick={setHomeClassFun}
               >
-                <span className='navbar-toggler-icon'></span>
+                <span className="navbar-toggler-icon"></span>
               </button>
               <div
                 className={NavbarShow + " collapse navbar-collapse "}
-                id='navbarSupportedContent'
+                id="navbarSupportedContent"
               >
-                <ul className='navbar-nav m-auto mb-2 mb-lg-0 linkStyles'>
-                  <li className='nav-item'>
+                <ul className="navbar-nav m-auto mb-2 mb-lg-0 linkStyles">
+                  <li className="nav-item">
                     <a
-                      href='#about-us'
-                      className='nav-link'
+                      href="#about-us"
+                      className="nav-link"
                       onClick={closeNavbar}
                     >
                       عن الشركة{" "}
                     </a>
                   </li>
-                  <li className='nav-item'>
+                  <li className="nav-item">
                     <a
-                      href='#why-we-are-here '
-                      className='nav-link'
+                      href="#why-we-are-here "
+                      className="nav-link"
                       onClick={closeNavbar}
                     >
                       لماذا نحن؟{" "}
                     </a>
                   </li>
-                  <li className='nav-item'>
+                  <li className="nav-item">
                     <a
-                      href='#services'
-                      className='nav-link'
+                      href="#services"
+                      className="nav-link"
                       onClick={closeNavbar}
                     >
                       الخدمات{" "}
                     </a>
                   </li>
 
-                  <li className='nav-item'>
+                  <li className="nav-item">
                     <a
-                      href='#reviews'
-                      className='nav-link'
+                      href="#reviews"
+                      className="nav-link"
                       onClick={closeNavbar}
                     >
                       الآراء{" "}
                     </a>
                   </li>
-                  <li className='nav-item'>
-                    <a href='#join' className='nav-link' onClick={closeNavbar}>
+                  <li className="nav-item">
+                    <a href="#join" className="nav-link" onClick={closeNavbar}>
                       طلب الانضمام{" "}
                     </a>
                   </li>
-                  <li className='nav-item'>
-                    <a href='#join' className='nav-link' onClick={closeNavbar}>
+                  <li className="nav-item">
+                    <a href="#join" className="nav-link" onClick={closeNavbar}>
                       طلب خدمة{" "}
                     </a>
                   </li>
-                  <li className='nav-item'>
+                  <li className="nav-item">
                     <button
                       onClick={() => {
                         closeNavbar();
                         navigate(SUGGESTEDTABLE_ROUTE);
                       }}
-                      className='nav-link'
+                      className="nav-link"
                     >
                       لوحة التحكم
                     </button>
@@ -222,10 +222,10 @@ const MainPage = () => {
                 </ul>
                 <form>
                   <button
-                    type='button'
-                    className='btn secondary-bgColor py-3 px-5'
+                    type="button"
+                    className="btn secondary-bgColor py-3 px-5"
                   >
-                    <span className='brandMain-color mediumFont'>
+                    <span className="brandMain-color mediumFont">
                       تسجيل الدخول
                     </span>
                   </button>
@@ -236,47 +236,49 @@ const MainPage = () => {
         </div>
 
         {/* Content */}
-        <div className='container mt-5'>
-          <div className='homeContent'>
-            <p className='firstP mediumFont'>
+        <div className="container mt-5">
+          <div className="homeContent">
+            <p className="firstP mediumFont">
               مؤسسة حدود البناء للمقاولات العامة
             </p>
-            <p className='firstP2 text-white boldFont'>
+            <p className="firstP2 text-white boldFont">
               إعـــداد التصاميـــم الهندسيـــــة وأعمال التشطيبات المتكاملـــــة
               وترميم المبـــاني
             </p>
-            <p className='text-white  firstP3 regularFont'>
+            <p className="text-white  firstP3 regularFont">
               لا تقتصر فقط أعمالنا على المقــــاولات من أعمال البنـــاء بل
               تمتـــد أيضاً إلى الأنشطــــة التــخصصيـــــة والمكملـــة لنشاط
               المقاولات والتي تتمثل بخدمات ما قبل البناء وبعده
             </p>
-            <button className='service mt-3 mediumFont' onClick={scrollToForm}>
-              <span className='text-white px-4 py-3'>اطلب خدمة</span>
+            <button className="service mt-3 mediumFont" onClick={scrollToForm}>
+              <span className="text-white px-4 py-3">اطلب خدمة</span>
             </button>
           </div>
         </div>
 
-        <div className='container projectsNum'>
-          <div className='row justify-content-center'>
-            <div className='col-8'>
-              <div className='stats-box d-flex justify-content-between align-items-center text-center p-4 rounded'>
+        <div className="container projectsNum ">
+          <div className="row justify-content-center">
+            <div className="col-lg-8 ">
+              <div className="stats-box d-flex justify-content-between align-items-center text-center p-4  rounded">
                 {/* First Column */}
-                <div className='col'>
-                  <h6 className='mb-2 regularFont'>عدد المشاريع</h6>
-                  <h2 className='boldFont'>5092</h2>
+                <div className="col">
+                  <h6 className="mb-2 regularFont about-box">عدد المشاريع</h6>
+                  <h2 className="boldFont about-box-num">5092</h2>
 
-                  <p className='mediumFont'>
-                    <img src={graph} alt='' />{" "}
-                    <span className='text-success'>90%</span> أعلى خلال عام{" "}
+                  <p className="mediumFont about-box about-box-margin">
+                    <img src={graph} alt="" className="graph-img" />{" "}
+                    <span className="text-success about-box">90%</span>{" "}
+                    <span className="through-year">أعلى خلال عام</span>
                   </p>
                 </div>
 
-                <div className='col border-end'>
-                  <h6 className='mb-2 regularFont'>عدد الشركاء</h6>
-                  <h2 className='boldFont'>1005</h2>
-                  <p className='mediumFont'>
-                    <img src={graph} alt='' />{" "}
-                    <span className='text-success'>75%</span> أعلى خلال عام
+                <div className="col border-end">
+                  <h6 className="mb-2 regularFont about-box">عدد الشركاء</h6>
+                  <h2 className="boldFont about-box-num">1005</h2>
+                  <p className="mediumFont about-box about-box-margin">
+                    <img src={graph} className="graph-img" alt="" />{" "}
+                    <span className="text-success about-box">75%</span>{" "}
+                    <span className="through-year">أعلى خلال عام</span>
                   </p>
                 </div>
               </div>
@@ -284,7 +286,7 @@ const MainPage = () => {
           </div>
         </div>
 
-        <form id='serviceForm'>{/* Form content here */}</form>
+        <form id="serviceForm">{/* Form content here */}</form>
       </div>
     </>
   );
