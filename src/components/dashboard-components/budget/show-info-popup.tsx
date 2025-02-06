@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "../../../styles/dashboard-styles/budget/show-info-popup.css";
 import { IShowInfo } from "../../../types/show-info";
-import { data } from "../../../store/data";
 import { reportData } from "../../../store/data";
 import { annualData } from "../../../store/data";
 import { infoFields } from "../../../store/table-headers/info-fields";
@@ -40,7 +39,8 @@ const InfoModalComponent: React.FC<IShowInfo> = (props) => {
                 </div>
                 <div className='col-6 regularFont Gray400-color'>
                   {suggestedBudget.map((header: Column, index: number) => (
-                    <p key={index}>{data[props.currentIndex][header.field]}</p>
+                    
+                    <p key={index}>{ (header.field === "doorLookUp" || header.field === "sectionLookUp")  ? props.data[header.field].value : props.data[header.field]  }</p>
                   ))}
                 </div>
               </div>

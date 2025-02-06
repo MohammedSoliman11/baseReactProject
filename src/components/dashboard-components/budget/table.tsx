@@ -9,13 +9,8 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
   tableName,
   onPageChange: setCurrentPage,
   currentPage,
+  totalPages
 }) => {
-  const rowsPerPage = 10;
-  const totalPages = Math.ceil(data.length / rowsPerPage);
-  const currentData = data.slice(
-    (currentPage - 1) * rowsPerPage,
-    currentPage * rowsPerPage
-  );
 
   return (
     <div className='regularFont fontSize-12'>
@@ -28,8 +23,9 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
           </tr>
         </thead>
         <tbody>
-          {currentData.map((row, index) => (
-            <tr key={index}>
+          {data && data.map((row, index) => (
+            //console.log("row : ", row),
+            <tr key={index} id={`row-${index}`}>
               {columns.map((col, i) => (
                 <td
                   style={col.field == "actions" ? { width: "15%" } : {}}
@@ -38,10 +34,15 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
                   {col.field == "actions" ? (
                     <TableActionsComponent
                       tableName={tableName}
-                      currentIndex={10 * currentPage - (10 - index)}
+                      currentIndex={row.id}
+                      index={index}
+                      data= {row}
                     />
-                  ) : (
-                    row[col.field]
+                  ) : (                     
+                    (col.field === "doorLookUp" || col.field === "sectionLookUp") && row[col.field] 
+                    ? row[col.field].value 
+                    : row[col.field] ?? "-"
+
                   )}
                 </td>
               ))}
