@@ -1,33 +1,36 @@
 import { IInfoFieldsType } from "../../types";
 export const infoFields: IInfoFieldsType = {
   suggestedBudget: [
-    { label: "رقم الباب", field: "id" },
-    { label: "البند", field: "item" },
-    { label: "رقم التصنيف الاقتصادي", field: "economic_classification_number" },
-    { label: "ميزانية السنة القادمة", field: "next_year_budget" },
-    { label: "المعتمد السابق", field: "previous_approval" },
-    { label: "الاجمالي المعتمد السابق", field: "total_previous_approval" },
-    { label: "المنصرف السابق", field: "previous_expenses" },
-    { label: "الوفر", field: "savings" },
+    { label: "رقم الباب", field: "doorLookUp" },
+    { label: "البند", field: "sectionLookUp" },
+    { label: "رقم التصنيف الاقتصادي", field: "economicClassificationNumber" },
+    { label: "ميزانية السنة القادمة", field: "nextYearBudget" },
+    { label: "المعتمد السابق", field: "previousApproved" },
+    { label: "الاجمالي المعتمد السابق", field: "totalPreviousApproved" },
+    { label: "المنصرف السابق", field: "previousOutgoing" },
+    { label: "الوفر", field: "previousAvailable" },
 
-    { label: "العام الحالي", field: "current_year" },
-    { label: "العام الماضي", field: "past_year" },
+    { label: "العام الحالي", field: "currentYear" },
+    { label: "العام الماضي", field: "lastYear" },
     { label: "الملاحظات", field: "notes" },
   ],
   reports: [
-    { label: "البند المحجوز منه", field: "item_from" },
-    { label: "قيمة المبلغ المحجوز", field: "reserved_amount" },
+    { label: "البند المحجوز منه", field: "proposedBudgetTransferredFromId" },
+    { label: "قيمة المبلغ المحجوز", field: "transfersValue" },
     { label: "رقم المشروع", field: "project_number" },
-    { label: "رقم المشروع المنقول اليه", field: "project_number_to" },
-    { label: "قيمة المناقلة", field: "transfer_amount" },
-    { label: "تاريخ المناقلة", field: "transfer_date" },
-    { label: "اجمالي الميزانيه للبند المنقول منه", field: "total_budget" },
-    { label: "نسبه للبند المنقول منه", field: "percentage" },
-    { label: "اجمالي الميزانيه للبند المنقول اليه", field: "total_budget_to" },
-    { label: "نسبه للبند المنقول اليه", field: "percentage_to" },
+    { label: "رقم المشروع المنقول اليه", field: "proposedBudgetTransferredToId" },
+    { label: "قيمة المناقلة", field: "transfersValue" },
+    { label: "تاريخ المناقلة", field: "transfersDate" },
 
-    { label: "العام", field: "year" },
-    { label: "الملاحظات", field: "notes" },
+
+
+    // { label: "اجمالي الميزانيه للبند المنقول منه", field: "total_budget" },
+    // { label: "نسبه للبند المنقول منه", field: "percentage" },
+    // { label: "اجمالي الميزانيه للبند المنقول اليه", field: "total_budget_to" },
+    // { label: "نسبه للبند المنقول اليه", field: "percentage_to" },
+
+    // { label: "العام", field: "year" },
+    // { label: "الملاحظات", field: "notes" },
   ],
   annualBudget: [
     { label: "رقم الايضاح", field: "observation_number" },
