@@ -15,22 +15,24 @@ export const infoFields: IInfoFieldsType = {
     { label: "الملاحظات", field: "notes" },
   ],
   reports: [
-    { label: "البند المحجوز منه", field: "proposedBudgetTransferredFromId" },
-    { label: "قيمة المبلغ المحجوز", field: "transfersValue" },
-    { label: "رقم المشروع", field: "project_number" },
-    { label: "رقم المشروع المنقول اليه", field: "proposedBudgetTransferredToId" },
+    { label: "البند المحجوز منه", field: "holdMoneyProposedBudget" },
+    { label: "قيمة المبلغ المحجوز", field: "holdMoneyValue" },
+    { label: "اسم البند المنقول اليه", field: "proposedBudgetTransferredTo" },
     { label: "قيمة المناقلة", field: "transfersValue" },
     { label: "تاريخ المناقلة", field: "transfersDate" },
 
 
-
-    // { label: "اجمالي الميزانيه للبند المنقول منه", field: "total_budget" },
-    // { label: "نسبه للبند المنقول منه", field: "percentage" },
-    // { label: "اجمالي الميزانيه للبند المنقول اليه", field: "total_budget_to" },
-    // { label: "نسبه للبند المنقول اليه", field: "percentage_to" },
-
-    // { label: "العام", field: "year" },
-    // { label: "الملاحظات", field: "notes" },
+    { label: "اجمالي الميزانيه للبند المنقول منه", field: "totalProposedBudgetTransferredFrom" },
+    { label: "نسبه للبند المنقول منه", field: "percentageProposedBudgetTransferredFrom" },
+    { label: "اجمالي الميزانيه للبند المنقول اليه", field: "totalProposedBudgetTransferredTo" },
+    { label: "نسبه للبند المنقول اليه", field: "percentageProposedBudgetTransferredTo" },
+    
+    
+    { label: "اجمالي المبلغ المحجوز منه", field: "totalProposedBudgetHoldMoney" },
+    { label: "نسبة المبلغ المحجوز منه", field: "percentageProposedBudgetHoldMoney" },
+    
+    { label: "العام", field: "year" },
+    { label: "الملاحظات", field: "notes" },
   ],
   annualBudget: [
     { label: "رقم الايضاح", field: "observation_number" },

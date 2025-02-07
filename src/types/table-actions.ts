@@ -3,6 +3,6 @@ import { SuggestedBudgetData } from "../api/dashboard/budget/suggested-budget/ty
 export interface ITableActions {
   tableName: string;
   index: number;
-  currentIndex: number;
+  currentId: number;
   data: SuggestedBudgetData;
 }

@@ -25,7 +25,7 @@ export const tableHeaders: tableHeadersType = {
     { label: "البند المحجوز منه", field: "proposedBudgetTransferredFromId" },
     { label: "قيمة المبلغ المحجوز", field: "transfersValue" },
     // { label: "رقم المشروع", field: "project_number" },
-    { label: "رقم المشروع المنقول اليه", field: "proposedBudgetTransferredToId" },
+    { label: "رقم البند المنقول اليه", field: "proposedBudgetTransferredToId" },
     { label: "قيمة المناقلة", field: "transfersValue" },
     { label: "تاريخ المناقلة", field: "transfersDate" },
     { label: "الاجراء", field: "actions" },
