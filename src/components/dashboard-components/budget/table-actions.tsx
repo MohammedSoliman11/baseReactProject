@@ -12,16 +12,16 @@ const TableActionsComponent: React.FC<ITableActions> = (props) => {
     <div className='d-flex justify-content-center align-items-center'>
       {props.tableName !== "reinforcementBudget" && (
         <InfoModalComponent
-          currentIndex={props.currentIndex}
-          tableName={props.tableName}
-          data= {props.data}
+          currentIndex = {props.currentId}
+          tableName = {props.tableName}
+          data = {props.data}
         />
       )}
       <ShowToastComponent id={props.index }></ShowToastComponent>
       {props.tableName === "suggestedBudget" && (
         <button
           type='button'
-          onClick={() => navigate(`${routes.ADDNEWITEM_BUDGET_ROUTE}?id=${props.currentIndex}`)}
+          onClick={() => navigate(`${routes.ADDNEWITEM_BUDGET_ROUTE}?id=${props.currentId}`)}
           className='btn btn-light'
         >
           <i className='bi bi-pencil-fill secondary-color'></i>
@@ -29,7 +29,7 @@ const TableActionsComponent: React.FC<ITableActions> = (props) => {
       )}
       {props.tableName === "reports" && (
         <button
-          onClick={() => navigate(routes.ADDNEWITEM_REPORTS_ROUTE + `?id=${props.currentIndex}`)}
+          onClick={() => navigate(routes.ADDNEWITEM_REPORTS_ROUTE+`?id=${props.currentId}`)}
           className='btn btn-light'
         >
           <i className='bi bi-pencil-fill secondary-color'></i>
@@ -37,7 +37,7 @@ const TableActionsComponent: React.FC<ITableActions> = (props) => {
       )}
       {props.tableName === "annualBudget" && (
         <button
-          onClick={() => navigate(routes.ADDNEWITEM_ANNUALBUDGET_ROUTE + `?id=${props.currentIndex}`)}
+          onClick={() => navigate(routes.ADDNEWITEM_ANNUALBUDGET_ROUTE + `?id=${props.currentId}`)}
           className='btn btn-light'
         >
           <i className='bi bi-pencil-fill secondary-color'></i>
@@ -45,14 +45,14 @@ const TableActionsComponent: React.FC<ITableActions> = (props) => {
       )}
       {props.tableName === "reinforcementBudget" && (
         <button
-          onClick={() => navigate(routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE + `?id=${props.currentIndex}`)}
+          onClick={() => navigate(routes.ADDNEWITEM_REINFORCEMENTBUDGET_ROUTE + `?id=${props.currentId}`)}
           className='btn btn-light'
         >
           <i className='bi bi-pencil-fill secondary-color'></i>
         </button>
       )}
 
-      <DeleteModalComponent id={props.currentIndex}></DeleteModalComponent>
+      <DeleteModalComponent id={props.currentId}></DeleteModalComponent>
     </div>
   );
 };

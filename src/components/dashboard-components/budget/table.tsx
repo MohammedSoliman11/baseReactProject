@@ -34,7 +34,7 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
                   {col.field == "actions" ? (
                     <TableActionsComponent
                       tableName={tableName}
-                      currentIndex={row.id}
+                      currentId={row.id}
                       index={index}
                       data= {row}
                     />
