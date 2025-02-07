@@ -24,7 +24,6 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
         </thead>
         <tbody>
           {data && data.map((row, index) => (
-            //console.log("row : ", row),
             <tr key={index} id={`row-${index}`}>
               {columns.map((col, i) => (
                 <td
@@ -38,12 +37,16 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
                       index={index}
                       data= {row}
                     />
-                  ) : (                     
-                    (col.field === "doorLookUp" || col.field === "sectionLookUp") && row[col.field] 
+                    ) : (   
+                    (col.field === "section.doorLookUp" || col.field === "section.sectionLookUp") && row.section ?
+                      row.section[col.field.split(".")[1]].value :   
+                    (col.field === "doorLookUp" || col.field === "sectionLookUp" ) && row[col.field] 
                     ? row[col.field].value 
                     : row[col.field] ?? "-"
 
-                  )}
+                  )
+                  
+                  }
                 </td>
               ))}
             </tr>

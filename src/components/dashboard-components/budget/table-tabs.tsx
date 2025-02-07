@@ -1,25 +1,27 @@
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+// componenets
 import TableWithPagination from "./table";
-// import { mainData } from "../../../store/data";
-import { tableHeaders } from "../../../store/table-headers/table-headers";
-const tableData = tableHeaders;
-import "../../../styles/dashboard-styles/budget/table-tabs.css";
-import ShowToastComponent from "./download-notification";
 import FilterModalComponent from "./filter-popup";
+import ShowToastComponent from "./download-notification";
 
-import routes from "../../../Routes/appRoutes";
+// apis
 import { getAllProposedBudget } from "../../../api/dashboard/budget/suggested-budget/GetAllProposedBudget"; // Import the API function
 import {GetAllTransferBudget} from '../../../api/dashboard/budget/reports/GetAllTransferBudget'; // Import the API function
 import { SuggestedBudgetQueryParams } from '../../../api/dashboard/budget/suggested-budget/types'; // Import the API types
+import { GetAllAnnualBudget } from "../../../api/dashboard/budget/annual-budget/GetAllAnnualBudget";
+import { GetAllReinforcementBudget } from "../../../api/dashboard/budget/reinforcement-budget/GetAllReinforcementBudget";
+// store
+import { tableHeaders } from "../../../store/table-headers/table-headers";
+import "../../../styles/dashboard-styles/budget/table-tabs.css";
+import routes from "../../../Routes/appRoutes";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const TableTabs: React.FC<any> = (props) => {
+  const tableData = tableHeaders;
+  const [activeTable, setActiveTable] = useState(props.TableName);
   const navigate = useNavigate();
-  const location = useLocation();
-  const pathName = location.pathname;
-  const table = pathName.split("/")[3];
   
   // get SuggestedBudgetQueryParams from this page
   const [currentPage, setCurrentPage] = useState(1);
@@ -30,12 +32,20 @@ export const TableTabs: React.FC<any> = (props) => {
   const [Data, setData] = useState({ isDone: false, totalCount: 0, data: [], message: "", statusCode: 0, outId: 0 });
   // call getAllProposedBudget api
   useEffect(() => {
-    if (table === "suggestedBudget") {
+    if (activeTable === "suggestedBudget") {
       getAllProposedBudget(queryParams).then((data) => {
         setData(data);
       });
-    } else if (table === "reports") {
+    } else if (activeTable === "reports") {
       GetAllTransferBudget(queryParams).then((data) => {
+        setData(data);
+      });
+    } else if(activeTable === "annualBudget") { 
+      GetAllAnnualBudget(queryParams).then((data) => {
+        setData(data);
+      });
+    } else if (activeTable === "reinforcementBudget") { 
+      GetAllReinforcementBudget(queryParams).then((data) => {
         setData(data);
       });
     }
@@ -47,7 +57,7 @@ export const TableTabs: React.FC<any> = (props) => {
   }, [currentPage]);
   
 
-  const [activeTable, setActiveTable] = useState(props.TableName);
+  
   const showsuggestedBudget = () => {
     setData({ isDone: false, totalCount: 0, data: [], message: "", statusCode: 0, outId: 0 }); // Reset Data
     setActiveTable("suggestedBudget");
@@ -162,11 +172,15 @@ export const TableTabs: React.FC<any> = (props) => {
             <button
               className={`col-md-3 btn  fontSize-14 ${
                 activeTable === "annualBudget" ? "active " : ""
-              } budget `}
-              onClick={() => {
-                navigate(routes.ANNUALTABLE_ROUTE);
+                } budget `}
+                onClick={() => {
+                  GetAllAnnualBudget(queryParams).then((data) => {
+                    setData(data);
+                    //console.log("Proposed Budget Data: ", data);
+                  });
+                  navigate(routes.ANNUALTABLE_ROUTE);
                 showannualBudget();
-              }}
+                }}
             >
               ميزانية العام
             </button>
@@ -175,6 +189,10 @@ export const TableTabs: React.FC<any> = (props) => {
                 activeTable === "reinforcementBudget" ? "active " : ""
               } budget`}
               onClick={() => {
+                GetAllReinforcementBudget(queryParams).then((data) => {
+                  setData(data);
+                  //console.log("Proposed Budget Data: ", data);
+                });
                 navigate(routes.REINFORCEMENTTABLE_ROUTE);
                 showreinforcementBudget();
               }}
