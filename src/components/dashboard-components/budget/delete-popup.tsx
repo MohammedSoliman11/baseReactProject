@@ -21,11 +21,11 @@ function DeleteModalComponent(props: DeleteModalComponentProps) {
   const handleShow = (): void => setShow(true);
   
   const handleDelete = (): void => {
-    if (table === "suggestedBudget") {
+    if (table === "suggested-budget") {
       DeleteProposedBudget(props.id);
     } else if (table === "reports") {
       DeleteTransferBudget(props.id);
-    } else if (table === "annualBudget") {
+    } else if (table === "annual-budget") {
       // DeleteAnnualBudget
     }
     else if (table === "reinforcement-budget") { 
