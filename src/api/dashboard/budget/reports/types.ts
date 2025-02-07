@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface GetAllTransferBudgetQueryParams {
   name?: string;
   sectionId?: number;
@@ -5,14 +6,36 @@ export interface GetAllTransferBudgetQueryParams {
   pageSize?: number;
 }
 
+export interface TransferBudgetResponse {
+  isDone: boolean;
+  outId: number;
+  data: any; // Replace 'any' with the appropriate type if known
+  message: string;
+  paginationResult: any; // Replace 'any' with the appropriate type if known
+  paging: any; // Replace 'any' with the appropriate type if known
+  errors: any; // Replace 'any' with the appropriate type if known
+  statusCode: number;
+  totalCount: any; // Replace 'any' with the appropriate type if known
+  completedTotalCount: any; // Replace 'any' with the appropriate type if known
+}
+
+export interface TransferBudgetDataRequest {
+  id: number;
+  proposedBudgetTransferredFromId: number;
+  proposedBudgetTransferredToId: number;
+  transfersValue: number;
+  holdMoneyValue: number;
+  holdMoneyId: number;
+  transfersDate: string; // Consider using Date if you will be working with Date objects
+  year: string;
+  notes: string;
+}
+
 export interface SuggestedBudgetData {
 
   id: number;
-
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any; // Add this line
-
-  // other properties
 
 }
 
