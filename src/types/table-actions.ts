@@ -1,4 +1,8 @@
+import { SuggestedBudgetData } from "../api/dashboard/budget/suggested-budget/types";
+
 export interface ITableActions {
   tableName: string;
-  currentIndex: number;
+  index: number;
+  currentId: number;
+  data: SuggestedBudgetData;
 }

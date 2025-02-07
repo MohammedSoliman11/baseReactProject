@@ -1,20 +1,19 @@
 import { tableHeadersType } from "../../types";
 export const tableHeaders: tableHeadersType = {
   suggestedBudget: [
-    { label: "رقم الباب", field: "id" },
-    { label: "البند", field: "item" },
-    { label: "رقم التصنيف الاقتصادي", field: "economic_classification_number" },
-    { label: "العام الحالي", field: "current_year" },
-    { label: "العام الماضي", field: "past_year" },
+    { label: "رقم الباب", field: "doorLookUp" },
+    { label: "البند", field: "sectionLookUp" },
+    { label: "رقم التصنيف الاقتصادي", field: "economicClassificationNumber" },
+    { label: "العام الحالي", field: "currentYear" },
+    { label: "العام الماضي", field: "lastYear" },
     { label: "الاجراء", field: "actions" },
   ],
   reports: [
-    { label: "البند المحجوز منه", field: "item_from" },
-    { label: "قيمة المبلغ المحجوز", field: "reserved_amount" },
-    { label: "رقم المشروع", field: "project_number" },
-    { label: "رقم المشروع المنقول اليه", field: "project_number_to" },
-    { label: "قيمة المناقلة", field: "transfer_amount" },
-    { label: "تاريخ المناقلة", field: "transfer_date" },
+    { label: "البند المحجوز منه", field: "proposedBudgetTransferredFromId" },
+    { label: "قيمة المبلغ المحجوز", field: "transfersValue" },
+    { label: "رقم البند المنقول اليه", field: "proposedBudgetTransferredToId" },
+    { label: "قيمة المناقلة", field: "transfersValue" },
+    { label: "تاريخ المناقلة", field: "transfersDate" },
     { label: "الاجراء", field: "actions" },
   ],
   annualBudget: [
@@ -37,9 +36,9 @@ export const tableHeaders: tableHeadersType = {
     { label: "الاجراء", field: "actions" },
   ],
   reinforcementBudget: [
-    { label: "رقم الباب", field: "id" },
-    { label: "رقم البند", field: "item_id" },
-    { label: "المبلغ", field: "amount" },
+    { label: "رقم الباب", field: "section.doorLookUp" },
+    { label: "رقم البند", field: "section.sectionLookUp" },
+    { label: "المبلغ", field: "value" },
     { label: "التاريخ", field: "date" },
     { label: "الاجراء", field: "actions" },
   ],

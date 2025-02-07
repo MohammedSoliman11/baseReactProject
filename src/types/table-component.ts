@@ -1,3 +1,5 @@
+import { SuggestedBudgetData } from "../api/dashboard/budget/suggested-budget/types";
+
 export interface Column {
   label: string;
   field: string;
@@ -11,9 +13,10 @@ export interface IData {
 }
 
 export interface TableWithPaginationProps {
-  data: RowData[];
+  data: SuggestedBudgetData[];
   columns: Column[];
   tableName: string;
   onPageChange: (page: number) => void;
   currentPage: number;
+  totalPages: number;
 }
