@@ -25,7 +25,7 @@ function DeleteModalComponent(props: DeleteModalComponentProps) {
       DeleteProposedBudget(props.id);
     } else if (table === "reports") {
       DeleteTransferBudget(props.id);
-    } else if (table === "annualBudget") {
+    } else if (table === "annual-budget") {
       // DeleteAnnualBudget
     }
     else if (table === "reinforcement-budget") { 
