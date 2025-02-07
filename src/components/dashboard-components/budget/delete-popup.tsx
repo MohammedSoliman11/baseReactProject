@@ -2,19 +2,29 @@ import { useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import "../../../styles/dashboard-styles/budget/delete-popup.css";
 import { DeleteProposedBudget } from "../../../api/dashboard/budget/suggested-budget/DeleteProposedBudget";
+import { useLocation } from "react-router-dom";
+import { DeleteTransferBudget } from "../../../api/dashboard/budget/reports/DeleteTransferBudget";
 
 interface DeleteModalComponentProps {
   id: number;
 }
 
 function DeleteModalComponent(props: DeleteModalComponentProps) {
+  const location = useLocation();
+  const pathName = location.pathname;
+  const table = pathName.split("/")[3];
+  
   const [show, setShow] = useState<boolean>(false);
 
   const handleClose = (): void => setShow(false);
   const handleShow = (): void => setShow(true);
   
   const handleDelete = (): void => {
-    DeleteProposedBudget(props.id);
+    if (table === "suggestedBudget") {
+      DeleteProposedBudget(props.id);
+    } else if (table === "reports") { 
+      DeleteTransferBudget(props.id);
+    }
     handleClose();
   };
 
