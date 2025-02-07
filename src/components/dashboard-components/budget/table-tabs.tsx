@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import TableWithPagination from "./table";
@@ -17,6 +17,9 @@ import { SuggestedBudgetQueryParams } from '../../../api/dashboard/budget/sugges
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const TableTabs: React.FC<any> = (props) => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const pathName = location.pathname;
+  const table = pathName.split("/")[3];
   
   // get SuggestedBudgetQueryParams from this page
   const [currentPage, setCurrentPage] = useState(1);
@@ -27,9 +30,20 @@ export const TableTabs: React.FC<any> = (props) => {
   const [Data, setData] = useState({ isDone: false, totalCount: 0, data: [], message: "", statusCode: 0, outId: 0 });
   // call getAllProposedBudget api
   useEffect(() => {
-    getAllProposedBudget(queryParams).then((data) => {
-      setData(data);
-    });
+    if (table === "suggestedBudget") {
+      getAllProposedBudget(queryParams).then((data) => {
+        setData(data);
+      });
+    } else if (table === "reports") {
+      GetAllTransferBudget(queryParams).then((data) => {
+        setData(data);
+      });
+    }
+    else { 
+      getAllProposedBudget(queryParams).then((data) => {
+        setData(data);
+      });
+    }
   }, [currentPage]);
   
 
