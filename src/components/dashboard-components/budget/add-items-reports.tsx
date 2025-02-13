@@ -40,7 +40,7 @@ const AddNewItemReportComponent = () => {
     if (!isFetchedGetAllProposedBudgetSections.current) {
       GetAllProposedBudgetSections().then((res) => {
         setProposedBudget(res);
-        isFetchedGetAllSectionsLookups.current = true;
+        isFetchedGetAllProposedBudgetSections.current = true;
       });
     }
   }, []);
