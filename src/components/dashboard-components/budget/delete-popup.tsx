@@ -5,6 +5,7 @@ import { DeleteProposedBudget } from "../../../api/dashboard/budget/suggested-bu
 import { useLocation } from "react-router-dom";
 import { DeleteTransferBudget } from "../../../api/dashboard/budget/reports/DeleteTransferBudget";
 import { DeleteReinforcementBudget } from "../../../api/dashboard/budget/reinforcement-budget/DeleteReinforcementBudget";
+import { DeleteAnnualBudget } from "../../../api/dashboard/budget/annual-budget/DeleteAnnualBudget";
 
 interface DeleteModalComponentProps {
   id: number;
@@ -26,9 +27,8 @@ function DeleteModalComponent(props: DeleteModalComponentProps) {
     } else if (table === "reports") {
       DeleteTransferBudget(props.id);
     } else if (table === "annual-budget") {
-      // DeleteAnnualBudget
-    }
-    else if (table === "reinforcement-budget") { 
+      DeleteAnnualBudget(props.id);
+    } else if (table === "reinforcement-budget") { 
       DeleteReinforcementBudget(props.id);
     }
     handleClose();
