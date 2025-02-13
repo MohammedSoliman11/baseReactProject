@@ -118,7 +118,7 @@ export const TableTabs: React.FC<any> = (props) => {
             </div>
           }
           <div className='mx-2'>
-            <button className='btn btn-light p-2'>
+            <button className='btn btn-light p-2' onClick={() => window.print()}>
               <i className='bi bi-printer-fill brandMain-color '></i>
             </button>
           </div>
