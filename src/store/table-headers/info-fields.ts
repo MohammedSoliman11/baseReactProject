@@ -26,36 +26,27 @@ export const infoFields: IInfoFieldsType = {
     { label: "نسبه للبند المنقول منه", field: "percentageProposedBudgetTransferredFrom" },
     { label: "اجمالي الميزانيه للبند المنقول اليه", field: "totalProposedBudgetTransferredTo" },
     { label: "نسبه للبند المنقول اليه", field: "percentageProposedBudgetTransferredTo" },
-    
-    
     { label: "اجمالي المبلغ المحجوز منه", field: "totalProposedBudgetHoldMoney" },
     { label: "نسبة المبلغ المحجوز منه", field: "percentageProposedBudgetHoldMoney" },
-    
     { label: "العام", field: "year" },
     { label: "الملاحظات", field: "notes" },
   ],
   annualBudget: [
-    { label: "رقم الايضاح", field: "observation_number" },
-    { label: "الموافقة مقابل الايرادات", field: "revenue_approval" },
-    { label: "تخصيص الميزانية", field: "budget_allocation" },
-    { label: "الميزانية المقترحة", field: "proposed_budget" },
+    { label: "رقم الايضاح", field: "clarificationNumber" },
+    { label: "الموافقة مقابل الايرادات", field: "approvalVersusRevenue" },
+    { label: "تخصيص الميزانية", field: "budgetAppropriation" },
+    { label: "اسم البند", field: "budget" },
     {
-      label: "عنوان التصنيف الاقتصادي",
-      field: "economic_classification_title",
+      label: "مسمي التصنيف الاقتصادي",
+      field: "economicClassificationName",
     },
     {
-      label: "التفسير التصنيف الاقتصادي",
-      field: "economic_classification_explanation",
+      label: "تفسير مسمي التصنيف الاقتصادي",
+      field: "economicClassificationExplanation",
     },
     {
-      label: "تفاصيل رقم التصنيف الاقتصادي",
-      field: "economic_classification_details",
+      label: "تفاصيل مسمي التصنيف الاقتصادي",
+      field: "economicClassificationDetails",
     },
-  ],
-  reinforcementBudget: [
-    { label: "رقم الباب", field: "id" },
-    { label: "رقم البند", field: "item_id" },
-    { label: "المبلغ", field: "amount" },
-    { label: "التاريخ", field: "date" },
   ],
 };

@@ -39,7 +39,9 @@ const TableWithPagination: React.FC<TableWithPaginationProps> = ({
                     />
                     ) : (   
                     (col.field === "section.doorLookUp" || col.field === "section.sectionLookUp") && row.section ?
-                      row.section[col.field.split(".")[1]].value :   
+                        row.section[col.field.split(".")[1]].value : 
+                    (col.field === "budget.sectionLookUp") && row.budget ? 
+                        row.budget[col.field.split(".")[1]].value : 
                     (col.field === "doorLookUp" || col.field === "sectionLookUp" ) && row[col.field] 
                     ? row[col.field].value 
                     : row[col.field] ?? "-"
