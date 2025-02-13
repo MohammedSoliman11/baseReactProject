@@ -17,22 +17,10 @@ export const tableHeaders: tableHeadersType = {
     { label: "الاجراء", field: "actions" },
   ],
   annualBudget: [
-    { label: "رقم الايضاح", field: "observation_number" },
-    { label: "الموافقة مقابل الايرادات", field: "revenue_approval" },
-    { label: "تخصيص الميزانية", field: "budget_allocation" },
-    { label: "الميزانية المقترحة", field: "proposed_budget" },
-    {
-      label: "عنوان التصنيف الاقتصادي",
-      field: "economic_classification_title",
-    },
-    {
-      label: "التفسير التصنيف الاقتصادي",
-      field: "economic_classification_explanation",
-    },
-    {
-      label: "تفاصيل رقم التصنيف الاقتصادي",
-      field: "economic_classification_details",
-    },
+    { label: "رقم الايضاح", field: "clarificationNumber" },
+    { label: "الموافقة مقابل الايرادات", field: "approvalVersusRevenue" },
+    { label: "تخصيص الميزانية", field: "budgetAppropriation" },
+    { label: "اسم البند", field: "budget.sectionLookUp" },
     { label: "الاجراء", field: "actions" },
   ],
   reinforcementBudget: [

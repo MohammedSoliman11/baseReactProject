@@ -3,7 +3,6 @@ import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "../../../styles/dashboard-styles/budget/show-info-popup.css";
 import { IShowInfo } from "../../../types/show-info";
-import { annualData } from "../../../store/data";
 import { infoFields } from "../../../store/table-headers/info-fields";
 import { Column } from "../../../types";
 import routes from "../../../Routes/appRoutes";
@@ -124,12 +123,14 @@ const InfoModalComponent: React.FC<IShowInfo> = (props) => {
                   )}
                 </div>
                 <div className='col-6 regularFont Gray400-color'>
-                  {annualBudget.map((header: Column, index: number) => (
-                    <p key={index}>
-                      {typeof annualData[props.currentIndex][header.field] === 'object'
-                        ? JSON.stringify(annualData[props.currentIndex][header.field])
-                        : annualData[props.currentIndex][header.field]}
-                    </p>
+                {annualBudget.map((header: Column, index: number) => (
+                    
+                    <p key={index}>{header.field === 'budget'
+                      ? props.data[header.field]?.sectionLookUp?.value ?? '-'
+                      : (typeof props.data[header.field] === 'object'
+                        ? props.data[header.field]?.sectionLookUp?.value :
+                        JSON.stringify(props.data[header.field]))
+                      ?? '-'}</p>
                   ))}
                 </div>
               </div>
