@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect, useMemo } from "react";
 
 // componenets
 import TableWithPagination from "./table";
@@ -22,59 +22,82 @@ export const TableTabs: React.FC<any> = (props) => {
   const tableData = tableHeaders;
   const [activeTable, setActiveTable] = useState(props.TableName);
   const navigate = useNavigate();
-  
+
+  const location = useLocation();
+  const queryParamsURL = new URLSearchParams(location.search);
+  const Door = queryParamsURL.get("doorId"); 
+  const Section = queryParamsURL.get("sectionId");
+
   // get SuggestedBudgetQueryParams from this page
   const [currentPage, setCurrentPage] = useState(1);
-  const queryParams: SuggestedBudgetQueryParams = {
+
+  const [FilterParams, setFilterParams] = useState({
+    doorId: 0,
+    sectionId: 0,
+  });
+  let queryParams: SuggestedBudgetQueryParams = useMemo(() => ({
     pageNumber: currentPage,
     pageSize: 10,
-  };
+    Door: Door ? parseInt(Door) : undefined,
+    sectionId: Section ? parseInt(Section) : undefined,
+  }), []);
+
   const [Data, setData] = useState({ isDone: false, totalCount: 0, data: [], message: "", statusCode: 0, outId: 0 });
+  
+  
   // call getAllProposedBudget api
   useEffect(() => {
-    if (activeTable === "suggestedBudget") {
-      getAllProposedBudget(queryParams).then((data) => {
-        setData(data);
-      });
-    } else if (activeTable === "reports") {
-      GetAllTransferBudget(queryParams).then((data) => {
-        setData(data);
-      });
-    } else if(activeTable === "annualBudget") { 
-      GetAllAnnualBudget(queryParams).then((data) => {
-        setData(data);
-      });
-    } else if (activeTable === "reinforcementBudget") { 
-      GetAllReinforcementBudget(queryParams).then((data) => {
-        setData(data);
-      });
-    }
-    else { 
-      getAllProposedBudget(queryParams).then((data) => {
-        setData(data);
-      });
-    }
-  }, [currentPage]);
-  
+      if (activeTable === "suggestedBudget") {
+        getAllProposedBudget(queryParams).then((data) => {
+          setData(data);
+          setFilterParams({ doorId: 0, sectionId: 0 }); // Reset FilterParams
+        });
+      } else if (activeTable === "reports") {
+        GetAllTransferBudget(queryParams).then((data) => {
+          setData(data);
+          setFilterParams({ doorId: 0, sectionId: 0 }); // Reset FilterParams
+        });
+      } else if(activeTable === "annualBudget") { 
+        GetAllAnnualBudget(queryParams).then((data) => {
+          setData(data);
+          setFilterParams({ doorId: 0, sectionId: 0 }); // Reset FilterParams
+        });
+      } else if (activeTable === "reinforcementBudget") { 
+        GetAllReinforcementBudget(queryParams).then((data) => {
+          setData(data);
+          setFilterParams({ doorId: 0, sectionId: 0 }); // Reset FilterParams
+        });
+      }
+      else { 
+        getAllProposedBudget(queryParams).then((data) => {
+          setData(data);
+          setFilterParams({ doorId: 0, sectionId: 0 }); // Reset FilterParams
+        });
+      }
+  }, []);
 
   
   const showsuggestedBudget = () => {
     setData({ isDone: false, totalCount: 0, data: [], message: "", statusCode: 0, outId: 0 }); // Reset Data
+    queryParams = { pageNumber: 1, pageSize: 10 };
     setActiveTable("suggestedBudget");
     setCurrentPage(1);
   };
   const showreports = () => {
     setData({ isDone: false, totalCount: 0, data: [], message: "", statusCode: 0, outId: 0 }); // Reset Data
+    queryParams = { pageNumber: 1, pageSize: 10 };
     setActiveTable("reports");
     setCurrentPage(1);
   };
   const showannualBudget = () => {
     setData({ isDone: false, totalCount: 0, data: [], message: "", statusCode: 0, outId: 0 }); // Reset Data
+    queryParams = { pageNumber: 1, pageSize: 10 };
     setActiveTable("annualBudget");
     setCurrentPage(1);
   };
   const showreinforcementBudget = () => {
     setData({ isDone: false, totalCount: 0, data: [], message: "", statusCode: 0, outId: 0 }); // Reset Data
+    queryParams = { pageNumber: 1, pageSize: 10 };
     setActiveTable("reinforcementBudget");
     setCurrentPage(1);
   };
@@ -114,6 +137,8 @@ export const TableTabs: React.FC<any> = (props) => {
             <div className='mx-2'>
               <FilterModalComponent
                 tableName={activeTable}
+                setFilterParams={setFilterParams}
+                FilterParams={FilterParams}
               ></FilterModalComponent>
             </div>
           }
@@ -142,6 +167,7 @@ export const TableTabs: React.FC<any> = (props) => {
                 activeTable === "suggestedBudget" ? "active" : ""
               } budget`}
               onClick={() => {
+                showsuggestedBudget();
                 getAllProposedBudget(queryParams).then((data) => {
                   setData(data);
                   //console.log("Proposed Budget Data: ", data);
@@ -149,7 +175,6 @@ export const TableTabs: React.FC<any> = (props) => {
                 setTimeout(() => {
                   navigate(routes.SUGGESTEDTABLE_ROUTE);
                 }, 1000); 
-                showsuggestedBudget();
               }}
             >
               الميزانية المقترحة
@@ -159,12 +184,12 @@ export const TableTabs: React.FC<any> = (props) => {
                 activeTable === "reports" ? "active " : ""
               } budget`}
               onClick={() => {
+                showreports();
                 GetAllTransferBudget(queryParams).then((data) => {
                   setData(data);
                   //console.log("Proposed Budget Data: ", data);
                 });
                 navigate(routes.REPORTTABLE_ROUTE);
-                showreports();
               }}
             >
               بيـان الحجوزات والمناقلات والصرف
@@ -173,13 +198,13 @@ export const TableTabs: React.FC<any> = (props) => {
               className={`col-md-3 btn  fontSize-14 ${
                 activeTable === "annualBudget" ? "active " : ""
                 } budget `}
-                onClick={() => {
+              onClick={() => {
+                showannualBudget();
                   GetAllAnnualBudget(queryParams).then((data) => {
                     setData(data);
                     //console.log("Proposed Budget Data: ", data);
                   });
                   navigate(routes.ANNUALTABLE_ROUTE);
-                showannualBudget();
                 }}
             >
               ميزانية العام
@@ -189,12 +214,12 @@ export const TableTabs: React.FC<any> = (props) => {
                 activeTable === "reinforcementBudget" ? "active " : ""
               } budget`}
               onClick={() => {
+                showreinforcementBudget();
                 GetAllReinforcementBudget(queryParams).then((data) => {
                   setData(data);
                   //console.log("Proposed Budget Data: ", data);
                 });
                 navigate(routes.REINFORCEMENTTABLE_ROUTE);
-                showreinforcementBudget();
               }}
             >
               ميزانية التعزيز{" "}
